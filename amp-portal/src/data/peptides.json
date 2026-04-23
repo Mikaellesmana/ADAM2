@@ -1,0 +1,20 @@
+[
+  {
+    "ampId": "UAMP_000124",
+    "name": "LL-37",
+    "length": 37,
+    "netCharge": 6
+  },
+  {
+    "ampId": "UAMP_000225",
+    "name": "Magainin 2",
+    "length": 23,
+    "netCharge": 4
+  },
+  {
+    "ampId": "UAMP_000300",
+    "name": "Defensin A",
+    "length": 45,
+    "netCharge": 8
+  }
+]
