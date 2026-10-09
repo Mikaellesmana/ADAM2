@@ -1,10 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import useRevealOnScroll from "../useRevealOnScroll";
+import { API_BASE } from "../api";
 
-const stats = [
-  { value: "6,248", label: "Peptide Entries" },
-  { value: "3,891", label: "Unique Sequences" },
-  { value: "142", label: "Organism Sources" },
-  { value: "18", label: "Activity Classes" },
+// Shown until /api/stats answers. These were previously hard-coded figures
+// that had drifted to a fraction of the real dataset (6,248 entries against
+// 26,788 actual), so they are now only placeholders, never the source of truth.
+const STAT_FIELDS = [
+  { key: "peptideEntries",  label: "Peptide Entries" },
+  { key: "uniqueSequences", label: "Unique Sequences" },
+  { key: "organismSources", label: "Organism Sources" },
+  { key: "activityClasses", label: "Activity Classes" },
 ];
 
 const features = [
@@ -33,7 +38,7 @@ const features = [
   },
   {
     title: "Prediction System",
-    desc: "Predict antimicrobial activity using SVM and HMM models",
+    desc: "Predict antimicrobial activity using SVM, HMM, ESMC, and FLM models",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="28" height="28">
         <path d="M3 17l4-8 4 5 3-3 4 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -42,18 +47,6 @@ const features = [
     ),
     link: "/prediction",
     cta: "Predict",
-  },
-  {
-    title: "Download Data",
-    desc: "Access bulk downloads and REST API endpoints for all entries",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="28" height="28">
-        <path d="M12 3v13M7 11l5 5 5-5" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M4 20h16" strokeLinecap="round" />
-      </svg>
-    ),
-    link: "/download",
-    cta: "Download",
   },
   {
     title: "User Guide",
@@ -67,17 +60,6 @@ const features = [
     link: "/guide",
     cta: "Learn",
   },
-  {
-    title: "Statistics",
-    desc: "Release notes, coverage metrics, and database growth history",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="28" height="28">
-        <rect x="3" y="12" width="4" height="9" rx="1" /><rect x="10" y="7" width="4" height="14" rx="1" /><rect x="17" y="3" width="4" height="18" rx="1" />
-      </svg>
-    ),
-    link: "/stats",
-    cta: "View",
-  },
 ];
 
 const related = [
@@ -89,28 +71,29 @@ const related = [
 ];
 
 const updates = [
-  { date: "Apr 2025", title: "New AMP Entries Added", body: "Recently curated antimicrobial peptide records have been added to improve dataset coverage and accuracy." },
-  { date: "Mar 2025", title: "Prediction System Enhancement", body: "Updated prediction algorithms to improve classification performance and user experience." },
-  { date: "Feb 2025", title: "Interface Improvements", body: "Minor UI improvements and bug fixes for smoother navigation." },
+  { date: "May 2025", title: "系統重建完成", body: "前端採用 React 18 搭配 Vite 全面重建，介面現代化並支援響應式排版，操作體驗大幅提升。" },
+  { date: "May 2025", title: "叢集瀏覽功能上線", body: "新增前 30 個結構叢集瀏覽頁面，整合 RCSB PDB 結構縮圖與序列相似性網絡圖，支援全螢幕檢視。" },
+  { date: "May 2025", title: "預測系統整合完成", body: "SVM 與 HMM 預測管線成功整合至新系統，使用者可直接透過網頁介面提交序列並取得預測結果。" },
 ];
 
 export default function HomePage() {
   const heroRef = useRef(null);
 
+  useRevealOnScroll(0.1);
+
+  const [stats, setStats] = useState(null);
   useEffect(() => {
-    const els = document.querySelectorAll("[data-fade]");
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.1 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    let cancelled = false;
+    fetch(`${API_BASE}/api/stats`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => { if (!cancelled && d) setStats(d); })
+      .catch(() => {});
+    return () => { cancelled = true; };
   }, []);
 
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap');
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -287,7 +270,7 @@ export default function HomePage() {
         /* ── Feature grid ── */
         .feature-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 1px;
           background: var(--border);
           border: 1px solid var(--border);
@@ -449,8 +432,11 @@ export default function HomePage() {
           .about-grid { grid-template-columns: 1fr; }
           .related-grid { grid-template-columns: repeat(3, 1fr); }
         }
+       @media (max-width: 900px) {
+        .feature-grid { grid-template-columns: 1fr 1fr; }
+        }
         @media (max-width: 560px) {
-          .feature-grid, .related-grid { grid-template-columns: 1fr; }
+          .feature-grid { grid-template-columns: 1fr; }
         }
       `}</style>
 
@@ -476,9 +462,11 @@ export default function HomePage() {
       {/* Stats bar */}
       <div className="stats-bar">
         <div className="stats-inner">
-          {stats.map((s) => (
+          {STAT_FIELDS.map((s) => (
             <div className="stat-item" key={s.label}>
-              <span className="stat-value">{s.value}</span>
+              <span className="stat-value">
+                {stats ? stats[s.key].toLocaleString() : "—"}
+              </span>
               <span className="stat-label">{s.label}</span>
             </div>
           ))}
@@ -535,7 +523,7 @@ export default function HomePage() {
                   therapeutics.
                 </p>
                 <p>
-                  Integrated computational tools — including SVM- and HMM-based classifiers — allow
+                  Integrated computational tools — including SVM-, HMM-, ESMC-, and FLM-based classifiers — allow
                   users to predict activity for novel sequences directly from the web interface.
                 </p>
               </div>

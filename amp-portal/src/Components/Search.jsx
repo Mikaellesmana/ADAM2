@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { API_BASE } from "../api";
 
@@ -26,6 +26,18 @@ export default function Search() {
   const [rowsInput, setRowsInput]     = useState(10);
   const [jumpInput, setJumpInput]     = useState("");
   const [totalCount, setTotalCount]   = useState(null);
+  // The idle-state hint used to hard-code "12,535+ peptide entries", which had
+  // drifted to less than half the real figure. Read it from the database instead.
+  const [dbCount, setDbCount]         = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`${API_BASE}/api/peptides/count`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => { if (!cancelled && d?.total) setDbCount(d.total); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, []);
   const [loading, setLoading]         = useState(false);
 
   // ─── Handlers ──────────────────────────────────────────────────────────────
@@ -98,7 +110,6 @@ export default function Search() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap');
 
         :root {
           --navy:        #2a2a2a;
@@ -159,7 +170,7 @@ export default function Search() {
         .srch-page-title {
           font-size: 22px;
           font-weight: 700;
-          color: var(--navy-dark);
+          color: var(--navy);
           line-height: 1;
         }
         .srch-page-desc {
@@ -348,7 +359,7 @@ export default function Search() {
           gap: 10px;
         }
         .results-count-badge {
-          background: var(--teal);
+          background: var(--accent);
           color: #fff;
           font-family: var(--mono);
           font-size: 11px;
@@ -569,10 +580,14 @@ export default function Search() {
         }
         .result-meta-grid {
           display: grid;
-          grid-template-columns: repeat(5, 1fr);
+          /* minmax(0, 1fr) rather than 1fr: a plain 1fr track refuses to shrink
+             below its content, so one long taxonomy string widened its own
+             column, shoved the others out of alignment row-to-row, and pushed
+             the tail of the text past the card edge. */
+          grid-template-columns: repeat(5, minmax(0, 1fr));
           gap: 4px 16px;
         }
-        .result-meta-item { display: flex; flex-direction: column; gap: 2px; }
+        .result-meta-item { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
         .result-meta-label {
           font-family: var(--mono);
           font-size: 8.5px;
@@ -883,7 +898,7 @@ export default function Search() {
             {totalCount === 0 && (
               <div className="results-body">
                 <div className="empty-state">
-                  <svg className="empty-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" strokeWidth="1.5">
+                  <svg className="empty-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.5">
                     <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35" strokeLinecap="round"/>
                     <line x1="8" y1="11" x2="14" y2="11" strokeLinecap="round"/>
                   </svg>
@@ -897,14 +912,19 @@ export default function Search() {
             {totalCount === null && (
               <div className="welcome-state">
                 <div className="welcome-icon">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" strokeWidth="1.8" strokeLinecap="round">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="1.8" strokeLinecap="round">
                     <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/>
                   </svg>
                 </div>
                 <h2>Search the AMP Database</h2>
                 <p>Use the filters on the left to query peptides by name, sequence, biological activity, structure, or literature references.</p>
                 <div className="welcome-hints">
-                  {["12,535+ peptide entries", "Full-text field search", "Batch JSON export", "5 filter categories"].map(h => (
+                  {[
+                    dbCount ? `${dbCount.toLocaleString()} peptide entries` : "Curated peptide entries",
+                    "Full-text field search",
+                    "Batch JSON export",
+                    "5 filter categories",
+                  ].map(h => (
                     <div key={h} className="welcome-hint">
                       <span className="welcome-hint-dot"/>
                       {h}

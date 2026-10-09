@@ -1,0 +1,5 @@
+{
+  "epochs_done": 2,
+  "baseline_acc": 0.9508333333333333,
+  "finetune_acc": 0.935
+}

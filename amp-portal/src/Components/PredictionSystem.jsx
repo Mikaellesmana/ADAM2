@@ -1,52 +1,59 @@
-import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import useRevealOnScroll from "../useRevealOnScroll";
 
 const methods = [
   {
     id: "svm",
     label: "SVM",
     title: "Support Vector Machine",
-    badge: "Recommended",
-    desc: "Classifies peptide sequences using a trained SVM model on physicochemical and compositional features. Best suited for binary AMP / non-AMP prediction with high precision.",
+    badge: "Fast",
+    desc: "Classifies peptide sequences using a trained SVM on amino-acid composition features. Best suited for quick binary AMP / non-AMP prediction.",
     details: [
       { label: "Input", value: "FASTA or raw sequence" },
       { label: "Output", value: "AMP / non-AMP + score" },
-      { label: "Avg. time", value: "< 5 seconds" },
+      { label: "Accuracy", value: "88.4%", strong: true },
+      { label: "Avg. time", value: "< 1 second" },
     ],
     href: "/prediction/svm",
   },
   {
     id: "hmm",
     label: "HMM",
-    title: "Hidden Markov Model",
+    title: "Profile-based Scoring",
     badge: "Profile-based",
-    desc: "Uses profile HMMs built from curated AMP family alignments. Particularly effective for detecting remote homologs and classifying peptides into known AMP families.",
+    desc: "Scores a peptide against a position-frequency profile built from curated AMP sequences, using a log-odds comparison against the background distribution.",
     details: [
       { label: "Input", value: "FASTA sequence" },
-      { label: "Output", value: "Family match + E-value" },
-      { label: "Avg. time", value: "< 10 seconds" },
+      { label: "Output", value: "AMP / non-AMP + log-odds score" },
+      { label: "Accuracy", value: "82.7%", strong: true },
+      { label: "Avg. time", value: "< 1 second" },
     ],
     href: "/prediction/hmm",
+  },
+  {
+    id: "esmcflm",
+    label: "ESMC FLM",
+    title: "Fine-tuned Language Model",
+    badge: "Most accurate",
+    desc: "A protein language model fine-tuned end-to-end on curated AMP sequences — the transformer itself adapts to the task rather than serving only as a frozen feature extractor. Slower than the classical models, but the most accurate.",
+    details: [
+      { label: "Input", value: "FASTA sequence" },
+      { label: "Output", value: "AMP / non-AMP + confidence" },
+      { label: "Accuracy", value: "96.0%", strong: true },
+      { label: "Avg. time", value: "< 10 seconds" },
+    ],
+    href: "/prediction/esmc-flm",
   },
 ];
 
 export default function PredictionSystem() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const els = document.querySelectorAll("[data-fade]");
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.08 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  useRevealOnScroll(0.08);
 
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap');
 
         [data-fade] { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
         [data-fade].visible { opacity: 1; transform: translateY(0); }
@@ -231,6 +238,14 @@ export default function PredictionSystem() {
           color: #444;
           font-weight: 500;
         }
+        /* Accuracy is the figure people actually pick a model on, so it is
+           weighted heavier than the surrounding input/output metadata. */
+        .pred-meta-val-strong {
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 12.5px;
+          font-weight: 600;
+          color: #c93333;
+        }
         .pred-card-btn {
           display: flex;
           align-items: center;
@@ -319,6 +334,35 @@ export default function PredictionSystem() {
           <p className="pred-section-label" data-fade>Method Selection</p>
           <h2 className="pred-section-title" data-fade>Choose a prediction model</h2>
 
+          {/* Ensemble callout */}
+          <div
+            data-fade
+            onClick={() => navigate("/prediction/ensemble")}
+            style={{
+              background: "#2a2a2a", borderRadius: "8px", padding: "24px 32px",
+              display: "flex", alignItems: "center", justifyContent: "space-between",
+              gap: "20px", marginBottom: "32px", cursor: "pointer", flexWrap: "wrap",
+            }}
+          >
+            <div>
+              <p style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "10px", letterSpacing: "0.14em", textTransform: "uppercase", color: "rgba(255,255,255,0.45)", marginBottom: "8px" }}>
+                Not sure which model to trust?
+              </p>
+              <p style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: "19px", fontWeight: 400, color: "#fff" }}>
+                Run all 4 models at once and see a combined, weighted consensus
+              </p>
+            </div>
+            <button style={{
+              display: "flex", alignItems: "center", gap: "8px", background: "#c93333",
+              color: "#fff", fontSize: "13px", fontWeight: 500, letterSpacing: "0.04em",
+              padding: "11px 24px", borderRadius: "6px", border: "none", cursor: "pointer",
+              flexShrink: 0,
+            }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Run Ensemble Prediction
+            </button>
+          </div>
+
           {/* Cards */}
           <div className="pred-cards">
             {methods.map((m, i) => (
@@ -342,7 +386,7 @@ export default function PredictionSystem() {
                   {m.details.map((d) => (
                     <div className="pred-meta-row" key={d.label}>
                       <span className="pred-meta-key">{d.label}</span>
-                      <span className="pred-meta-val">{d.value}</span>
+                      <span className={`pred-meta-val${d.strong ? " pred-meta-val-strong" : ""}`}>{d.value}</span>
                     </div>
                   ))}
                 </div>
@@ -367,9 +411,10 @@ export default function PredictionSystem() {
             <div>
               <p className="pred-info-title">Not sure which model to use?</p>
               <p className="pred-info-body">
-                Use <strong>SVM</strong> for fast binary AMP classification on novel sequences.
-                Use <strong>HMM</strong> when you want to identify which known AMP family your
-                peptide belongs to. Both models accept standard single-letter amino acid sequences.
+                Use <strong>SVM</strong> or <strong>HMM</strong> for instant, lightweight scoring.
+                Use <strong>ESMC</strong> for the newest protein-language-model classification, or
+                <strong> FLM</strong> for the deeper, fine-tuned model's assessment.
+                All four models accept standard single-letter amino acid sequences.
                 See the <a href="/guide">User Guide</a> for detailed methodology.
               </p>
             </div>

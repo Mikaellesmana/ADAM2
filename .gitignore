@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+
+# Training / runtime output
+*.log
+*.err
+*.out
+
+# Large model weights and checkpoints (exceed GitHub's 100 MB limit)
+*.pt
+amp-portal/src/server/python/esmc_embed_cache.pkl
+amp-portal/src/server/python/flm_final_epoch_checkpoint/
+
+# Old model / data backups
+*_backup/
+*_backup.pkl
+
+# Office lock files
+~$*

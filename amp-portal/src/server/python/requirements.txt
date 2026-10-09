@@ -1,0 +1,9 @@
+torch
+transformers
+einops
+flask
+scikit-learn
+pandas
+joblib
+openpyxl
+numpy

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import useRevealOnScroll from "../useRevealOnScroll";
 
 const guideSteps = [
   {
@@ -28,7 +29,7 @@ const guideSteps = [
     number: "03",
     title: "Prediction System",
     href: "/prediction",
-    desc: "Use SVM and HMM prediction tools to evaluate antimicrobial potential of peptide sequences. Enter your sequence in FASTA format in the input field.",
+    desc: "Use SVM, HMM, ESMC, and FLM prediction tools to evaluate antimicrobial potential of peptide sequences. Enter your sequence in FASTA format in the input field.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="26" height="26">
         <path d="M3 17l4-8 4 5 3-3 4 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -51,15 +52,7 @@ export default function Guide() {
   const [status, setStatus] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  useEffect(() => {
-    const els = document.querySelectorAll("[data-fade]");
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
-      { threshold: 0.08 }
-    );
-    els.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  useRevealOnScroll(0.08);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -89,7 +82,6 @@ export default function Guide() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=IBM+Plex+Sans:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap');
 
         :root {
           --accent: #A80000;
