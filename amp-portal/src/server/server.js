@@ -5,6 +5,9 @@ const fs        = require("fs");
 const path      = require("path");
 const https     = require("https");
 const { spawn } = require("child_process");
+const { inferOrigin, fillFromSequence, fillFromFamily } = require("./origin_curation");
+const { createAssistant } = require("./assistant");
+const aiInfo = require("./assistant_ai");
 
 const SERVER_DIR  = __dirname;
 const PYTHON_DIR  = path.join(SERVER_DIR, "python");
@@ -59,41 +62,60 @@ if (fs.existsSync(clusterDetailPath)) {
 =========================== */
 console.log("Loading peptide database...");
 
-const workbook = XLSX.readFile(path.join(SERVER_DIR, "ADAMV2(2).xlsx"));
+const workbook = XLSX.readFile(path.join(SERVER_DIR, "ADAM2_database_57385.xlsx"));
+// The current file keeps its rows in a "peptides" sheet and a column
+// dictionary in a second "fields" sheet; the older ADAMV2(2).xlsx had a single
+// sheet. Taking the first sheet picks the right one in both.
 const sheet    = workbook.Sheets[workbook.SheetNames[0]];
 const rawRows  = XLSX.utils.sheet_to_json(sheet);
 
-const peptides = rawRows.map(r => ({
-  Peptide_Name:            r["Peptide_Name"]            ?? null,
-  Source:                  r["Source_Organism"]         ?? null,
-  Tax:                     r["Taxonomy"]                ?? null,
-  Uniprot:                 r["UniProt_ID"]               ?? null,
-  PDB:                     r["PDB_ID"]                  ?? null,
-  Targets:                 r["Target_Organism"]         ?? null,
-  Sequence:                r["Sequence"]                ?? null,
-  Sequence_Length:         r["Length"]                  ?? null,
-  Swiss_Prot_Entry:        null,
-  Family:                  r["Protein_Family"]          ?? null,
-  Gene:                    r["Gene"]                    ?? null,
-  Activity:                r["Activity"]                ?? null,
-  Protein_existence:       r["Protein_Existence"]       ?? null,
-  Structure:               r["Structure"]               ?? null,
-  Structure_Description:   r["Structure_Description"]   ?? null,
-  Comments:                r["Comments"]                ?? null,
-  Hemolytic_activity:      r["Hemolytic_Activity"]      ?? null,
-  Linear_Cyclic_Branched:  r["Linear_Cyclic_Branched"]  ?? null,
-  N_terminal_Modification: r["N_Terminus"]               ?? null,
-  C_terminal_Modification: r["C_Terminus"]               ?? null,
-  Other_Modifications:     r["Other_Modifications"]     ?? null,
-  Stereochemistry:         r["Stereochemistry"]         ?? null,
-  Cytotoxicity:            r["Cytotoxicity"]            ?? null,
-  Binding_Target:          r["Binding_Target"]          ?? null,
-  Pubmed_ID:               r["PubMed_ID"]                ?? null,
-  Reference:               r["Reference"]               ?? null,
-  Author:                  r["Author"]                  ?? null,
-  Title:                   r["Reference_Title"]         ?? null,
-  Validation:              r["Validation"]              ?? null,
-}));
+// ADAM2_database_57385.xlsx names its columns in lower-case snake_case where
+// ADAMV2(2).xlsx capitalised them ("peptide_name" vs "Peptide_Name"). Folding
+// each row's keys to lower case lets the mapping below read either file
+// unchanged — the same case-insensitive approach common.py takes on the Python
+// side. The API shape it produces is deliberately unchanged, so the frontend
+// and every endpoint below carry on reading the same field names.
+const peptides = rawRows.map(raw => {
+  const r = Object.create(null);
+  for (const key of Object.keys(raw)) r[key.trim().toLowerCase()] = raw[key];
+
+  return {
+    Adam_ID:                 r["adam_id"]               ?? null,
+    Peptide_Name:            r["peptide_name"]          ?? null,
+    Source:                  r["source_organism"]       ?? null,
+    Source_Category:         r["source_category"]       ?? null,
+    Source_Databases:        r["source_databases"]      ?? null,
+    Tax:                     r["taxonomy"]              ?? null,
+    Uniprot:                 r["uniprot_id"]            ?? null,
+    PDB:                     r["pdb_id"]                ?? null,
+    Targets:                 r["target_organism"]       ?? null,
+    Sequence:                r["sequence"]              ?? null,
+    Sequence_Length:         r["length"]                ?? null,
+    // Hard-coded null previously because ADAMV2(2).xlsx had no such column;
+    // the current file carries it for 4,865 entries.
+    Swiss_Prot_Entry:        r["swiss_prot_entry"]      ?? null,
+    Family:                  r["protein_family"]        ?? null,
+    Gene:                    r["gene"]                  ?? null,
+    Activity:                r["activity"]              ?? null,
+    Protein_existence:       r["protein_existence"]     ?? null,
+    Structure:               r["structure"]             ?? null,
+    Structure_Description:   r["structure_description"] ?? null,
+    Comments:                r["comments"]              ?? null,
+    Hemolytic_activity:      r["hemolytic_activity"]    ?? null,
+    Linear_Cyclic_Branched:  r["linear_cyclic_branched"] ?? null,
+    N_terminal_Modification: r["n_terminus"]            ?? null,
+    C_terminal_Modification: r["c_terminus"]            ?? null,
+    Other_Modifications:     r["other_modifications"]   ?? null,
+    Stereochemistry:         r["stereochemistry"]       ?? null,
+    Cytotoxicity:            r["cytotoxicity"]          ?? null,
+    Binding_Target:          r["binding_target"]        ?? null,
+    Pubmed_ID:               r["pubmed_id"]             ?? null,
+    Reference:               r["reference"]             ?? null,
+    Author:                  r["author"]                ?? null,
+    Title:                   r["reference_title"]       ?? null,
+    Validation:              r["validation"]            ?? null,
+  };
+});
 
 console.log(`Loaded ${peptides.length} peptides.`);
 
@@ -160,7 +182,7 @@ app.get("/api/peptides", (req, res) => {
   const limit  = Math.max(1, parseInt(req.query.limit) || 10);
   const search = (req.query.search || "").trim().toLowerCase();
 
-  let filtered = peptides.map((p, i) => ({ ...p, id: i }));
+  let filtered = peptides.map((p, i) => ({ ...p, id: adamNo(i) }));
 
   if (search) {
     filtered = filtered.filter(p =>
@@ -180,10 +202,11 @@ app.get("/api/peptides", (req, res) => {
 
 app.get("/api/peptide/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  if (isNaN(id) || id < 0 || id >= peptides.length) {
+  const row = rowByNo.get(id);
+  if (row === undefined) {
     return res.status(404).json({ error: "Peptide not found" });
   }
-  res.json({ ...peptides[id], id });
+  res.json({ ...peptides[row], id });
 });
 
 app.post("/api/search", (req, res) => {
@@ -191,7 +214,7 @@ app.post("/api/search", (req, res) => {
   console.log("Filters received:", filters);
 
   const results = peptides
-    .map((p, index) => ({ ...p, id: index }))
+    .map((p, index) => ({ ...p, id: adamNo(index) }))
     .filter(peptide => {
       return Object.entries(filters).every(([key, value]) => {
         if (value === null || value === undefined || value === "") return true;
@@ -329,6 +352,282 @@ app.get("/api/stats/pfam", (req, res) => {
 });
 
 /* ===========================
+   DATABASE STATISTICS — powers the charts on the Help page.
+
+   Derived from the loaded dataset rather than hard-coded, for the same reason
+   the homepage figures are: the older /api/stats/species and /api/stats/pfam
+   tables above are static and have drifted (they total ~7,800 against 57,385
+   actual entries). Computed once at startup — the dataset is static for the
+   life of the process.
+=========================== */
+
+// Where a peptide came from. ADAM2_database_57385.xlsx annotates this in two
+// places and they are not equally usable: `taxonomy` is free text that is only
+// 16% populated (it was 93% in ADAMV2(2).xlsx), while `source_category` is a
+// controlled vocabulary covering 72% of rows. So the origin breakdown is built
+// from source_category first; the 16,052 rows without one are filled in from
+// the organism, taxonomy and name fields by origin_curation.js.
+//
+// A row can hold several terms ("synthetic; mammal; animal; natural"), so the
+// first match in this order wins and the buckets stay mutually exclusive.
+// "animal" is the umbrella term — amphibian/mammal/insect rows always carry it
+// too — and "natural" is dropped, being the complement of synthetic rather
+// than an origin of its own.
+const ORIGIN_PRIORITY = [
+  ["synthetic", "Synthetic"],
+  ["animal",    "Animal"],
+  ["plant",     "Plant"],
+  ["bacteria",  "Bacteria"],
+  ["virus",     "Virus"],
+  ["fungi",     "Fungi"],
+];
+const ORIGIN_ORDER = [...ORIGIN_PRIORITY.map(([, label]) => label), "Unclassified"];
+
+// Every peptide gets an `Origin`: the source database's category when it gave
+// one, otherwise ADAM's curated reading of the rest of the row (see
+// origin_curation.js). `Origin_Basis` records which of the two it was, and for
+// curated rows which clue decided it.
+for (const p of peptides) {
+  const terms  = String(p.Source_Category ?? "").toLowerCase().split(";").map(t => t.trim());
+  const bucket = ORIGIN_PRIORITY.find(([term]) => terms.includes(term));
+  if (bucket) {
+    p.Origin = bucket[1];
+    p.Origin_Basis = "source";
+  } else {
+    const inferred = inferOrigin(p);
+    p.Origin = inferred?.origin ?? null;
+    p.Origin_Basis = inferred?.basis ?? null;
+  }
+}
+// Rows still empty take the origin of the same sequence elsewhere in the file,
+// then of their peptide family.
+fillFromSequence(peptides);
+fillFromFamily(peptides);
+
+// Page numbers follow the ADAM ID, so /result/52 is ADAM2_000052 (the IDs
+// have gaps, so this is not the row position).
+const adamNo = (i) => {
+  const m = /(\d+)\s*$/.exec(String(peptides[i].Adam_ID ?? ""));
+  return m ? Number(m[1]) : i + 1;
+};
+const rowByNo = new Map(peptides.map((p, i) => [adamNo(i), i]));
+
+// Upper bound of each length bin; the final bin is open-ended.
+const LENGTH_BINS = [
+  { label: "1–10",   max: 10  },
+  { label: "11–20",  max: 20  },
+  { label: "21–30",  max: 30  },
+  { label: "31–40",  max: 40  },
+  { label: "41–50",  max: 50  },
+  { label: "51–75",  max: 75  },
+  { label: "76–100", max: 100 },
+  { label: "> 100",  max: Infinity },
+];
+
+const statsOverview = (() => {
+  const origin    = Object.fromEntries(ORIGIN_ORDER.map(k => [k, 0]));
+  const lengths   = [];
+  const lengthBin = LENGTH_BINS.map(b => ({ label: b.label, value: 0 }));
+  const activity  = {};
+  const organisms = new Set();
+  const uniqueSeq = new Set();
+  let validated   = 0;
+
+  // What the entries still without an origin do (and do not) record.
+  const uncKinds    = { seqonly: 0, nameonly: 0, vague: 0, other: 0 };
+  const uncExamples = { nameonly: {}, vague: {}, other: {} };
+  const srcUnc      = {};   // entries per source database, unclassified only
+  const srcAll      = {};   // entries per source database, whole dataset
+
+  for (const p of peptides) {
+    const srcName = String(p.Source_Databases ?? "").trim() || "Not recorded";
+    srcAll[srcName] = (srcAll[srcName] || 0) + 1;
+
+    origin[p.Origin ?? "Unclassified"]++;
+
+    if (!p.Origin) {
+      srcUnc[srcName] = (srcUnc[srcName] || 0) + 1;
+      const org  = String(p.Source ?? "").trim();
+      const name = String(p.Peptide_Name ?? "").trim();
+      const kind = p.Origin_Basis === "other" ? "other" : org ? "vague" : name ? "nameonly" : "seqonly";
+      uncKinds[kind]++;
+      const ex = kind === "nameonly" ? name : org;
+      if (ex && uncExamples[kind]) uncExamples[kind][ex] = (uncExamples[kind][ex] || 0) + 1;
+    }
+
+    const len = Number(p.Sequence_Length);
+    if (Number.isFinite(len) && len > 0) {
+      lengths.push(len);
+      lengthBin[LENGTH_BINS.findIndex(b => len <= b.max)].value++;
+    }
+
+    for (const a of String(p.Activity ?? "").split(";")) {
+      const t = a.trim();
+      if (t) activity[t] = (activity[t] || 0) + 1;
+    }
+
+    const seq = String(p.Sequence ?? "").trim().toUpperCase();
+    if (seq) uniqueSeq.add(seq);
+
+    const org = String(p.Source ?? "").trim();
+    if (org) organisms.add(org);
+
+    // Rows can carry several validation terms ("Experimentally validated;
+    // Predicted"); any experimental evidence at all counts here.
+    if (String(p.Validation ?? "").includes("Experimentally validated")) validated++;
+  }
+
+  lengths.sort((a, b) => a - b);
+
+  const topNames = (m, n) => Object.entries(m).sort((a, b) => b[1] - a[1]).slice(0, n).map(([name]) => name);
+
+  return {
+    summary: {
+      totalEntries:   peptides.length,
+      uniqueSequences: uniqueSeq.size,
+      sourceOrganisms: organisms.size,
+      activityTerms:   Object.keys(activity).length,
+      medianLength:    lengths[Math.floor(lengths.length / 2)] ?? 0,
+      validated,
+      validatedPct:    Math.round((validated / peptides.length) * 1000) / 10,
+    },
+    // Pie: one slice per origin, Unclassified kept last so it reads as the
+    // remainder rather than as another category.
+    origin: ORIGIN_ORDER.map(label => ({ label, value: origin[label] })),
+    // What the "Unclassified" slice is made of. Groups sum to the slice.
+    unclassified: {
+      total: origin["Unclassified"],
+      groups: [
+        { key: "seqonly",  label: "Sequence only", value: uncKinds.seqonly,
+          note: "The source record holds only the sequence: no peptide name, organism, taxonomy or reference, and almost never an activity.",
+          examples: [] },
+        { key: "nameonly", label: "Name only, no organism", value: uncKinds.nameonly,
+          note: "A peptide name is given, but nothing about the organism. Some could be traced from the name by hand (magainins come from frogs, for example).",
+          examples: topNames(uncExamples.nameonly, 3) },
+        { key: "vague",    label: "Generic label", value: uncKinds.vague,
+          note: "The organism field holds a word that does not name a source.",
+          examples: topNames(uncExamples.vague, 3) },
+        { key: "other",    label: "Archaea or protist", value: uncKinds.other,
+          note: "The organism is known, but it belongs to none of the six origin categories.",
+          examples: topNames(uncExamples.other, 3) },
+      ],
+      // Per source database: how many of its entries are unclassified.
+      sources: Object.entries(srcUnc)
+        .sort((a, b) => b[1] - a[1])
+        .map(([label, value]) => ({ label, value, total: srcAll[label] })),
+    },
+    // Column chart: sequence length, binned.
+    lengthBins: lengthBin,
+    // Horizontal bars: activity terms are multi-valued per peptide, so these
+    // counts overlap and deliberately sum to more than the entry count.
+    activity: Object.entries(activity)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 7)
+      .map(([label, value]) => ({ label, value })),
+  };
+})();
+
+app.get("/api/stats/overview", (req, res) => res.json(statsOverview));
+
+/* ===========================
+   HELP ASSISTANT — /api/assistant
+   The chat panel on every page. Built after origins are filled in, so
+   searches can match on origin too. See assistant.js.
+=========================== */
+const assistant = createAssistant(peptides, statsOverview);
+console.log(`Assistant AI (${aiInfo.PROVIDER}, ${aiInfo.MODEL}): ${assistant.aiAvailable() ? "on" : `off (no ${aiInfo.KEY_VAR} in src/server/.env)`}.`);
+
+app.get("/api/assistant/status", (req, res) => res.json({ ai: assistant.aiAvailable(), provider: aiInfo.PROVIDER }));
+
+app.post("/api/assistant", async (req, res) => {
+  res.json(await assistant.answer(req.body?.message, req.body?.history, req.body?.lastIds));
+});
+
+/* ===========================
+   DATASET DOWNLOAD — powers the /download page.
+
+   Built from the loaded peptides on first request and cached: the dataset is
+   static for the life of the process. Column names follow the source
+   spreadsheet so the file reads the same as ADAM2_database_57385.xlsx.
+=========================== */
+const DOWNLOAD_COLUMNS = [
+  ["adam_id",          "Adam_ID"],
+  ["peptide_name",     "Peptide_Name"],
+  ["sequence",         "Sequence"],
+  ["length",           "Sequence_Length"],
+  ["activity",         "Activity"],
+  ["validation",       "Validation"],
+  ["source_organism",  "Source"],
+  ["source_category",  "Source_Category"],
+  ["origin",           "Origin"],
+  ["origin_basis",     "Origin_Basis"],
+  ["taxonomy",         "Tax"],
+  ["target_organism",  "Targets"],
+  ["uniprot_id",       "Uniprot"],
+  ["pdb_id",           "PDB"],
+  ["pubmed_id",        "Pubmed_ID"],
+  ["source_databases", "Source_Databases"],
+];
+
+const csvCell = (v) => {
+  if (v === null || v === undefined) return "";
+  const t = String(v);
+  return /[",\r\n]/.test(t) ? `"${t.replace(/"/g, '""')}"` : t;
+};
+
+let downloadCache = null;
+function buildDownloads() {
+  if (downloadCache) return downloadCache;
+
+  const lines = [DOWNLOAD_COLUMNS.map(([name]) => name).join(",")];
+  for (const p of peptides) lines.push(DOWNLOAD_COLUMNS.map(([, key]) => csvCell(p[key])).join(","));
+  // The BOM lets Excel detect UTF-8, so names with Greek letters or Chinese
+  // characters open correctly instead of as mojibake.
+  const csv = Buffer.from("\uFEFF" + lines.join("\r\n") + "\r\n", "utf8");
+
+  const fasta = [];
+  let fastaCount = 0;
+  for (const p of peptides) {
+    const seq = String(p.Sequence ?? "").replace(/\s+/g, "").toUpperCase();
+    if (!seq) continue;
+    const name = String(p.Peptide_Name ?? "").replace(/\s+/g, " ").trim();
+    fasta.push(`>${p.Adam_ID ?? "ADAM"}${name ? " " + name : ""}`);
+    for (let i = 0; i < seq.length; i += 60) fasta.push(seq.slice(i, i + 60));
+    fastaCount++;
+  }
+  const fastaBuf = Buffer.from(fasta.join("\n") + "\n", "utf8");
+
+  downloadCache = {
+    csv, fasta: fastaBuf,
+    info: {
+      entries: peptides.length,
+      columns: DOWNLOAD_COLUMNS.map(([name]) => name),
+      csvBytes: csv.length,
+      fastaSequences: fastaCount,
+      fastaBytes: fastaBuf.length,
+      sourceFile: "ADAM2_database_57385.xlsx",
+    },
+  };
+  return downloadCache;
+}
+
+app.get("/api/download/info", (req, res) => res.json(buildDownloads().info));
+
+app.get("/api/download/peptides.csv", (req, res) => {
+  const { csv } = buildDownloads();
+  res.setHeader("Content-Type", "text/csv; charset=utf-8");
+  res.setHeader("Content-Disposition", 'attachment; filename="ADAM2_peptides.csv"');
+  res.send(csv);
+});
+
+app.get("/api/download/peptides.fasta", (req, res) => {
+  const { fasta } = buildDownloads();
+  res.setHeader("Content-Type", "text/plain; charset=utf-8");
+  res.setHeader("Content-Disposition", 'attachment; filename="ADAM2_peptides.fasta"');
+  res.send(fasta);
+});
+
+/* ===========================
    SHARED — proxy to the persistent Python inference server (serve.py).
    Models are loaded once there, so requests here are fast (no per-call
    Python/torch/sklearn import + model-load overhead).
@@ -377,11 +676,10 @@ app.post("/api/predict/hmm", (req, res) => {
    ESMC FLM PREDICTION — fine-tuned language model.
 
    The public model name is "esmcflm"; ESMC_FLM_BACKEND is the Flask route it
-   actually calls. Fine-tuning ESM Cambrian is still training, so that is "flm"
-   (the fine-tuned ESM-2) for now — change the one constant when the ESMC run
-   finishes and nothing else here has to move.
+   actually calls — the fine-tuned ESM Cambrian (esmc_flm_model_full). Set it
+   back to "flm" to serve the fine-tuned ESM-2 instead.
 =========================== */
-const ESMC_FLM_BACKEND = "flm";
+const ESMC_FLM_BACKEND = "esmcflm";
 
 app.post("/api/predict/esmcflm", (req, res) => {
   const { sequence } = req.body;
@@ -412,10 +710,11 @@ app.post("/api/predict/flm", (req, res) => {
    ENSEMBLE PREDICTION — runs all 3 models and combines them into a
    single accuracy-weighted consensus, so no single model's call has
    to be trusted alone. Weights come from each model's cross-validated
-   accuracy (ESMC FLM 96.0%, SVM 88.4%, HMM 82.7%), all 5-fold CV.
+   accuracy (ESMC FLM 94.83%, SVM 89.19%, HMM 84.53%), all 5-fold CV on the
+   balanced 58,426-sequence set.
 =========================== */
 // Keep in step with MODEL_META in EnsemblePrediction.jsx.
-const MODEL_WEIGHTS = { svm: 0.88, hmm: 0.83, esmcflm: 0.96 };
+const MODEL_WEIGHTS = { svm: 0.89, hmm: 0.85, esmcflm: 0.95 };
 const MODEL_NAMES   = ["svm", "hmm", "esmcflm"];
 // Public model name -> Flask route, since the Python service still exposes the
 // underlying model under its own name.

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import useRevealOnScroll from "../useRevealOnScroll";
+import DatabaseStats from "./DatabaseStats";
 
 const guideSteps = [
   {
@@ -29,7 +30,7 @@ const guideSteps = [
     number: "03",
     title: "Prediction System",
     href: "/prediction",
-    desc: "Use SVM, HMM, ESMC, and FLM prediction tools to evaluate antimicrobial potential of peptide sequences. Enter your sequence in FASTA format in the input field.",
+    desc: "Use the SVM, HMM, and ESMC FLM prediction tools to evaluate antimicrobial potential of peptide sequences, or run all three at once for a weighted consensus. Enter your sequence in FASTA format in the input field.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="26" height="26">
         <path d="M3 17l4-8 4 5 3-3 4 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -40,11 +41,11 @@ const guideSteps = [
 ];
 
 const teamMembers = [
-  "Team Member One",
-  "Team Member Two",
-  "Team Member Three",
-  "Team Member Four",
-  "Team Member Five",
+  { id: "01257176", name: "許能翔", email: "01257176@mail.ntou.edu.tw" },
+  { id: "01257174", name: "林偉翔", email: "sjjsjsjjjsjj@gmail.com" },
+  { id: "01257175", name: "陳科宇", email: "tanky01110111@gmail.com" },
+  { id: "01257171", name: "林承濬", email: "kaelanmcgowin@gmail.com" },
+  { id: "01257066", name: "劉玉蕃", email: "mikaelesmana27@gmail.com" },
 ];
 
 export default function Guide() {
@@ -310,6 +311,11 @@ export default function Guide() {
           width: 18px;
           flex-shrink: 0;
         }
+        .team-person { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+        .team-name { display: flex; align-items: baseline; gap: 10px; font-size: 14px; font-weight: 500; color: #1a1a1a; }
+        .team-id { font-family: var(--mono); font-size: 10.5px; font-weight: 400; color: var(--muted); letter-spacing: 0.04em; }
+        .team-email { font-size: 12.5px; color: var(--accent); text-decoration: none; overflow-wrap: anywhere; }
+        .team-email:hover { text-decoration: underline; }
 
         /* Feedback form */
         .form-title {
@@ -441,6 +447,8 @@ export default function Guide() {
           </div>
         </section>
 
+        <DatabaseStats />
+
         {/* ── Contact & Feedback ── */}
         <section className="guide-section contact-section">
           <div className="guide-section-inner">
@@ -463,10 +471,16 @@ export default function Guide() {
                 <div className="info-card">
                   <p className="info-card-label">Team Members</p>
                   <ul className="team-list">
-                    {teamMembers.map((name, i) => (
-                      <li key={name} className="team-item">
+                    {teamMembers.map((m, i) => (
+                      <li key={m.id} className="team-item">
                         <span className="team-index">{String(i + 1).padStart(2, "0")}</span>
-                        {name}
+                        <div className="team-person">
+                          <span className="team-name">
+                            {m.name}
+                            <span className="team-id">{m.id}</span>
+                          </span>
+                          <a className="team-email" href={`mailto:${m.email}`}>{m.email}</a>
+                        </div>
                       </li>
                     ))}
                   </ul>

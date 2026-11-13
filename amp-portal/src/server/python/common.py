@@ -95,8 +95,9 @@ POSITIVE_ACTIVITY_PATTERN = (
 
 def load_positive_dataset(min_seq_len=5):
     """
-    Loads ADAMV2(2).xlsx and returns (sequences, labels=[1, 1, ...]) for every
-    row whose Activity describes antimicrobial-family activity (see
+    Loads the ADAM spreadsheet at EXCEL_PATH and returns (sequences,
+    labels=[1, 1, ...]) for every row whose Activity describes
+    antimicrobial-family activity (see
     POSITIVE_ACTIVITY_PATTERN). This is ADAM's own peptide set — all positives,
     since ADAM does not curate genuine non-AMP negatives itself.
     """

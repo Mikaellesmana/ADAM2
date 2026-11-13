@@ -1,0 +1,12 @@
+{
+  "base_model": "Synthyra/ESMplusplus_small",
+  "revision": "3399aae2103ea574ce7ec11ba72a015448ef1c1e",
+  "unfreeze_last": 2,
+  "n_blocks": 30,
+  "hidden": 960,
+  "max_len": 128,
+  "epochs": 2,
+  "samples": 58426,
+  "cv_accuracy": 0.9483449667234002,
+  "cv_std": 0.0016180382123829752
+}

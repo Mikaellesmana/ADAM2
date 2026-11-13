@@ -38,7 +38,7 @@ const features = [
   },
   {
     title: "Prediction System",
-    desc: "Predict antimicrobial activity using SVM, HMM, ESMC, and FLM models",
+    desc: "Predict antimicrobial activity with SVM, HMM and ESMC FLM models, or all three at once",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" width="28" height="28">
         <path d="M3 17l4-8 4 5 3-3 4 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -70,7 +70,14 @@ const related = [
   { name: "DRAMP", desc: "Data Repository of Antimicrobial Peptides", url: "http://dramp.cpu-bioinfor.org/" },
 ];
 
+// Newest first. Older entries are left as written: they describe the site as it
+// was at the time, not as it is now.
 const updates = [
+  { date: "Oct 2026", title: "新增資料下載頁面", body: "可直接下載完整資料集（CSV，57,385 筆）與所有序列（FASTA），檔案由目前的資料庫即時產生。" },
+  { date: "Oct 2026", title: "新版 ADAM2 標誌", body: "全站更換為 ADAM2 標誌，並沿用原標誌的深紅色調；在桌機與手機上皆可清楚顯示。" },
+  { date: "Oct 2026", title: "說明頁新增資料庫統計", body: "新增肽段來源、活性分佈與序列長度圖表，數據皆由即時資料計算，並說明「未分類」條目的組成。" },
+  { date: "Oct 2026", title: "預測模型以平衡資料重新訓練", body: "AMP 與非 AMP 序列各 29,213 筆；SVM、HMM 與 ESMC FLM 的五折交叉驗證準確率分別為 89.2%、84.5% 與 94.8%。" },
+  { date: "Oct 2026", title: "資料庫擴充至 57,385 筆", body: "網站改用最新版 ADAM2 資料庫，收錄 57,385 筆肽段資料（原為 26,788 筆）。" },
   { date: "May 2025", title: "系統重建完成", body: "前端採用 React 18 搭配 Vite 全面重建，介面現代化並支援響應式排版，操作體驗大幅提升。" },
   { date: "May 2025", title: "叢集瀏覽功能上線", body: "新增前 30 個結構叢集瀏覽頁面，整合 RCSB PDB 結構縮圖與序列相似性網絡圖，支援全螢幕檢視。" },
   { date: "May 2025", title: "預測系統整合完成", body: "SVM 與 HMM 預測管線成功整合至新系統，使用者可直接透過網頁介面提交序列並取得預測結果。" },
@@ -523,17 +530,18 @@ export default function HomePage() {
                   therapeutics.
                 </p>
                 <p>
-                  Integrated computational tools — including SVM-, HMM-, ESMC-, and FLM-based classifiers — allow
-                  users to predict activity for novel sequences directly from the web interface.
+                  Integrated computational tools — SVM and HMM classifiers, a fine-tuned ESMC protein
+                  language model (ESMC FLM), and a weighted ensemble of all three — allow users to predict
+                  activity for novel sequences directly from the web interface.
                 </p>
               </div>
             </div>
             <div data-fade data-fade-delay="2">
               <p className="section-label" style={{ marginTop: 0 }}>Quick access</p>
               <ul className="quick-links">
-                <li><a href="/search/by_name">Search by peptide name or ID</a></li>
-                <li><a href="/search/by_sequence">Search by amino acid sequence</a></li>
-                <li><a href="/search/by_activity">Browse by activity class</a></li>
+                <li><a href="/search">Search by peptide name or ID</a></li>
+                <li><a href="/search/sequence">Search by amino acid sequence</a></li>
+                <li><a href="/search">Browse by activity class</a></li>
                 <li><a href="/cluster">View sequence similarity clusters</a></li>
                 <li><a href="/prediction">Run activity prediction</a></li>
                 <li><a href="/download">Download full dataset</a></li>

@@ -18,3 +18,15 @@ amp-portal/src/server/python/flm_final_epoch_checkpoint/
 
 # Office lock files
 ~$*
+
+# Secrets (API keys) — never commit
+.env
+**/.env
+
+# Slide decks and posters stay local
+*.ppt
+*.pptx
+
+# Training runtime leftovers
+*.pid
+*_backup.json

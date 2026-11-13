@@ -6,7 +6,7 @@
 
 ## 🌐 系統概述
 
-ADAM 是一個綜合性的抗菌肽資料庫，收錄 **26,788 筆肽段條目**，並附有完整的結構、生物與文獻標註資訊。本入口提供：
+ADAM 是一個綜合性的抗菌肽資料庫，收錄 **57,385 筆肽段條目**，並附有完整的結構、生物與文獻標註資訊。本入口提供：
 
 - 跨 29 個肽段屬性的進階多欄位搜尋
 - 基於 SVM 與 HMM 機率輪廓的 AMP / 非 AMP 二元分類（即時、輕量）
@@ -81,7 +81,7 @@ Final Project/
     │   └── index.css
     └── server/
         ├── server.js             # Express 後端 — 將 /api/predict/* 轉發至 serve.py
-        ├── ADAMV2(2).xlsx        # 肽段資料庫（26,788 筆）
+        ├── ADAM2_database_57385.xlsx  # 肽段資料庫（57,385 筆）
         ├── feedback.json         # 使用者回饋儲存
         └── python/               # 預測流程
             ├── common.py         # 共用的 FASTA 解析、資料集載入、特徵萃取
@@ -191,7 +191,8 @@ npm run dev
 ### 🔗 序列搜尋
 - 輸入：FASTA 序列
 - 輸出：相似序列，附同一性、比對長度、E 值與比對到的目標序列
-- 流程：`mmseqs easy-search`（透過 WSL2）比對由肽段資料庫全部 26,788 筆序列建立的 MMseqs2 資料庫
+- 流程：`mmseqs easy-search`（透過 WSL2）比對由肽段資料庫建立的 MMseqs2 資料庫
+- ⚠️ 目前的索引是由舊版 26,788 筆匯出檔建立。它仍可正常運作，但不會比對到之後新增的序列；請重建索引（見「安裝」）以搜尋全部 57,385 筆
 
 ### 📋 群集列表
 - 瀏覽依序列相似性組織的肽段群集
@@ -226,7 +227,7 @@ tar xvzf foldseek-linux-avx2.tar.gz
 ```bash
 mkdir -p ~/adam_db/tmp
 
-# 先將 ADAMV2(2).xlsx 的序列匯出成 FASTA（見 amp-portal/src/server，一次性 Node 腳本），然後：
+# 先將 ADAM2_database_57385.xlsx 的序列匯出成 FASTA（見 amp-portal/src/server，一次性 Node 腳本），然後：
 ~/mmseqs/bin/mmseqs createdb /mnt/d/.../all_sequences.fasta ~/adam_db/seq_db
 
 ~/foldseek/bin/foldseek createdb "/mnt/d/Final Project/amp-portal/public/pdb" ~/adam_db/struct_db

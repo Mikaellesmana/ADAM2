@@ -11,7 +11,7 @@ const methods = [
     details: [
       { label: "Input", value: "FASTA or raw sequence" },
       { label: "Output", value: "AMP / non-AMP + score" },
-      { label: "Accuracy", value: "88.4%", strong: true },
+      { label: "Accuracy", value: "89.2%", strong: true },
       { label: "Avg. time", value: "< 1 second" },
     ],
     href: "/prediction/svm",
@@ -25,7 +25,7 @@ const methods = [
     details: [
       { label: "Input", value: "FASTA sequence" },
       { label: "Output", value: "AMP / non-AMP + log-odds score" },
-      { label: "Accuracy", value: "82.7%", strong: true },
+      { label: "Accuracy", value: "84.5%", strong: true },
       { label: "Avg. time", value: "< 1 second" },
     ],
     href: "/prediction/hmm",
@@ -39,7 +39,7 @@ const methods = [
     details: [
       { label: "Input", value: "FASTA sequence" },
       { label: "Output", value: "AMP / non-AMP + confidence" },
-      { label: "Accuracy", value: "96.0%", strong: true },
+      { label: "Accuracy", value: "94.8%", strong: true },
       { label: "Avg. time", value: "< 10 seconds" },
     ],
     href: "/prediction/esmc-flm",
@@ -139,7 +139,7 @@ export default function PredictionSystem() {
         /* ── Method cards ── */
         .pred-cards {
           display: grid;
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(3, 1fr);
           gap: 1px;
           background: #cccac4;
           border: 1px solid #cccac4;
@@ -149,7 +149,7 @@ export default function PredictionSystem() {
         }
         .pred-card {
           background: #fff;
-          padding: 36px 32px;
+          padding: 32px 26px;
           display: flex;
           flex-direction: column;
           gap: 0;
@@ -305,10 +305,15 @@ export default function PredictionSystem() {
         }
         .pred-info-body a:hover { text-decoration: underline; }
 
+        /* Three across only while each column still has room. Below that go
+           straight to one column: a two-column tier would leave an empty
+           fourth cell showing the grid's hairline background as a grey block. */
+        @media (max-width: 980px) {
+          .pred-cards { grid-template-columns: 1fr; }
+        }
         @media (max-width: 720px) {
           .pred-hero { padding: 40px 20px 44px; }
           .pred-body { padding: 40px 20px 56px; }
-          .pred-cards { grid-template-columns: 1fr; }
         }
       `}</style>
 
@@ -349,7 +354,7 @@ export default function PredictionSystem() {
                 Not sure which model to trust?
               </p>
               <p style={{ fontFamily: "'Source Serif 4', Georgia, serif", fontSize: "19px", fontWeight: 400, color: "#fff" }}>
-                Run all 4 models at once and see a combined, weighted consensus
+                Run all 3 models at once and see a combined, weighted consensus
               </p>
             </div>
             <button style={{
@@ -411,10 +416,10 @@ export default function PredictionSystem() {
             <div>
               <p className="pred-info-title">Not sure which model to use?</p>
               <p className="pred-info-body">
-                Use <strong>SVM</strong> or <strong>HMM</strong> for instant, lightweight scoring.
-                Use <strong>ESMC</strong> for the newest protein-language-model classification, or
-                <strong> FLM</strong> for the deeper, fine-tuned model's assessment.
-                All four models accept standard single-letter amino acid sequences.
+                Use <strong>SVM</strong> or <strong>HMM</strong> for instant, lightweight scoring,
+                or <strong>ESMC FLM</strong> for the fine-tuned protein-language-model
+                classification — slower, but the most accurate of the three.
+                All three models accept standard single-letter amino acid sequences.
                 See the <a href="/guide">User Guide</a> for detailed methodology.
               </p>
             </div>

@@ -13,9 +13,9 @@ FVNQHLCGSHLVEALYLVCGERGFFYTPKT`;
 // language model. Weights must stay in step with MODEL_WEIGHTS in server.js.
 const MODEL_ORDER = ["svm", "hmm", "esmcflm"];
 const MODEL_META = {
-  svm:     { label: "SVM",      weight: 0.88 },
-  hmm:     { label: "HMM",      weight: 0.83 },
-  esmcflm: { label: "ESMC FLM", weight: 0.96 },
+  svm:     { label: "SVM",      weight: 0.89 },
+  hmm:     { label: "HMM",      weight: 0.85 },
+  esmcflm: { label: "ESMC FLM", weight: 0.95 },
 };
 
 export default function EnsemblePrediction() {
@@ -138,7 +138,7 @@ export default function EnsemblePrediction() {
         .ens-consensus-wrap { display: flex; align-items: center; gap: 10px; }
         .ens-votes { font-size: 11px; font-family: var(--mono); color: var(--muted); }
 
-        .ens-models-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
+        .ens-models-row { display: grid; grid-template-columns: repeat(${MODEL_ORDER.length}, 1fr); gap: 1px; background: var(--border); }
         .ens-model-cell { background: var(--card); padding: 14px 18px; }
         .ens-model-name { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
         .ens-model-value { font-family: var(--mono); font-size: 12px; color: var(--text); margin-top: 4px; }
@@ -192,8 +192,8 @@ export default function EnsemblePrediction() {
             Prediction System
           </a>
           <p className="ens-eyebrow" data-fade>Ensemble · Combined Verdict</p>
-          <h1 className="ens-title" data-fade>See all 4 models<br /><em>agree — or disagree</em></h1>
-          <p className="ens-sub" data-fade>Runs SVM, HMM, ESMC, and FLM on the same sequence side by side, then combines them into one accuracy-weighted consensus — so no single model's call has to be trusted alone.</p>
+          <h1 className="ens-title" data-fade>See all {MODEL_ORDER.length} models<br /><em>agree — or disagree</em></h1>
+          <p className="ens-sub" data-fade>Runs SVM, HMM, and ESMC FLM on the same sequence side by side, then combines them into one accuracy-weighted consensus — so no single model's call has to be trusted alone.</p>
           <span className="ens-badge" data-fade>Weighted by each model's held-out accuracy</span>
         </div>
       </section>
@@ -237,7 +237,7 @@ export default function EnsemblePrediction() {
                 <div className="ens-actions">
                   <button type="button" className="btn-clear" onClick={handleReset}>Clear</button>
                   <button type="submit" className="btn-predict" disabled={loading}>
-                    {loading ? <><div className="ens-spinner" />Running all 4 models…</> : <><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Run Ensemble Prediction</>}
+                    {loading ? <><div className="ens-spinner" />Running all {MODEL_ORDER.length} models…</> : <><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Run Ensemble Prediction</>}
                   </button>
                 </div>
               </div>
@@ -358,7 +358,7 @@ export default function EnsemblePrediction() {
             <div>
               <p className="ens-info-title">How the consensus is computed</p>
               <p className="ens-info-body">
-                Each model casts an AMP / Non-AMP vote, weighted by its own held-out test accuracy — ESMC FLM (96%) counts more than HMM (83%). The weighted AMP score is the accuracy-weighted share of votes that said AMP; if it's ≥ 50%, the consensus is AMP. Treat scores near 50% as genuinely uncertain rather than confidently one way or the other — that's exactly when models disagree most. See individual models: <a href="/prediction/svm">SVM</a>, <a href="/prediction/hmm">HMM</a>, <a href="/prediction/esmc-flm">ESMC FLM</a>.
+                Each model casts an AMP / Non-AMP vote, weighted by its own held-out test accuracy — ESMC FLM (95%) counts more than HMM (85%). The weighted AMP score is the accuracy-weighted share of votes that said AMP; if it's ≥ 50%, the consensus is AMP. Treat scores near 50% as genuinely uncertain rather than confidently one way or the other — that's exactly when models disagree most. See individual models: <a href="/prediction/svm">SVM</a>, <a href="/prediction/hmm">HMM</a>, <a href="/prediction/esmc-flm">ESMC FLM</a>.
               </p>
             </div>
           </div>

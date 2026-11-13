@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import Assistant from "./Components/Assistant";
 
 const navLinks = [
   { label: "Clustering List", href: "/cluster" },
@@ -65,8 +66,8 @@ export default function Layout() {
           max-width: 1200px; margin: 0 auto; padding: 0 48px;
           height: 84px; display: flex; align-items: center; justify-content: space-between;
         }
-        .header-logo { display: flex; align-items: center; text-decoration: none; gap: 12px; }
-        .header-logo img { height: 68px; object-fit: contain; display: block; }
+        .header-logo { display: flex; align-items: center; text-decoration: none; gap: 8px; }
+        .header-logo img { height: 38px; width: auto; object-fit: contain; display: block; }
         .header-logo-text { display: flex; flex-direction: column; line-height: 1.2; }
         .header-logo-name { font-size: 17px; font-weight: 600; color: #1a1a1a; letter-spacing: -0.01em; }
         .header-logo-sub { font-size: 10px; font-weight: 400; color: #777; letter-spacing: 0.08em; text-transform: uppercase; }
@@ -171,7 +172,7 @@ export default function Layout() {
           gap: 40px; align-items: start;
         }
         .footer-brand { display: flex; flex-direction: column; gap: 8px; }
-        .footer-brand img { height: 64px; width: auto; max-width: 100%; object-fit: contain; object-position: left; display: block; }
+        .footer-brand img { height: 40px; width: auto; max-width: 100%; object-fit: contain; object-position: left; display: block; }
         .footer-brand-name { font-size: 15px; font-weight: 600; color: #A80000; letter-spacing: -0.01em; }
         .footer-brand-tagline { font-size: 12px; color: #888; line-height: 1.5; max-width: 220px; }
         .footer-col-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-bottom: 14px; }
@@ -190,9 +191,15 @@ export default function Layout() {
         .footer-copy a { color: #A80000; text-decoration: none; }
         .footer-copy a:hover { text-decoration: underline; }
 
+        /* The wordmark is wide (about 4.9:1), so the caption beside it is dropped
+           when space runs short — the logo already spells out the name. */
+        @media (max-width: 1080px) {
+          .header-logo-text, .header-divider { display: none; }
+        }
+
         @media (max-width: 900px) {
           .header-inner { padding: 0 20px; height: 64px; }
-          .header-logo img { height: 42px; }
+          .header-logo img { height: 30px; }
           .header-logo-text { display: none; }
           .header-divider { display: none; }
           .footer-inner { grid-template-columns: 1fr; padding: 32px 20px 24px; gap: 28px; }
@@ -403,6 +410,7 @@ export default function Layout() {
         </div>
       </footer>
 
+      <Assistant />
     </div>
   );
 }

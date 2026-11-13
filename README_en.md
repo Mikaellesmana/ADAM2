@@ -6,7 +6,7 @@ A curated web portal for browsing, searching, and predicting antimicrobial pepti
 
 ## 🌐 Overview
 
-ADAM is a comprehensive antimicrobial peptide database containing **26,788 peptide entries** with full structural, biological, and literature annotations. The portal provides:
+ADAM is a comprehensive antimicrobial peptide database containing **57,385 peptide entries** with full structural, biological, and literature annotations. The portal provides:
 
 - Advanced multi-field search across 29 peptide properties
 - SVM-based and HMM profile-based binary AMP / Non-AMP classification (instant, lightweight)
@@ -81,7 +81,7 @@ Final Project/
     │   └── index.css
     └── server/
         ├── server.js             # Express backend — proxies /api/predict/* to serve.py
-        ├── ADAMV2(2).xlsx        # Peptide database (26,788 entries)
+        ├── ADAM2_database_57385.xlsx  # Peptide database (57,385 entries)
         ├── feedback.json         # User feedback storage
         └── python/               # Prediction pipeline
             ├── common.py         # shared FASTA parsing, dataset loading, feature extraction
@@ -191,7 +191,8 @@ Filter peptides by 29 fields across 5 categories:
 ### 🔗 Sequence Search
 - Input: FASTA sequence
 - Output: Similar sequences with identity, alignment length, E-value, and matched target sequence
-- Pipeline: `mmseqs easy-search` (via WSL2) against an MMseqs2 DB built from all 26,788 sequences in the peptide database
+- Pipeline: `mmseqs easy-search` (via WSL2) against an MMseqs2 DB built from the peptide database
+- ⚠️ The current index was built from the earlier 26,788-entry export. It keeps working, but will not match anything added since; rebuild it (see Setup) to search all 57,385 entries
 
 ### 📋 Clustering List
 - Browse peptide clusters organized by sequence similarity
@@ -226,7 +227,7 @@ From WSL, build an MMseqs2 sequence DB from the peptide database and a Foldseek 
 ```bash
 mkdir -p ~/adam_db/tmp
 
-# Export ADAMV2(2).xlsx sequences to FASTA first (see amp-portal/src/server, one-time Node script),
+# Export ADAM2_database_57385.xlsx sequences to FASTA first (see amp-portal/src/server, one-time Node script),
 # then:
 ~/mmseqs/bin/mmseqs createdb /mnt/d/.../all_sequences.fasta ~/adam_db/seq_db
 

@@ -1,0 +1,64 @@
+{
+  "_comment": "Site-guide topics for the help assistant (assistant.js). A question scores one point per keyword it contains; the best-scoring topic answers. Keywords are matched lower-case, with spaces removed for Chinese.",
+  "topics": [
+    {
+      "id": "about",
+      "en": ["what is adam", "about adam", "about this site", "about this website"],
+      "zh": ["adam是什麼", "這個網站", "網站介紹"],
+      "reply": {
+        "en": "ADAM is an antimicrobial peptide (AMP) database from National Taiwan Ocean University. It combines four public databases (DRAMP, CAMP, dbAMP3 and DBAASP) and adds clustering, sequence and structure search, and AMP prediction models.",
+        "zh": "ADAM 是國立臺灣海洋大學建立的抗菌胜肽（AMP）資料庫，整合 DRAMP、CAMP、dbAMP3 與 DBAASP 四個公開資料庫，並提供分群、序列與結構搜尋，以及 AMP 預測模型。"
+      },
+      "links": [["Help page", "使用說明", "/guide"]]
+    },
+    {
+      "id": "amp",
+      "en": ["what is an amp", "what is amp", "what are amps", "antimicrobial peptide"],
+      "zh": ["什麼是amp", "抗菌胜肽是", "抗菌肽是"],
+      "reply": {
+        "en": "Antimicrobial peptides (AMPs) are short chains of amino acids, usually 10 to 50 long, that kill or slow down bacteria, fungi or viruses. Many animals and plants make them as part of their immune defence; others are designed in the lab.",
+        "zh": "抗菌胜肽（AMP）是由約 10 到 50 個胺基酸組成的短鏈，能殺死或抑制細菌、真菌或病毒。許多動植物會產生它們作為免疫防禦，也有些是在實驗室設計的。"
+      }
+    },
+    {
+      "id": "search",
+      "en": ["how to search", "how do i search", "search page", "advanced search", "filter"],
+      "zh": ["怎麼搜尋", "如何搜尋", "搜尋方式", "進階搜尋", "篩選", "查詢方式"],
+      "reply": {
+        "en": "On the Search page you can look peptides up by name, source organism, taxonomy, UniProt or PDB ID, sequence, length range, activity, target, structure or reference. Fill in any fields (empty ones are ignored) and press Search. You can also type a name, an ADAM ID or a sequence here and I will look it up.",
+        "zh": "在「Search AMP」頁面可以依名稱、來源物種、分類、UniProt 或 PDB ID、序列、長度範圍、活性、作用對象、結構或文獻搜尋。填寫任意欄位（空白欄位會被忽略）後按 Search 即可。你也可以直接在這裡輸入名稱、ADAM ID 或序列，我會幫你查。"
+      },
+      "links": [["Search AMP", "前往搜尋", "/search"]]
+    },
+    {
+      "id": "seqsearch",
+      "en": ["sequence search", "similar sequence", "mmseqs", "blast", "alignment"],
+      "zh": ["序列搜尋", "相似序列", "序列比對"],
+      "reply": {
+        "en": "Sequence Search finds database peptides similar to yours using MMseqs2. Paste a sequence in FASTA format; results show identity, alignment length and E-value (a lower E-value means a stronger match).",
+        "zh": "序列搜尋使用 MMseqs2 找出與你的序列相似的胜肽。以 FASTA 格式貼上序列，結果會顯示相似度、比對長度與 E-value（E-value 越低代表越相似）。"
+      },
+      "links": [["Sequence Search", "序列搜尋", "/search/sequence"]]
+    },
+    {
+      "id": "structsearch",
+      "en": ["structure search", "pdb file", "foldseek", "3d structure", "similar structure"],
+      "zh": ["結構搜尋", "pdb檔", "立體結構", "相似結構"],
+      "reply": {
+        "en": "Structure Search compares a protein structure with the AMP structures in ADAM using Foldseek. Upload a .pdb file; results show identity, alignment length and E-value.",
+        "zh": "結構搜尋使用 Foldseek 將你的蛋白質結構與 ADAM 中的 AMP 結構比對。上傳 .pdb 檔即可，結果會顯示相似度、比對長度與 E-value。"
+      },
+      "links": [["Structure Search", "結構搜尋", "/search/structure"]]
+    },
+    {
+      "id": "cluster",
+      "en": ["cluster", "clustering", "cath", "scop", "pfam"],
+      "zh": ["分群", "群集", "聚類"],
+      "reply": {
+        "en": "The Clustering List groups peptides by sequence similarity. Search it by cluster ID, PDB, CATH, SCOP or Pfam, then open a cluster to see its members and network.",
+        "zh": "分群列表依序列相似度將胜肽分組。可用群集 ID、PDB、CATH、SCOP 或 Pfam 搜尋，點開群集即可看到成員與網路圖。"
+      },
+      "links": [["Clustering List", "分群列表", "/cluster"]]
+    }
+  ]
+}

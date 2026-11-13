@@ -17,6 +17,8 @@ const Ensemble        = lazy(() => import("./Components/EnsemblePrediction"));
 const Guide           = lazy(() => import("./Components/Guide"));
 const StructureSearch = lazy(() => import("./Components/StructureSearch"));
 const SequenceSearch  = lazy(() => import("./Components/SequenceSearch"));
+const Download        = lazy(() => import("./Components/Download"));
+const NotFound        = lazy(() => import("./Components/NotFound"));
 
 // Matches the page background so a chunk load reads as a brief pause rather
 // than a white flash between the header and footer.
@@ -43,9 +45,12 @@ function App() {
             {/* Old split-model URLs kept so existing links and bookmarks still resolve. */}
             <Route path="prediction/esmc" element={<ESMCFLM />} />
             <Route path="prediction/flm" element={<ESMCFLM />} />
-i            <Route path="prediction/ensemble" element={<Ensemble />} />
+            <Route path="prediction/ensemble" element={<Ensemble />} />
             <Route path="search/structure" element={<StructureSearch />} />
             <Route path="search/sequence" element={<SequenceSearch />} />
+            <Route path="download" element={<Download />} />
+            {/* Anything else: an explicit not-found page instead of an empty one. */}
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </Suspense>

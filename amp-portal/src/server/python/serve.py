@@ -5,7 +5,7 @@ Persistent inference server — loads all 4 prediction models once at
 startup and serves them over HTTP, so individual requests are fast
 (no per-request Python/torch/sklearn import + model-load overhead).
 
-server.js proxies /api/predict/{svm,hmm,esmc,flm} to this process
+server.js proxies /api/predict/{svm,hmm,esmc,flm,esmcflm} to this process
 instead of spawning a fresh python process per request.
 
 Run:
@@ -42,6 +42,16 @@ SVM_PATH       = os.path.join(SCRIPT_DIR, "svm_model.pkl")
 HMM_PATH       = os.path.join(SCRIPT_DIR, "hmm_model.pkl")
 ESMC_HEAD_PATH = os.path.join(SCRIPT_DIR, "esmc_head.pkl")
 FLM_DIR        = os.path.join(SCRIPT_DIR, "flm_model")
+# Fine-tuned ESMC, newest first: the balanced-data run (58,426 sequences,
+# 29,213 AMP : 29,213 non-AMP), then the earlier imbalanced full-dataset run,
+# then the 12k-sample one. To roll back, delete or rename esmc_flm_model_bal/.
+ESMC_FLM_DIR   = next(
+    (d for d in (os.path.join(SCRIPT_DIR, "esmc_flm_model_bal"),
+                 os.path.join(SCRIPT_DIR, "esmc_flm_model_full"),
+                 os.path.join(SCRIPT_DIR, "esmc_flm_model"))
+     if os.path.exists(os.path.join(d, "model_state.pt"))),
+    None,
+)
 
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 5100
 
@@ -71,6 +81,10 @@ flm_tokenizer = None
 # locking keeps the common case (already loaded) lock-free.
 _esmc_load_lock = threading.Lock()
 _flm_load_lock = threading.Lock()
+
+esmc_flm_model = None
+esmc_flm_tokenizer = None
+_esmc_flm_load_lock = threading.Lock()
 
 
 def load_esmc():
@@ -110,6 +124,30 @@ def load_flm():
                 loaded_flm.eval()
                 flm_model = loaded_flm
     return flm_model, flm_tokenizer
+
+
+def load_esmc_flm():
+    global esmc_flm_model, esmc_flm_tokenizer
+    if esmc_flm_model is None and ESMC_FLM_DIR is not None:
+        with _esmc_flm_load_lock:
+            if esmc_flm_model is None:
+                # train_esmc_flm.py saves a bare state_dict for its own ESMCClassifier
+                # (trunk + mean-pool + MLP head), so the model is rebuilt the same way
+                # training built it — same base revision, same default attention.
+                from train_esmc_flm import ESMCClassifier
+                with open(os.path.join(ESMC_FLM_DIR, "meta.json")) as f:
+                    meta = json.load(f)
+                print(f"Loading ESMC FLM from {ESMC_FLM_DIR}...")
+                tokenizer = AutoTokenizer.from_pretrained(meta["base_model"], revision=meta["revision"], trust_remote_code=True)
+                base = AutoModel.from_pretrained(meta["base_model"], revision=meta["revision"], trust_remote_code=True)
+                model = ESMCClassifier(base, hidden=meta["hidden"], unfreeze_last=meta["unfreeze_last"], n_blocks=meta["n_blocks"])
+                state = torch.load(os.path.join(ESMC_FLM_DIR, "model_state.pt"), map_location=device)
+                model.load_state_dict(state)
+                model.to(device)
+                model.eval()
+                esmc_flm_tokenizer = tokenizer
+                esmc_flm_model = model
+    return esmc_flm_model, esmc_flm_tokenizer
 
 
 print("Ready.")
@@ -252,6 +290,30 @@ def predict_flm():
     return jsonify(results)
 
 
+@app.post("/predict/esmcflm")
+def predict_esmc_flm():
+    model, tokenizer = load_esmc_flm()
+    if model is None or tokenizer is None:
+        return error_response("ESMC FLM model not found. Run train_esmc_flm.py first.")
+    entries = entries_from_request()
+    if not entries:
+        return error_response("No valid FASTA sequences found in input")
+
+    results = []
+    for name, raw_seq in entries:
+        seq = clean_sequence(raw_seq)
+        if len(seq) < 2:
+            results.append({"name": name, "sequence": raw_seq, "value": None, "label": "Non-AMP"})
+            continue
+        with torch.no_grad():
+            enc = tokenizer([seq], return_tensors="pt", truncation=True, max_length=MAX_LEN).to(device)
+            logits = model(enc["input_ids"], enc["attention_mask"])
+            proba = torch.softmax(logits, dim=-1)[0][1].item()
+        results.append({"name": name, "sequence": seq, "value": round(proba, 4),
+                         "label": "AMP" if proba >= 0.5 else "Non-AMP"})
+    return jsonify(results)
+
+
 @app.get("/health")
 def health():
     return jsonify({
@@ -259,6 +321,7 @@ def health():
         "hmm": hmm_model is not None,
         "esmc": esmc_head is not None,
         "flm": flm_model is not None or os.path.isdir(FLM_DIR),
+        "esmcflm": ESMC_FLM_DIR is not None,
     })
 
 
