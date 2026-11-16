@@ -1,0 +1,3537 @@
+molecule_id,display_name
+ADAM2_001249,Angiotensin-converting enzyme 2 (suggested)
+ADAM2_001567,Envelope glycoprotein B (suggested)
+ADAM2_001827,Envelope glycoprotein B (suggested)
+ADAM2_002212,Spike glycoprotein (suggested)
+ADAM2_002335,Unnamed peptide ADAM2_002335
+ADAM2_002484,Unnamed peptide ADAM2_002484
+ADAM2_002485,Unnamed peptide ADAM2_002485
+ADAM2_002490,Unnamed peptide ADAM2_002490
+ADAM2_002491,Unnamed peptide ADAM2_002491
+ADAM2_002492,Unnamed peptide ADAM2_002492
+ADAM2_002493,Unnamed peptide ADAM2_002493
+ADAM2_002494,Unnamed peptide ADAM2_002494
+ADAM2_002495,Unnamed peptide ADAM2_002495
+ADAM2_002496,Unnamed peptide ADAM2_002496
+ADAM2_002497,Unnamed peptide ADAM2_002497
+ADAM2_002498,Unnamed peptide ADAM2_002498
+ADAM2_002499,Unnamed peptide ADAM2_002499
+ADAM2_002500,Unnamed peptide ADAM2_002500
+ADAM2_002501,Unnamed peptide ADAM2_002501
+ADAM2_002502,Unnamed peptide ADAM2_002502
+ADAM2_002503,Unnamed peptide ADAM2_002503
+ADAM2_002505,Unnamed peptide ADAM2_002505
+ADAM2_002506,Unnamed peptide ADAM2_002506
+ADAM2_002507,Unnamed peptide ADAM2_002507
+ADAM2_002508,Unnamed peptide ADAM2_002508
+ADAM2_002509,Unnamed peptide ADAM2_002509
+ADAM2_002510,Unnamed peptide ADAM2_002510
+ADAM2_002515,Unnamed peptide ADAM2_002515
+ADAM2_002516,Unnamed peptide ADAM2_002516
+ADAM2_002604,Unnamed peptide ADAM2_002604
+ADAM2_002763,Unnamed peptide ADAM2_002763
+ADAM2_002774,Unnamed peptide ADAM2_002774
+ADAM2_003071,Envelope glycoprotein B (suggested)
+ADAM2_003072,Envelope glycoprotein B (suggested)
+ADAM2_003079,Envelope glycoprotein B (suggested)
+ADAM2_003080,Envelope glycoprotein B (suggested)
+ADAM2_003081,Envelope glycoprotein B (suggested)
+ADAM2_003082,Envelope glycoprotein B (suggested)
+ADAM2_003229,Envelope glycoprotein B (suggested)
+ADAM2_003230,Envelope glycoprotein B (suggested)
+ADAM2_003231,Envelope glycoprotein B (suggested)
+ADAM2_003232,Envelope glycoprotein B (suggested)
+ADAM2_003234,Envelope glycoprotein B (suggested)
+ADAM2_003235,"glycoprotein B, partial (suggested)"
+ADAM2_003236,Envelope glycoprotein B (suggested)
+ADAM2_003237,Envelope glycoprotein B (suggested)
+ADAM2_003238,Envelope glycoprotein B (suggested)
+ADAM2_003239,Envelope glycoprotein B (suggested)
+ADAM2_003240,Envelope glycoprotein B (suggested)
+ADAM2_003241,Envelope glycoprotein B (suggested)
+ADAM2_003242,Envelope glycoprotein B (suggested)
+ADAM2_003243,Envelope glycoprotein B (suggested)
+ADAM2_003244,Envelope glycoprotein B (suggested)
+ADAM2_003245,Envelope glycoprotein B (suggested)
+ADAM2_003246,Envelope glycoprotein B (suggested)
+ADAM2_003247,Envelope glycoprotein B (suggested)
+ADAM2_003248,Envelope glycoprotein B (suggested)
+ADAM2_003249,Envelope glycoprotein B (suggested)
+ADAM2_003250,Envelope glycoprotein B (suggested)
+ADAM2_003251,Envelope glycoprotein B (suggested)
+ADAM2_003252,Envelope glycoprotein B (suggested)
+ADAM2_003253,Envelope glycoprotein B (suggested)
+ADAM2_003255,Envelope glycoprotein B (suggested)
+ADAM2_003256,Envelope glycoprotein B (suggested)
+ADAM2_003257,Envelope glycoprotein B (suggested)
+ADAM2_003258,Envelope glycoprotein B (suggested)
+ADAM2_003259,Envelope glycoprotein B (suggested)
+ADAM2_003260,Envelope glycoprotein B (suggested)
+ADAM2_003261,Envelope glycoprotein B (suggested)
+ADAM2_003262,Envelope glycoprotein B (suggested)
+ADAM2_003263,Envelope glycoprotein B (suggested)
+ADAM2_003264,Envelope glycoprotein B (suggested)
+ADAM2_003265,Envelope glycoprotein B (suggested)
+ADAM2_003266,Envelope glycoprotein B (suggested)
+ADAM2_003267,Envelope glycoprotein B (suggested)
+ADAM2_003268,Envelope glycoprotein B (suggested)
+ADAM2_003269,Envelope glycoprotein B (suggested)
+ADAM2_003270,Envelope glycoprotein B (suggested)
+ADAM2_003284,Genome polyprotein (suggested)
+ADAM2_003285,Envelope glycoprotein B (suggested)
+ADAM2_003286,Envelope glycoprotein B (suggested)
+ADAM2_003287,Envelope glycoprotein B (suggested)
+ADAM2_003288,Envelope glycoprotein B (suggested)
+ADAM2_003289,Envelope glycoprotein B (suggested)
+ADAM2_003292,Envelope glycoprotein B (suggested)
+ADAM2_003293,Envelope glycoprotein B (suggested)
+ADAM2_003294,Envelope glycoprotein B (suggested)
+ADAM2_003295,Envelope glycoprotein B (suggested)
+ADAM2_003296,Envelope glycoprotein B (suggested)
+ADAM2_003297,Envelope glycoprotein B (suggested)
+ADAM2_003298,Envelope glycoprotein B (suggested)
+ADAM2_003299,Envelope glycoprotein B (suggested)
+ADAM2_003318,Envelope glycoprotein B (suggested)
+ADAM2_003319,Envelope glycoprotein B (suggested)
+ADAM2_003320,Envelope glycoprotein B (suggested)
+ADAM2_003321,Envelope glycoprotein B (suggested)
+ADAM2_003322,Envelope glycoprotein B (suggested)
+ADAM2_003323,Envelope glycoprotein B (suggested)
+ADAM2_003324,Envelope glycoprotein B (suggested)
+ADAM2_003325,Envelope glycoprotein B (suggested)
+ADAM2_003326,Envelope glycoprotein B (suggested)
+ADAM2_003327,Envelope glycoprotein B (suggested)
+ADAM2_003330,Envelope glycoprotein B (suggested)
+ADAM2_003331,Envelope glycoprotein B (suggested)
+ADAM2_003332,Envelope glycoprotein B (suggested)
+ADAM2_003333,Envelope glycoprotein B (suggested)
+ADAM2_003334,Envelope glycoprotein B (suggested)
+ADAM2_003335,Envelope glycoprotein B (suggested)
+ADAM2_003336,Envelope glycoprotein B (suggested)
+ADAM2_003337,Envelope glycoprotein B (suggested)
+ADAM2_003338,Envelope glycoprotein B (suggested)
+ADAM2_003339,Envelope glycoprotein B (suggested)
+ADAM2_003360,Envelope glycoprotein B (suggested)
+ADAM2_003361,Envelope glycoprotein B (suggested)
+ADAM2_003362,Envelope glycoprotein B (suggested)
+ADAM2_003363,Envelope glycoprotein B (suggested)
+ADAM2_003364,Envelope glycoprotein B (suggested)
+ADAM2_003365,Envelope glycoprotein B (suggested)
+ADAM2_003366,Envelope glycoprotein B (suggested)
+ADAM2_003367,Envelope glycoprotein B (suggested)
+ADAM2_003368,Envelope glycoprotein B (suggested)
+ADAM2_003369,Envelope glycoprotein B (suggested)
+ADAM2_003370,Envelope glycoprotein B (suggested)
+ADAM2_003371,Envelope glycoprotein B (suggested)
+ADAM2_003374,Envelope glycoprotein B (suggested)
+ADAM2_003376,Envelope glycoprotein B (suggested)
+ADAM2_003377,Envelope glycoprotein B (suggested)
+ADAM2_003378,Envelope glycoprotein B (suggested)
+ADAM2_003379,Envelope glycoprotein B (suggested)
+ADAM2_003418,Envelope glycoprotein B (suggested)
+ADAM2_003419,Envelope glycoprotein B (suggested)
+ADAM2_003420,Envelope glycoprotein B (suggested)
+ADAM2_003421,Envelope glycoprotein B (suggested)
+ADAM2_003422,Envelope glycoprotein B (suggested)
+ADAM2_003423,Envelope glycoprotein B (suggested)
+ADAM2_003424,Envelope glycoprotein B (suggested)
+ADAM2_003425,Envelope glycoprotein B (suggested)
+ADAM2_003426,Envelope glycoprotein B (suggested)
+ADAM2_003427,Envelope glycoprotein B (suggested)
+ADAM2_003428,Envelope glycoprotein B (suggested)
+ADAM2_003430,Envelope glycoprotein B (suggested)
+ADAM2_003431,Envelope glycoprotein B (suggested)
+ADAM2_003432,Envelope glycoprotein B (suggested)
+ADAM2_003433,Envelope glycoprotein B (suggested)
+ADAM2_003434,Envelope glycoprotein B (suggested)
+ADAM2_003435,Envelope glycoprotein B (suggested)
+ADAM2_003436,Envelope glycoprotein B (suggested)
+ADAM2_003437,Envelope glycoprotein B (suggested)
+ADAM2_003438,Envelope glycoprotein B (suggested)
+ADAM2_003439,Envelope glycoprotein B (suggested)
+ADAM2_003440,Envelope glycoprotein B (suggested)
+ADAM2_003441,Envelope glycoprotein B (suggested)
+ADAM2_003442,Envelope glycoprotein B (suggested)
+ADAM2_003443,Envelope glycoprotein B (suggested)
+ADAM2_003444,Envelope glycoprotein B (suggested)
+ADAM2_003445,Envelope glycoprotein B (suggested)
+ADAM2_003448,Envelope glycoprotein B (suggested)
+ADAM2_003449,Envelope glycoprotein B (suggested)
+ADAM2_003451,Envelope glycoprotein B (suggested)
+ADAM2_003452,Envelope glycoprotein B (suggested)
+ADAM2_003453,Envelope glycoprotein B (suggested)
+ADAM2_003470,Unnamed peptide ADAM2_003470
+ADAM2_003471,Unnamed peptide ADAM2_003471
+ADAM2_003476,Unnamed peptide ADAM2_003476
+ADAM2_003696,MADS-box transcription factor family protein (suggested)
+ADAM2_003697,gyrase subunit B (suggested)
+ADAM2_003701,"multidrug resistance protein, putative (suggested)"
+ADAM2_003702,Protein kti12 (suggested)
+ADAM2_003703,Aspartic proteinase nepenthesin-1 (suggested)
+ADAM2_003705,formamidopyrimidine-DNA glycosylase (suggested)
+ADAM2_003735,Large envelope protein (suggested)
+ADAM2_003736,terminase (suggested)
+ADAM2_003737,expressed hypothetical protein (suggested)
+ADAM2_003741,Unnamed peptide ADAM2_003741
+ADAM2_003742,Large envelope protein (suggested)
+ADAM2_003750,Unnamed peptide ADAM2_003750
+ADAM2_003751,Large envelope protein (suggested)
+ADAM2_003799,DHHC-type zinc finger family protein (suggested)
+ADAM2_003831,Mytilin-A (suggested)
+ADAM2_003865,Unnamed peptide ADAM2_003865
+ADAM2_003878,Unnamed peptide ADAM2_003878
+ADAM2_003957,Alpha amylase Alstotide S1 (suggested)
+ADAM2_004372,Genome polyprotein (suggested)
+ADAM2_004639,Unnamed peptide ADAM2_004639
+ADAM2_004640,Unnamed peptide ADAM2_004640
+ADAM2_004641,Unnamed peptide ADAM2_004641
+ADAM2_004642,Unnamed peptide ADAM2_004642
+ADAM2_004643,Unnamed peptide ADAM2_004643
+ADAM2_004647,Unnamed peptide ADAM2_004647
+ADAM2_004648,Unnamed peptide ADAM2_004648
+ADAM2_004649,Unnamed peptide ADAM2_004649
+ADAM2_004650,Unnamed peptide ADAM2_004650
+ADAM2_004651,Unnamed peptide ADAM2_004651
+ADAM2_004652,Unnamed peptide ADAM2_004652
+ADAM2_004653,Unnamed peptide ADAM2_004653
+ADAM2_004759,Unnamed peptide ADAM2_004759
+ADAM2_004760,Unnamed peptide ADAM2_004760
+ADAM2_004795,Spike glycoprotein (suggested)
+ADAM2_004809,Fusion glycoprotein F0 (suggested)
+ADAM2_004895,Unnamed peptide ADAM2_004895
+ADAM2_004896,Unnamed peptide ADAM2_004896
+ADAM2_004943,Unnamed peptide ADAM2_004943
+ADAM2_004944,Unnamed peptide ADAM2_004944
+ADAM2_004945,Unnamed peptide ADAM2_004945
+ADAM2_004955,Unnamed peptide ADAM2_004955
+ADAM2_005458,Unnamed peptide ADAM2_005458
+ADAM2_005459,Unnamed peptide ADAM2_005459
+ADAM2_005617,Unnamed peptide ADAM2_005617
+ADAM2_005752,Unnamed peptide ADAM2_005752
+ADAM2_005909,Unnamed peptide ADAM2_005909
+ADAM2_006042,Unnamed peptide ADAM2_006042
+ADAM2_006099,Unnamed peptide ADAM2_006099
+ADAM2_006101,Unnamed peptide ADAM2_006101
+ADAM2_006102,Unnamed peptide ADAM2_006102
+ADAM2_006104,Unnamed peptide ADAM2_006104
+ADAM2_006149,Unnamed peptide ADAM2_006149
+ADAM2_006180,Unnamed peptide ADAM2_006180
+ADAM2_006189,Unnamed peptide ADAM2_006189
+ADAM2_006275,Unnamed peptide ADAM2_006275
+ADAM2_006605,Unnamed peptide ADAM2_006605
+ADAM2_006606,Unnamed peptide ADAM2_006606
+ADAM2_006607,Unnamed peptide ADAM2_006607
+ADAM2_006608,Unnamed peptide ADAM2_006608
+ADAM2_007364,Unnamed peptide ADAM2_007364
+ADAM2_007365,Unnamed peptide ADAM2_007365
+ADAM2_007375,Unnamed peptide ADAM2_007375
+ADAM2_007410,Unnamed peptide ADAM2_007410
+ADAM2_010718,Unnamed peptide ADAM2_010718
+ADAM2_010719,Unnamed peptide ADAM2_010719
+ADAM2_010928,Peptide D4 (suggested)
+ADAM2_011026,Varv peptide F (suggested)
+ADAM2_011737,Unnamed peptide ADAM2_011737
+ADAM2_011909,Unnamed peptide ADAM2_011909
+ADAM2_011978,Unnamed peptide ADAM2_011978
+ADAM2_012151,Unnamed peptide ADAM2_012151
+ADAM2_012166,Unnamed peptide ADAM2_012166
+ADAM2_012200,Unnamed peptide ADAM2_012200
+ADAM2_012331,Unnamed peptide ADAM2_012331
+ADAM2_012375,Unnamed peptide ADAM2_012375
+ADAM2_012417,Unnamed peptide ADAM2_012417
+ADAM2_012474,Unnamed peptide ADAM2_012474
+ADAM2_012476,Antimicrobial peptide 2 (suggested)
+ADAM2_012477,Antimicrobial peptide 1 (suggested)
+ADAM2_012481,Unnamed peptide ADAM2_012481
+ADAM2_012530,Unnamed peptide ADAM2_012530
+ADAM2_012540,Unnamed peptide ADAM2_012540
+ADAM2_012651,Unnamed peptide ADAM2_012651
+ADAM2_012667,Unnamed peptide ADAM2_012667
+ADAM2_012684,Unnamed peptide ADAM2_012684
+ADAM2_012686,Unnamed peptide ADAM2_012686
+ADAM2_012688,Unnamed peptide ADAM2_012688
+ADAM2_012693,Unnamed peptide ADAM2_012693
+ADAM2_012921,Unnamed peptide ADAM2_012921
+ADAM2_012930,Unnamed peptide ADAM2_012930
+ADAM2_012988,Unnamed peptide ADAM2_012988
+ADAM2_012989,Unnamed peptide ADAM2_012989
+ADAM2_012994,Unnamed peptide ADAM2_012994
+ADAM2_013031,Unnamed peptide ADAM2_013031
+ADAM2_013068,Unnamed peptide ADAM2_013068
+ADAM2_013077,Unnamed peptide ADAM2_013077
+ADAM2_013125,Unnamed peptide ADAM2_013125
+ADAM2_013186,Unnamed peptide ADAM2_013186
+ADAM2_013231,Unnamed peptide ADAM2_013231
+ADAM2_013246,Unnamed peptide ADAM2_013246
+ADAM2_013275,Unnamed peptide ADAM2_013275
+ADAM2_013279,Unnamed peptide ADAM2_013279
+ADAM2_013280,Unnamed peptide ADAM2_013280
+ADAM2_013295,Unnamed peptide ADAM2_013295
+ADAM2_013309,Unnamed peptide ADAM2_013309
+ADAM2_013340,Unnamed peptide ADAM2_013340
+ADAM2_013361,Unnamed peptide ADAM2_013361
+ADAM2_013397,Unnamed peptide ADAM2_013397
+ADAM2_013421,Unnamed peptide ADAM2_013421
+ADAM2_013422,Unnamed peptide ADAM2_013422
+ADAM2_013550,Unnamed peptide ADAM2_013550
+ADAM2_013562,Unnamed peptide ADAM2_013562
+ADAM2_013573,Unnamed peptide ADAM2_013573
+ADAM2_013574,Unnamed peptide ADAM2_013574
+ADAM2_013575,Unnamed peptide ADAM2_013575
+ADAM2_013576,Unnamed peptide ADAM2_013576
+ADAM2_013580,Unnamed peptide ADAM2_013580
+ADAM2_013581,Unnamed peptide ADAM2_013581
+ADAM2_013582,Unnamed peptide ADAM2_013582
+ADAM2_013583,Unnamed peptide ADAM2_013583
+ADAM2_013584,Unnamed peptide ADAM2_013584
+ADAM2_013586,Unnamed peptide ADAM2_013586
+ADAM2_013587,Unnamed peptide ADAM2_013587
+ADAM2_013599,Unnamed peptide ADAM2_013599
+ADAM2_013635,Unnamed peptide ADAM2_013635
+ADAM2_013706,Unnamed peptide ADAM2_013706
+ADAM2_013707,Unnamed peptide ADAM2_013707
+ADAM2_013726,Unnamed peptide ADAM2_013726
+ADAM2_013727,Unnamed peptide ADAM2_013727
+ADAM2_013836,Unnamed peptide ADAM2_013836
+ADAM2_013867,Unnamed peptide ADAM2_013867
+ADAM2_013868,Unnamed peptide ADAM2_013868
+ADAM2_013869,Unnamed peptide ADAM2_013869
+ADAM2_013874,Unnamed peptide ADAM2_013874
+ADAM2_013875,Unnamed peptide ADAM2_013875
+ADAM2_013876,Unnamed peptide ADAM2_013876
+ADAM2_013877,Unnamed peptide ADAM2_013877
+ADAM2_013893,Unnamed peptide ADAM2_013893
+ADAM2_013894,Unnamed peptide ADAM2_013894
+ADAM2_013895,Unnamed peptide ADAM2_013895
+ADAM2_013947,Unnamed peptide ADAM2_013947
+ADAM2_013980,Unnamed peptide ADAM2_013980
+ADAM2_013983,Unnamed peptide ADAM2_013983
+ADAM2_013984,Unnamed peptide ADAM2_013984
+ADAM2_013985,Unnamed peptide ADAM2_013985
+ADAM2_014000,Unnamed peptide ADAM2_014000
+ADAM2_014001,Unnamed peptide ADAM2_014001
+ADAM2_014077,Unnamed peptide ADAM2_014077
+ADAM2_014078,Unnamed peptide ADAM2_014078
+ADAM2_014079,Unnamed peptide ADAM2_014079
+ADAM2_014080,Unnamed peptide ADAM2_014080
+ADAM2_014084,Unnamed peptide ADAM2_014084
+ADAM2_014085,Unnamed peptide ADAM2_014085
+ADAM2_014086,Unnamed peptide ADAM2_014086
+ADAM2_014087,Unnamed peptide ADAM2_014087
+ADAM2_014088,Unnamed peptide ADAM2_014088
+ADAM2_014089,Unnamed peptide ADAM2_014089
+ADAM2_014121,RI-1018 (suggested)
+ADAM2_014160,Unnamed peptide ADAM2_014160
+ADAM2_014161,Unnamed peptide ADAM2_014161
+ADAM2_014162,Unnamed peptide ADAM2_014162
+ADAM2_014163,Unnamed peptide ADAM2_014163
+ADAM2_014164,Unnamed peptide ADAM2_014164
+ADAM2_014167,Unnamed peptide ADAM2_014167
+ADAM2_014168,Unnamed peptide ADAM2_014168
+ADAM2_014169,Unnamed peptide ADAM2_014169
+ADAM2_014170,Unnamed peptide ADAM2_014170
+ADAM2_014171,Unnamed peptide ADAM2_014171
+ADAM2_014172,Unnamed peptide ADAM2_014172
+ADAM2_014173,Unnamed peptide ADAM2_014173
+ADAM2_014174,Unnamed peptide ADAM2_014174
+ADAM2_014176,Unnamed peptide ADAM2_014176
+ADAM2_014177,Unnamed peptide ADAM2_014177
+ADAM2_014178,Unnamed peptide ADAM2_014178
+ADAM2_014179,Unnamed peptide ADAM2_014179
+ADAM2_014180,Unnamed peptide ADAM2_014180
+ADAM2_014181,Unnamed peptide ADAM2_014181
+ADAM2_014194,Unnamed peptide ADAM2_014194
+ADAM2_014195,Unnamed peptide ADAM2_014195
+ADAM2_014196,Unnamed peptide ADAM2_014196
+ADAM2_014197,Unnamed peptide ADAM2_014197
+ADAM2_014198,Unnamed peptide ADAM2_014198
+ADAM2_014199,Unnamed peptide ADAM2_014199
+ADAM2_014200,Unnamed peptide ADAM2_014200
+ADAM2_014201,Unnamed peptide ADAM2_014201
+ADAM2_014207,Unnamed peptide ADAM2_014207
+ADAM2_014214,Unnamed peptide ADAM2_014214
+ADAM2_014215,Unnamed peptide ADAM2_014215
+ADAM2_014216,Unnamed peptide ADAM2_014216
+ADAM2_014217,Unnamed peptide ADAM2_014217
+ADAM2_014218,Unnamed peptide ADAM2_014218
+ADAM2_014219,Unnamed peptide ADAM2_014219
+ADAM2_014221,Unnamed peptide ADAM2_014221
+ADAM2_014222,Unnamed peptide ADAM2_014222
+ADAM2_014223,Unnamed peptide ADAM2_014223
+ADAM2_014224,Unnamed peptide ADAM2_014224
+ADAM2_014225,Unnamed peptide ADAM2_014225
+ADAM2_014226,Unnamed peptide ADAM2_014226
+ADAM2_014227,Unnamed peptide ADAM2_014227
+ADAM2_014228,Unnamed peptide ADAM2_014228
+ADAM2_014229,Unnamed peptide ADAM2_014229
+ADAM2_014230,Unnamed peptide ADAM2_014230
+ADAM2_014231,Unnamed peptide ADAM2_014231
+ADAM2_014232,Unnamed peptide ADAM2_014232
+ADAM2_014233,Unnamed peptide ADAM2_014233
+ADAM2_014234,Unnamed peptide ADAM2_014234
+ADAM2_014235,Unnamed peptide ADAM2_014235
+ADAM2_014236,Unnamed peptide ADAM2_014236
+ADAM2_014282,Unnamed peptide ADAM2_014282
+ADAM2_014295,Unnamed peptide ADAM2_014295
+ADAM2_014296,Unnamed peptide ADAM2_014296
+ADAM2_014297,Unnamed peptide ADAM2_014297
+ADAM2_014298,Unnamed peptide ADAM2_014298
+ADAM2_014299,Unnamed peptide ADAM2_014299
+ADAM2_014300,Unnamed peptide ADAM2_014300
+ADAM2_014301,Unnamed peptide ADAM2_014301
+ADAM2_014302,Unnamed peptide ADAM2_014302
+ADAM2_014303,Unnamed peptide ADAM2_014303
+ADAM2_014304,Unnamed peptide ADAM2_014304
+ADAM2_014305,Unnamed peptide ADAM2_014305
+ADAM2_014306,Unnamed peptide ADAM2_014306
+ADAM2_014307,Unnamed peptide ADAM2_014307
+ADAM2_014308,Unnamed peptide ADAM2_014308
+ADAM2_014326,Unnamed peptide ADAM2_014326
+ADAM2_014327,Unnamed peptide ADAM2_014327
+ADAM2_014328,Unnamed peptide ADAM2_014328
+ADAM2_014329,Unnamed peptide ADAM2_014329
+ADAM2_014330,Unnamed peptide ADAM2_014330
+ADAM2_014331,Unnamed peptide ADAM2_014331
+ADAM2_014332,Unnamed peptide ADAM2_014332
+ADAM2_014334,Unnamed peptide ADAM2_014334
+ADAM2_014335,Unnamed peptide ADAM2_014335
+ADAM2_014336,Unnamed peptide ADAM2_014336
+ADAM2_014337,Unnamed peptide ADAM2_014337
+ADAM2_014338,Unnamed peptide ADAM2_014338
+ADAM2_014339,Unnamed peptide ADAM2_014339
+ADAM2_014340,Unnamed peptide ADAM2_014340
+ADAM2_014341,Unnamed peptide ADAM2_014341
+ADAM2_014348,Unnamed peptide ADAM2_014348
+ADAM2_014349,Unnamed peptide ADAM2_014349
+ADAM2_014350,Unnamed peptide ADAM2_014350
+ADAM2_014351,Unnamed peptide ADAM2_014351
+ADAM2_014352,Unnamed peptide ADAM2_014352
+ADAM2_014353,Unnamed peptide ADAM2_014353
+ADAM2_014370,Unnamed peptide ADAM2_014370
+ADAM2_014374,Unnamed peptide ADAM2_014374
+ADAM2_014375,Unnamed peptide ADAM2_014375
+ADAM2_014376,Unnamed peptide ADAM2_014376
+ADAM2_014377,Unnamed peptide ADAM2_014377
+ADAM2_014378,Unnamed peptide ADAM2_014378
+ADAM2_014386,Unnamed peptide ADAM2_014386
+ADAM2_014388,Unnamed peptide ADAM2_014388
+ADAM2_014390,Unnamed peptide ADAM2_014390
+ADAM2_014395,Unnamed peptide ADAM2_014395
+ADAM2_014396,Unnamed peptide ADAM2_014396
+ADAM2_014397,Unnamed peptide ADAM2_014397
+ADAM2_014398,Unnamed peptide ADAM2_014398
+ADAM2_014399,Unnamed peptide ADAM2_014399
+ADAM2_014400,Unnamed peptide ADAM2_014400
+ADAM2_014401,Unnamed peptide ADAM2_014401
+ADAM2_014402,Unnamed peptide ADAM2_014402
+ADAM2_014405,Unnamed peptide ADAM2_014405
+ADAM2_014406,Unnamed peptide ADAM2_014406
+ADAM2_014407,Unnamed peptide ADAM2_014407
+ADAM2_014408,Unnamed peptide ADAM2_014408
+ADAM2_014433,Unnamed peptide ADAM2_014433
+ADAM2_014434,Unnamed peptide ADAM2_014434
+ADAM2_014435,Unnamed peptide ADAM2_014435
+ADAM2_014492,Unnamed peptide ADAM2_014492
+ADAM2_014509,Unnamed peptide ADAM2_014509
+ADAM2_014510,Unnamed peptide ADAM2_014510
+ADAM2_014513,Unnamed peptide ADAM2_014513
+ADAM2_014514,Unnamed peptide ADAM2_014514
+ADAM2_014515,Unnamed peptide ADAM2_014515
+ADAM2_014516,Unnamed peptide ADAM2_014516
+ADAM2_014517,Unnamed peptide ADAM2_014517
+ADAM2_014518,Unnamed peptide ADAM2_014518
+ADAM2_014519,Unnamed peptide ADAM2_014519
+ADAM2_014520,Unnamed peptide ADAM2_014520
+ADAM2_014521,Unnamed peptide ADAM2_014521
+ADAM2_014522,Unnamed peptide ADAM2_014522
+ADAM2_014523,Unnamed peptide ADAM2_014523
+ADAM2_014524,Unnamed peptide ADAM2_014524
+ADAM2_014525,Unnamed peptide ADAM2_014525
+ADAM2_014526,Unnamed peptide ADAM2_014526
+ADAM2_014527,Unnamed peptide ADAM2_014527
+ADAM2_014528,Unnamed peptide ADAM2_014528
+ADAM2_014570,Unnamed peptide ADAM2_014570
+ADAM2_014571,Unnamed peptide ADAM2_014571
+ADAM2_014572,Unnamed peptide ADAM2_014572
+ADAM2_014573,Unnamed peptide ADAM2_014573
+ADAM2_014574,Unnamed peptide ADAM2_014574
+ADAM2_014575,Unnamed peptide ADAM2_014575
+ADAM2_014576,Unnamed peptide ADAM2_014576
+ADAM2_014577,Unnamed peptide ADAM2_014577
+ADAM2_014578,Unnamed peptide ADAM2_014578
+ADAM2_014579,Unnamed peptide ADAM2_014579
+ADAM2_014580,Unnamed peptide ADAM2_014580
+ADAM2_014581,Unnamed peptide ADAM2_014581
+ADAM2_014582,Unnamed peptide ADAM2_014582
+ADAM2_014583,Unnamed peptide ADAM2_014583
+ADAM2_014584,Unnamed peptide ADAM2_014584
+ADAM2_014601,Unnamed peptide ADAM2_014601
+ADAM2_014602,Unnamed peptide ADAM2_014602
+ADAM2_014603,Unnamed peptide ADAM2_014603
+ADAM2_014604,Unnamed peptide ADAM2_014604
+ADAM2_014605,Unnamed peptide ADAM2_014605
+ADAM2_014606,Unnamed peptide ADAM2_014606
+ADAM2_014607,Unnamed peptide ADAM2_014607
+ADAM2_014608,Unnamed peptide ADAM2_014608
+ADAM2_014609,Unnamed peptide ADAM2_014609
+ADAM2_014610,Unnamed peptide ADAM2_014610
+ADAM2_014611,Unnamed peptide ADAM2_014611
+ADAM2_014612,Unnamed peptide ADAM2_014612
+ADAM2_014613,Unnamed peptide ADAM2_014613
+ADAM2_014614,Unnamed peptide ADAM2_014614
+ADAM2_014615,Unnamed peptide ADAM2_014615
+ADAM2_014616,Unnamed peptide ADAM2_014616
+ADAM2_014617,Unnamed peptide ADAM2_014617
+ADAM2_014618,Unnamed peptide ADAM2_014618
+ADAM2_014619,Unnamed peptide ADAM2_014619
+ADAM2_014620,Unnamed peptide ADAM2_014620
+ADAM2_014621,Unnamed peptide ADAM2_014621
+ADAM2_014622,Unnamed peptide ADAM2_014622
+ADAM2_014623,Unnamed peptide ADAM2_014623
+ADAM2_014624,Unnamed peptide ADAM2_014624
+ADAM2_014628,Unnamed peptide ADAM2_014628
+ADAM2_014631,Unnamed peptide ADAM2_014631
+ADAM2_014637,Unnamed peptide ADAM2_014637
+ADAM2_014639,Unnamed peptide ADAM2_014639
+ADAM2_014640,Unnamed peptide ADAM2_014640
+ADAM2_014641,Unnamed peptide ADAM2_014641
+ADAM2_014642,Unnamed peptide ADAM2_014642
+ADAM2_014643,Unnamed peptide ADAM2_014643
+ADAM2_014644,Unnamed peptide ADAM2_014644
+ADAM2_014645,Unnamed peptide ADAM2_014645
+ADAM2_014646,Unnamed peptide ADAM2_014646
+ADAM2_014647,Unnamed peptide ADAM2_014647
+ADAM2_014648,Unnamed peptide ADAM2_014648
+ADAM2_014649,Unnamed peptide ADAM2_014649
+ADAM2_014650,Unnamed peptide ADAM2_014650
+ADAM2_014651,Unnamed peptide ADAM2_014651
+ADAM2_014652,Unnamed peptide ADAM2_014652
+ADAM2_014653,Unnamed peptide ADAM2_014653
+ADAM2_014654,Unnamed peptide ADAM2_014654
+ADAM2_014657,Unnamed peptide ADAM2_014657
+ADAM2_014658,Unnamed peptide ADAM2_014658
+ADAM2_014659,Unnamed peptide ADAM2_014659
+ADAM2_014660,Unnamed peptide ADAM2_014660
+ADAM2_014661,Unnamed peptide ADAM2_014661
+ADAM2_014662,Unnamed peptide ADAM2_014662
+ADAM2_014664,Unnamed peptide ADAM2_014664
+ADAM2_014674,Unnamed peptide ADAM2_014674
+ADAM2_014675,Unnamed peptide ADAM2_014675
+ADAM2_014676,Unnamed peptide ADAM2_014676
+ADAM2_014702,Unnamed peptide ADAM2_014702
+ADAM2_014703,Unnamed peptide ADAM2_014703
+ADAM2_014704,Unnamed peptide ADAM2_014704
+ADAM2_014706,Unnamed peptide ADAM2_014706
+ADAM2_014707,Unnamed peptide ADAM2_014707
+ADAM2_014708,Unnamed peptide ADAM2_014708
+ADAM2_014709,Unnamed peptide ADAM2_014709
+ADAM2_014925,Unnamed peptide ADAM2_014925
+ADAM2_014926,Unnamed peptide ADAM2_014926
+ADAM2_014931,Unnamed peptide ADAM2_014931
+ADAM2_014932,Unnamed peptide ADAM2_014932
+ADAM2_014933,Unnamed peptide ADAM2_014933
+ADAM2_014936,Unnamed peptide ADAM2_014936
+ADAM2_014942,Unnamed peptide ADAM2_014942
+ADAM2_014950,Unnamed peptide ADAM2_014950
+ADAM2_014968,Unnamed peptide ADAM2_014968
+ADAM2_014984,Unnamed peptide ADAM2_014984
+ADAM2_015011,Unnamed peptide ADAM2_015011
+ADAM2_015064,Antimicrobial peptide (suggested)
+ADAM2_015072,Unnamed peptide ADAM2_015072
+ADAM2_015073,Unnamed peptide ADAM2_015073
+ADAM2_015093,Unnamed peptide ADAM2_015093
+ADAM2_015109,Unnamed peptide ADAM2_015109
+ADAM2_015110,Unnamed peptide ADAM2_015110
+ADAM2_015111,Unnamed peptide ADAM2_015111
+ADAM2_015155,Antimicrobial peptide 2 (suggested)
+ADAM2_015176,Unnamed peptide ADAM2_015176
+ADAM2_015177,Unnamed peptide ADAM2_015177
+ADAM2_015178,Unnamed peptide ADAM2_015178
+ADAM2_015184,Unnamed peptide ADAM2_015184
+ADAM2_015188,Unnamed peptide ADAM2_015188
+ADAM2_015189,Unnamed peptide ADAM2_015189
+ADAM2_015207,Unnamed peptide ADAM2_015207
+ADAM2_015214,Unnamed peptide ADAM2_015214
+ADAM2_015215,Unnamed peptide ADAM2_015215
+ADAM2_015216,Unnamed peptide ADAM2_015216
+ADAM2_015217,Unnamed peptide ADAM2_015217
+ADAM2_015220,Unnamed peptide ADAM2_015220
+ADAM2_015232,Unnamed peptide ADAM2_015232
+ADAM2_015233,Unnamed peptide ADAM2_015233
+ADAM2_015234,Unnamed peptide ADAM2_015234
+ADAM2_015235,Unnamed peptide ADAM2_015235
+ADAM2_015242,Unnamed peptide ADAM2_015242
+ADAM2_015243,Unnamed peptide ADAM2_015243
+ADAM2_015244,Unnamed peptide ADAM2_015244
+ADAM2_015245,Unnamed peptide ADAM2_015245
+ADAM2_015246,Unnamed peptide ADAM2_015246
+ADAM2_015254,Unnamed peptide ADAM2_015254
+ADAM2_015260,Unnamed peptide ADAM2_015260
+ADAM2_015261,Unnamed peptide ADAM2_015261
+ADAM2_015262,Unnamed peptide ADAM2_015262
+ADAM2_015263,Unnamed peptide ADAM2_015263
+ADAM2_015264,Unnamed peptide ADAM2_015264
+ADAM2_015279,Unnamed peptide ADAM2_015279
+ADAM2_015283,Unnamed peptide ADAM2_015283
+ADAM2_015284,Unnamed peptide ADAM2_015284
+ADAM2_015285,Unnamed peptide ADAM2_015285
+ADAM2_015286,Unnamed peptide ADAM2_015286
+ADAM2_015287,Unnamed peptide ADAM2_015287
+ADAM2_015288,Unnamed peptide ADAM2_015288
+ADAM2_015289,Unnamed peptide ADAM2_015289
+ADAM2_015290,Unnamed peptide ADAM2_015290
+ADAM2_015291,Unnamed peptide ADAM2_015291
+ADAM2_015292,Unnamed peptide ADAM2_015292
+ADAM2_015293,Unnamed peptide ADAM2_015293
+ADAM2_015295,Unnamed peptide ADAM2_015295
+ADAM2_015327,Unnamed peptide ADAM2_015327
+ADAM2_015371,Unnamed peptide ADAM2_015371
+ADAM2_015372,Unnamed peptide ADAM2_015372
+ADAM2_015380,Unnamed peptide ADAM2_015380
+ADAM2_015384,Unnamed peptide ADAM2_015384
+ADAM2_015400,Unnamed peptide ADAM2_015400
+ADAM2_015401,Unnamed peptide ADAM2_015401
+ADAM2_015402,Unnamed peptide ADAM2_015402
+ADAM2_015403,Unnamed peptide ADAM2_015403
+ADAM2_015423,Unnamed peptide ADAM2_015423
+ADAM2_015433,Unnamed peptide ADAM2_015433
+ADAM2_015443,Unnamed peptide ADAM2_015443
+ADAM2_015471,Antimicrobial peptide 1 (suggested)
+ADAM2_015478,Unnamed peptide ADAM2_015478
+ADAM2_015479,Unnamed peptide ADAM2_015479
+ADAM2_015491,Unnamed peptide ADAM2_015491
+ADAM2_015497,Unnamed peptide ADAM2_015497
+ADAM2_015498,Unnamed peptide ADAM2_015498
+ADAM2_015500,Unnamed peptide ADAM2_015500
+ADAM2_015501,Unnamed peptide ADAM2_015501
+ADAM2_015502,Unnamed peptide ADAM2_015502
+ADAM2_015503,Unnamed peptide ADAM2_015503
+ADAM2_015505,Unnamed peptide ADAM2_015505
+ADAM2_015506,Unnamed peptide ADAM2_015506
+ADAM2_015507,Unnamed peptide ADAM2_015507
+ADAM2_015510,Unnamed peptide ADAM2_015510
+ADAM2_015511,Unnamed peptide ADAM2_015511
+ADAM2_015512,Unnamed peptide ADAM2_015512
+ADAM2_015513,Unnamed peptide ADAM2_015513
+ADAM2_015514,Unnamed peptide ADAM2_015514
+ADAM2_015515,Unnamed peptide ADAM2_015515
+ADAM2_015518,Unnamed peptide ADAM2_015518
+ADAM2_015520,Unnamed peptide ADAM2_015520
+ADAM2_015521,Unnamed peptide ADAM2_015521
+ADAM2_015522,Unnamed peptide ADAM2_015522
+ADAM2_015523,Unnamed peptide ADAM2_015523
+ADAM2_015524,Unnamed peptide ADAM2_015524
+ADAM2_015525,Unnamed peptide ADAM2_015525
+ADAM2_015526,Unnamed peptide ADAM2_015526
+ADAM2_015527,Unnamed peptide ADAM2_015527
+ADAM2_015528,Unnamed peptide ADAM2_015528
+ADAM2_015529,Unnamed peptide ADAM2_015529
+ADAM2_015530,Unnamed peptide ADAM2_015530
+ADAM2_015531,Unnamed peptide ADAM2_015531
+ADAM2_015532,Unnamed peptide ADAM2_015532
+ADAM2_015533,Unnamed peptide ADAM2_015533
+ADAM2_015534,Unnamed peptide ADAM2_015534
+ADAM2_015535,Unnamed peptide ADAM2_015535
+ADAM2_015536,Unnamed peptide ADAM2_015536
+ADAM2_015537,Unnamed peptide ADAM2_015537
+ADAM2_015538,Unnamed peptide ADAM2_015538
+ADAM2_015539,Unnamed peptide ADAM2_015539
+ADAM2_015540,Unnamed peptide ADAM2_015540
+ADAM2_015541,Unnamed peptide ADAM2_015541
+ADAM2_015542,Unnamed peptide ADAM2_015542
+ADAM2_015543,Unnamed peptide ADAM2_015543
+ADAM2_015544,Unnamed peptide ADAM2_015544
+ADAM2_015545,Unnamed peptide ADAM2_015545
+ADAM2_015546,Unnamed peptide ADAM2_015546
+ADAM2_015547,Unnamed peptide ADAM2_015547
+ADAM2_015552,Unnamed peptide ADAM2_015552
+ADAM2_015553,Unnamed peptide ADAM2_015553
+ADAM2_015554,Unnamed peptide ADAM2_015554
+ADAM2_015555,Unnamed peptide ADAM2_015555
+ADAM2_015556,Unnamed peptide ADAM2_015556
+ADAM2_015557,Unnamed peptide ADAM2_015557
+ADAM2_015558,Unnamed peptide ADAM2_015558
+ADAM2_015559,Unnamed peptide ADAM2_015559
+ADAM2_015560,Unnamed peptide ADAM2_015560
+ADAM2_015561,Unnamed peptide ADAM2_015561
+ADAM2_015562,Unnamed peptide ADAM2_015562
+ADAM2_015563,Unnamed peptide ADAM2_015563
+ADAM2_015564,Unnamed peptide ADAM2_015564
+ADAM2_015565,Unnamed peptide ADAM2_015565
+ADAM2_015566,Unnamed peptide ADAM2_015566
+ADAM2_015567,Unnamed peptide ADAM2_015567
+ADAM2_015568,Unnamed peptide ADAM2_015568
+ADAM2_015569,Unnamed peptide ADAM2_015569
+ADAM2_015570,Unnamed peptide ADAM2_015570
+ADAM2_015571,Unnamed peptide ADAM2_015571
+ADAM2_015572,Unnamed peptide ADAM2_015572
+ADAM2_015576,Unnamed peptide ADAM2_015576
+ADAM2_015577,Unnamed peptide ADAM2_015577
+ADAM2_015578,Unnamed peptide ADAM2_015578
+ADAM2_015579,Unnamed peptide ADAM2_015579
+ADAM2_015580,Unnamed peptide ADAM2_015580
+ADAM2_015581,Unnamed peptide ADAM2_015581
+ADAM2_015582,Unnamed peptide ADAM2_015582
+ADAM2_015583,Unnamed peptide ADAM2_015583
+ADAM2_015585,Unnamed peptide ADAM2_015585
+ADAM2_015587,Unnamed peptide ADAM2_015587
+ADAM2_015588,Unnamed peptide ADAM2_015588
+ADAM2_015589,Unnamed peptide ADAM2_015589
+ADAM2_015590,Unnamed peptide ADAM2_015590
+ADAM2_015591,Unnamed peptide ADAM2_015591
+ADAM2_015592,Unnamed peptide ADAM2_015592
+ADAM2_015593,Unnamed peptide ADAM2_015593
+ADAM2_015595,Unnamed peptide ADAM2_015595
+ADAM2_015596,Unnamed peptide ADAM2_015596
+ADAM2_015597,Unnamed peptide ADAM2_015597
+ADAM2_015598,Unnamed peptide ADAM2_015598
+ADAM2_015599,Unnamed peptide ADAM2_015599
+ADAM2_015600,Unnamed peptide ADAM2_015600
+ADAM2_015601,Unnamed peptide ADAM2_015601
+ADAM2_015602,Unnamed peptide ADAM2_015602
+ADAM2_015603,Unnamed peptide ADAM2_015603
+ADAM2_015606,D-R7 (suggested)
+ADAM2_015607,Unnamed peptide ADAM2_015607
+ADAM2_015608,Unnamed peptide ADAM2_015608
+ADAM2_015609,Unnamed peptide ADAM2_015609
+ADAM2_015610,Unnamed peptide ADAM2_015610
+ADAM2_015611,Unnamed peptide ADAM2_015611
+ADAM2_015612,Unnamed peptide ADAM2_015612
+ADAM2_015625,Unnamed peptide ADAM2_015625
+ADAM2_015626,Unnamed peptide ADAM2_015626
+ADAM2_015627,Unnamed peptide ADAM2_015627
+ADAM2_015628,Unnamed peptide ADAM2_015628
+ADAM2_015629,Unnamed peptide ADAM2_015629
+ADAM2_015630,Unnamed peptide ADAM2_015630
+ADAM2_015631,Unnamed peptide ADAM2_015631
+ADAM2_015632,Unnamed peptide ADAM2_015632
+ADAM2_015633,Unnamed peptide ADAM2_015633
+ADAM2_015634,Unnamed peptide ADAM2_015634
+ADAM2_015635,Unnamed peptide ADAM2_015635
+ADAM2_015636,Unnamed peptide ADAM2_015636
+ADAM2_015637,Unnamed peptide ADAM2_015637
+ADAM2_015638,Unnamed peptide ADAM2_015638
+ADAM2_015643,Unnamed peptide ADAM2_015643
+ADAM2_015644,Unnamed peptide ADAM2_015644
+ADAM2_015645,Unnamed peptide ADAM2_015645
+ADAM2_015665,Antimicrobial peptide 3 (suggested)
+ADAM2_015667,Unnamed peptide ADAM2_015667
+ADAM2_015668,Unnamed peptide ADAM2_015668
+ADAM2_015669,Unnamed peptide ADAM2_015669
+ADAM2_015670,Unnamed peptide ADAM2_015670
+ADAM2_015676,Unnamed peptide ADAM2_015676
+ADAM2_015677,Unnamed peptide ADAM2_015677
+ADAM2_015678,Unnamed peptide ADAM2_015678
+ADAM2_015679,Unnamed peptide ADAM2_015679
+ADAM2_015680,Unnamed peptide ADAM2_015680
+ADAM2_015681,Unnamed peptide ADAM2_015681
+ADAM2_015682,Unnamed peptide ADAM2_015682
+ADAM2_015683,Unnamed peptide ADAM2_015683
+ADAM2_015684,Unnamed peptide ADAM2_015684
+ADAM2_015685,Unnamed peptide ADAM2_015685
+ADAM2_015686,Unnamed peptide ADAM2_015686
+ADAM2_015687,Unnamed peptide ADAM2_015687
+ADAM2_015704,Unnamed peptide ADAM2_015704
+ADAM2_015705,Unnamed peptide ADAM2_015705
+ADAM2_015721,Unnamed peptide ADAM2_015721
+ADAM2_015722,Unnamed peptide ADAM2_015722
+ADAM2_015723,Unnamed peptide ADAM2_015723
+ADAM2_015724,Unnamed peptide ADAM2_015724
+ADAM2_015725,Unnamed peptide ADAM2_015725
+ADAM2_015726,Unnamed peptide ADAM2_015726
+ADAM2_015727,Unnamed peptide ADAM2_015727
+ADAM2_015732,Unnamed peptide ADAM2_015732
+ADAM2_015733,Unnamed peptide ADAM2_015733
+ADAM2_015734,Unnamed peptide ADAM2_015734
+ADAM2_015735,Unnamed peptide ADAM2_015735
+ADAM2_015736,Unnamed peptide ADAM2_015736
+ADAM2_015737,Unnamed peptide ADAM2_015737
+ADAM2_015738,Unnamed peptide ADAM2_015738
+ADAM2_015739,Unnamed peptide ADAM2_015739
+ADAM2_015740,Unnamed peptide ADAM2_015740
+ADAM2_015741,Unnamed peptide ADAM2_015741
+ADAM2_015742,Unnamed peptide ADAM2_015742
+ADAM2_015743,Unnamed peptide ADAM2_015743
+ADAM2_015744,Unnamed peptide ADAM2_015744
+ADAM2_015745,Unnamed peptide ADAM2_015745
+ADAM2_015746,Unnamed peptide ADAM2_015746
+ADAM2_015747,Unnamed peptide ADAM2_015747
+ADAM2_015748,Unnamed peptide ADAM2_015748
+ADAM2_015751,Unnamed peptide ADAM2_015751
+ADAM2_015752,Unnamed peptide ADAM2_015752
+ADAM2_015753,Unnamed peptide ADAM2_015753
+ADAM2_015754,Unnamed peptide ADAM2_015754
+ADAM2_015755,Unnamed peptide ADAM2_015755
+ADAM2_015756,Unnamed peptide ADAM2_015756
+ADAM2_015761,Unnamed peptide ADAM2_015761
+ADAM2_015765,Unnamed peptide ADAM2_015765
+ADAM2_015766,Unnamed peptide ADAM2_015766
+ADAM2_015767,Unnamed peptide ADAM2_015767
+ADAM2_015768,Unnamed peptide ADAM2_015768
+ADAM2_015769,Unnamed peptide ADAM2_015769
+ADAM2_015770,Unnamed peptide ADAM2_015770
+ADAM2_015772,Unnamed peptide ADAM2_015772
+ADAM2_015773,Unnamed peptide ADAM2_015773
+ADAM2_015774,Unnamed peptide ADAM2_015774
+ADAM2_015775,Unnamed peptide ADAM2_015775
+ADAM2_015776,Unnamed peptide ADAM2_015776
+ADAM2_015778,Unnamed peptide ADAM2_015778
+ADAM2_015779,Unnamed peptide ADAM2_015779
+ADAM2_015781,Unnamed peptide ADAM2_015781
+ADAM2_015785,Unnamed peptide ADAM2_015785
+ADAM2_015786,Unnamed peptide ADAM2_015786
+ADAM2_015787,Unnamed peptide ADAM2_015787
+ADAM2_015788,Unnamed peptide ADAM2_015788
+ADAM2_015789,Unnamed peptide ADAM2_015789
+ADAM2_015790,Unnamed peptide ADAM2_015790
+ADAM2_015791,Unnamed peptide ADAM2_015791
+ADAM2_015797,Unnamed peptide ADAM2_015797
+ADAM2_015798,Unnamed peptide ADAM2_015798
+ADAM2_015799,Unnamed peptide ADAM2_015799
+ADAM2_015800,Unnamed peptide ADAM2_015800
+ADAM2_015801,Unnamed peptide ADAM2_015801
+ADAM2_015802,Unnamed peptide ADAM2_015802
+ADAM2_015803,Unnamed peptide ADAM2_015803
+ADAM2_015807,Unnamed peptide ADAM2_015807
+ADAM2_015808,Unnamed peptide ADAM2_015808
+ADAM2_015809,Unnamed peptide ADAM2_015809
+ADAM2_015810,Unnamed peptide ADAM2_015810
+ADAM2_015812,Unnamed peptide ADAM2_015812
+ADAM2_015813,Unnamed peptide ADAM2_015813
+ADAM2_015814,Unnamed peptide ADAM2_015814
+ADAM2_015819,Unnamed peptide ADAM2_015819
+ADAM2_015838,Unnamed peptide ADAM2_015838
+ADAM2_015839,Unnamed peptide ADAM2_015839
+ADAM2_015840,Unnamed peptide ADAM2_015840
+ADAM2_015844,Phomopsis sp. K38 Alternaria sp. E33
+ADAM2_015847,Unnamed peptide ADAM2_015847
+ADAM2_015848,Unnamed peptide ADAM2_015848
+ADAM2_015851,Unnamed peptide ADAM2_015851
+ADAM2_015856,Unnamed peptide ADAM2_015856
+ADAM2_015857,Unnamed peptide ADAM2_015857
+ADAM2_015862,Unnamed peptide ADAM2_015862
+ADAM2_015863,Unnamed peptide ADAM2_015863
+ADAM2_015864,Unnamed peptide ADAM2_015864
+ADAM2_015865,Unnamed peptide ADAM2_015865
+ADAM2_015866,Unnamed peptide ADAM2_015866
+ADAM2_015869,Unnamed peptide ADAM2_015869
+ADAM2_015870,Unnamed peptide ADAM2_015870
+ADAM2_015871,Unnamed peptide ADAM2_015871
+ADAM2_015872,Unnamed peptide ADAM2_015872
+ADAM2_015873,Unnamed peptide ADAM2_015873
+ADAM2_015874,Unnamed peptide ADAM2_015874
+ADAM2_015875,Unnamed peptide ADAM2_015875
+ADAM2_015876,Unnamed peptide ADAM2_015876
+ADAM2_015877,Unnamed peptide ADAM2_015877
+ADAM2_015878,Unnamed peptide ADAM2_015878
+ADAM2_015879,Unnamed peptide ADAM2_015879
+ADAM2_015880,Unnamed peptide ADAM2_015880
+ADAM2_015881,Unnamed peptide ADAM2_015881
+ADAM2_015882,Unnamed peptide ADAM2_015882
+ADAM2_015883,Unnamed peptide ADAM2_015883
+ADAM2_015885,Unnamed peptide ADAM2_015885
+ADAM2_015886,Unnamed peptide ADAM2_015886
+ADAM2_015887,Unnamed peptide ADAM2_015887
+ADAM2_015888,Unnamed peptide ADAM2_015888
+ADAM2_015890,Unnamed peptide ADAM2_015890
+ADAM2_015892,Unnamed peptide ADAM2_015892
+ADAM2_015896,Unnamed peptide ADAM2_015896
+ADAM2_015904,Unnamed peptide ADAM2_015904
+ADAM2_015905,Unnamed peptide ADAM2_015905
+ADAM2_015906,Unnamed peptide ADAM2_015906
+ADAM2_015907,Unnamed peptide ADAM2_015907
+ADAM2_015910,Unnamed peptide ADAM2_015910
+ADAM2_015911,Unnamed peptide ADAM2_015911
+ADAM2_015912,Unnamed peptide ADAM2_015912
+ADAM2_015917,Unnamed peptide ADAM2_015917
+ADAM2_015919,Unnamed peptide ADAM2_015919
+ADAM2_015932,Unnamed peptide ADAM2_015932
+ADAM2_015934,Unnamed peptide ADAM2_015934
+ADAM2_015935,Unnamed peptide ADAM2_015935
+ADAM2_015938,Unnamed peptide ADAM2_015938
+ADAM2_015939,Unnamed peptide ADAM2_015939
+ADAM2_015940,Unnamed peptide ADAM2_015940
+ADAM2_015941,Unnamed peptide ADAM2_015941
+ADAM2_015942,Unnamed peptide ADAM2_015942
+ADAM2_015943,Unnamed peptide ADAM2_015943
+ADAM2_015945,Unnamed peptide ADAM2_015945
+ADAM2_015946,Unnamed peptide ADAM2_015946
+ADAM2_015947,Unnamed peptide ADAM2_015947
+ADAM2_015953,Unnamed peptide ADAM2_015953
+ADAM2_015954,Unnamed peptide ADAM2_015954
+ADAM2_015955,Unnamed peptide ADAM2_015955
+ADAM2_015956,Unnamed peptide ADAM2_015956
+ADAM2_015957,Unnamed peptide ADAM2_015957
+ADAM2_015958,Unnamed peptide ADAM2_015958
+ADAM2_015959,Unnamed peptide ADAM2_015959
+ADAM2_015960,Unnamed peptide ADAM2_015960
+ADAM2_015966,Unnamed peptide ADAM2_015966
+ADAM2_015967,Unnamed peptide ADAM2_015967
+ADAM2_015968,Unnamed peptide ADAM2_015968
+ADAM2_015978,Unnamed peptide ADAM2_015978
+ADAM2_015985,Unnamed peptide ADAM2_015985
+ADAM2_015986,Unnamed peptide ADAM2_015986
+ADAM2_015987,Unnamed peptide ADAM2_015987
+ADAM2_015990,Unnamed peptide ADAM2_015990
+ADAM2_016140,Unnamed peptide ADAM2_016140
+ADAM2_016141,Unnamed peptide ADAM2_016141
+ADAM2_016142,Unnamed peptide ADAM2_016142
+ADAM2_016157,Unnamed peptide ADAM2_016157
+ADAM2_016158,Unnamed peptide ADAM2_016158
+ADAM2_016159,Unnamed peptide ADAM2_016159
+ADAM2_016160,Unnamed peptide ADAM2_016160
+ADAM2_016161,Unnamed peptide ADAM2_016161
+ADAM2_016162,Unnamed peptide ADAM2_016162
+ADAM2_016164,Unnamed peptide ADAM2_016164
+ADAM2_016169,Unnamed peptide ADAM2_016169
+ADAM2_016170,Unnamed peptide ADAM2_016170
+ADAM2_016179,Unnamed peptide ADAM2_016179
+ADAM2_016393,Unnamed peptide ADAM2_016393
+ADAM2_016474,Unnamed peptide ADAM2_016474
+ADAM2_016485,"Chain C, Structure Of Hiv-1 Gp41 NhrFUSION INHIBITOR COMPLEX P321 (suggested)"
+ADAM2_016521,Unnamed peptide ADAM2_016521
+ADAM2_016529,Unnamed peptide ADAM2_016529
+ADAM2_016551,Unnamed peptide ADAM2_016551
+ADAM2_016559,Unnamed peptide ADAM2_016559
+ADAM2_016560,Unnamed peptide ADAM2_016560
+ADAM2_016589,Unnamed peptide ADAM2_016589
+ADAM2_016592,Unnamed peptide ADAM2_016592
+ADAM2_016593,Unnamed peptide ADAM2_016593
+ADAM2_016594,Unnamed peptide ADAM2_016594
+ADAM2_016595,Unnamed peptide ADAM2_016595
+ADAM2_016596,Unnamed peptide ADAM2_016596
+ADAM2_016597,Unnamed peptide ADAM2_016597
+ADAM2_016606,"Chain A, Crystal Structure Of The D10-p1/iqn17 Complex: A D-peptide Inhibitor Of Hiv-1 Entry Bound To The Gp41 Coiled-coil Pocket. (suggested)"
+ADAM2_016607,Unnamed peptide ADAM2_016607
+ADAM2_016668,Unnamed peptide ADAM2_016668
+ADAM2_016673,Unnamed peptide ADAM2_016673
+ADAM2_016725,Unnamed peptide ADAM2_016725
+ADAM2_016726,Unnamed peptide ADAM2_016726
+ADAM2_016727,Unnamed peptide ADAM2_016727
+ADAM2_016728,Unnamed peptide ADAM2_016728
+ADAM2_016776,envelope glycoprotein (suggested)
+ADAM2_016777,envelope glycoprotein (suggested)
+ADAM2_016778,"Chain A, Hiv Gp41 Six-Helix Bundle Composed Of A Chimeric Alpha+alphaBETA- Peptide Analogue Of The Chr Domain In Complex With An Nhr Domain Alpha-Peptide (suggested)"
+ADAM2_016781,Unnamed peptide ADAM2_016781
+ADAM2_016847,Sifuvirtide (SFT)
+ADAM2_016855,envelope glycoprotein (suggested)
+ADAM2_016856,Env glycoprotein (suggested)
+ADAM2_016877,Unnamed peptide ADAM2_016877
+ADAM2_016878,Unnamed peptide ADAM2_016878
+ADAM2_016879,Unnamed peptide ADAM2_016879
+ADAM2_016880,Unnamed peptide ADAM2_016880
+ADAM2_016881,Unnamed peptide ADAM2_016881
+ADAM2_016882,Unnamed peptide ADAM2_016882
+ADAM2_016883,Unnamed peptide ADAM2_016883
+ADAM2_016894,Unnamed peptide ADAM2_016894
+ADAM2_016895,Unnamed peptide ADAM2_016895
+ADAM2_016896,Unnamed peptide ADAM2_016896
+ADAM2_016897,Unnamed peptide ADAM2_016897
+ADAM2_016909,envelope glycoprotein (suggested)
+ADAM2_016910,Unnamed peptide ADAM2_016910
+ADAM2_016934,Unnamed peptide ADAM2_016934
+ADAM2_016935,Unnamed peptide ADAM2_016935
+ADAM2_016936,Unnamed peptide ADAM2_016936
+ADAM2_016952,Unnamed peptide ADAM2_016952
+ADAM2_016953,Unnamed peptide ADAM2_016953
+ADAM2_016954,Unnamed peptide ADAM2_016954
+ADAM2_016955,Unnamed peptide ADAM2_016955
+ADAM2_016956,Unnamed peptide ADAM2_016956
+ADAM2_016957,Unnamed peptide ADAM2_016957
+ADAM2_016958,Unnamed peptide ADAM2_016958
+ADAM2_016959,Unnamed peptide ADAM2_016959
+ADAM2_016966,Unnamed peptide ADAM2_016966
+ADAM2_016989,"Chain A, Structure Of Reovirus Attachment Protein Sigma1 In Complex With Alpha- 2,3-Sialyllactose (suggested)"
+ADAM2_016993,Unnamed peptide ADAM2_016993
+ADAM2_017001,Unnamed peptide ADAM2_017001
+ADAM2_017002,Unnamed peptide ADAM2_017002
+ADAM2_017076,Unnamed peptide ADAM2_017076
+ADAM2_017091,Unnamed peptide ADAM2_017091
+ADAM2_017127,Unnamed peptide ADAM2_017127
+ADAM2_017152,Unnamed peptide ADAM2_017152
+ADAM2_017153,Unnamed peptide ADAM2_017153
+ADAM2_017154,Unnamed peptide ADAM2_017154
+ADAM2_017155,Unnamed peptide ADAM2_017155
+ADAM2_017176,Unnamed peptide ADAM2_017176
+ADAM2_017178,Unnamed peptide ADAM2_017178
+ADAM2_017179,Unnamed peptide ADAM2_017179
+ADAM2_017180,Unnamed peptide ADAM2_017180
+ADAM2_017181,Unnamed peptide ADAM2_017181
+ADAM2_017188,Unnamed peptide ADAM2_017188
+ADAM2_017189,Unnamed peptide ADAM2_017189
+ADAM2_017190,Unnamed peptide ADAM2_017190
+ADAM2_017191,Unnamed peptide ADAM2_017191
+ADAM2_017192,Unnamed peptide ADAM2_017192
+ADAM2_017193,Unnamed peptide ADAM2_017193
+ADAM2_017194,Unnamed peptide ADAM2_017194
+ADAM2_017195,Unnamed peptide ADAM2_017195
+ADAM2_017235,Unnamed peptide ADAM2_017235
+ADAM2_017236,Unnamed peptide ADAM2_017236
+ADAM2_017237,Unnamed peptide ADAM2_017237
+ADAM2_017238,Unnamed peptide ADAM2_017238
+ADAM2_017239,Unnamed peptide ADAM2_017239
+ADAM2_017240,Unnamed peptide ADAM2_017240
+ADAM2_017241,Unnamed peptide ADAM2_017241
+ADAM2_017248,Unnamed peptide ADAM2_017248
+ADAM2_017249,Unnamed peptide ADAM2_017249
+ADAM2_017250,Unnamed peptide ADAM2_017250
+ADAM2_017251,Unnamed peptide ADAM2_017251
+ADAM2_017252,Unnamed peptide ADAM2_017252
+ADAM2_017253,Unnamed peptide ADAM2_017253
+ADAM2_017254,Unnamed peptide ADAM2_017254
+ADAM2_017255,Unnamed peptide ADAM2_017255
+ADAM2_017256,Unnamed peptide ADAM2_017256
+ADAM2_017301,Unnamed peptide ADAM2_017301
+ADAM2_017302,Unnamed peptide ADAM2_017302
+ADAM2_017303,Unnamed peptide ADAM2_017303
+ADAM2_017304,Unnamed peptide ADAM2_017304
+ADAM2_017305,Unnamed peptide ADAM2_017305
+ADAM2_017307,Unnamed peptide ADAM2_017307
+ADAM2_017308,Unnamed peptide ADAM2_017308
+ADAM2_017309,Unnamed peptide ADAM2_017309
+ADAM2_017311,Unnamed peptide ADAM2_017311
+ADAM2_017312,Unnamed peptide ADAM2_017312
+ADAM2_017313,Unnamed peptide ADAM2_017313
+ADAM2_017316,Unnamed peptide ADAM2_017316
+ADAM2_017317,Unnamed peptide ADAM2_017317
+ADAM2_017318,Unnamed peptide ADAM2_017318
+ADAM2_017319,Unnamed peptide ADAM2_017319
+ADAM2_017320,Unnamed peptide ADAM2_017320
+ADAM2_017342,Unnamed peptide ADAM2_017342
+ADAM2_017343,Unnamed peptide ADAM2_017343
+ADAM2_017372,Unnamed peptide ADAM2_017372
+ADAM2_017376,Unnamed peptide ADAM2_017376
+ADAM2_017377,Unknown (suggested)
+ADAM2_017378,Unnamed peptide ADAM2_017378
+ADAM2_017379,Unnamed peptide ADAM2_017379
+ADAM2_017380,Unnamed peptide ADAM2_017380
+ADAM2_017381,Unnamed peptide ADAM2_017381
+ADAM2_017382,Unnamed peptide ADAM2_017382
+ADAM2_017383,Unnamed peptide ADAM2_017383
+ADAM2_017384,Unnamed peptide ADAM2_017384
+ADAM2_017385,Unnamed peptide ADAM2_017385
+ADAM2_017386,Unnamed peptide ADAM2_017386
+ADAM2_017387,Unnamed peptide ADAM2_017387
+ADAM2_017398,Unnamed peptide ADAM2_017398
+ADAM2_017399,Unnamed peptide ADAM2_017399
+ADAM2_017404,Unnamed peptide ADAM2_017404
+ADAM2_017405,Unnamed peptide ADAM2_017405
+ADAM2_017406,Unnamed peptide ADAM2_017406
+ADAM2_017407,Unnamed peptide ADAM2_017407
+ADAM2_017438,Unnamed peptide ADAM2_017438
+ADAM2_017439,Unnamed peptide ADAM2_017439
+ADAM2_017440,Unnamed peptide ADAM2_017440
+ADAM2_017441,Unnamed peptide ADAM2_017441
+ADAM2_017442,Unnamed peptide ADAM2_017442
+ADAM2_017443,Unnamed peptide ADAM2_017443
+ADAM2_017444,Unnamed peptide ADAM2_017444
+ADAM2_017445,Unnamed peptide ADAM2_017445
+ADAM2_017446,Unnamed peptide ADAM2_017446
+ADAM2_017447,Unnamed peptide ADAM2_017447
+ADAM2_017448,Unnamed peptide ADAM2_017448
+ADAM2_017449,Unnamed peptide ADAM2_017449
+ADAM2_017450,Unnamed peptide ADAM2_017450
+ADAM2_017451,Unnamed peptide ADAM2_017451
+ADAM2_017452,Unnamed peptide ADAM2_017452
+ADAM2_017453,Unnamed peptide ADAM2_017453
+ADAM2_017454,Unnamed peptide ADAM2_017454
+ADAM2_017455,Unnamed peptide ADAM2_017455
+ADAM2_017457,Unnamed peptide ADAM2_017457
+ADAM2_017458,Unnamed peptide ADAM2_017458
+ADAM2_017460,Unnamed peptide ADAM2_017460
+ADAM2_017461,Unnamed peptide ADAM2_017461
+ADAM2_017462,Unnamed peptide ADAM2_017462
+ADAM2_017463,Unnamed peptide ADAM2_017463
+ADAM2_017464,Unnamed peptide ADAM2_017464
+ADAM2_017494,Unnamed peptide ADAM2_017494
+ADAM2_017516,Unnamed peptide ADAM2_017516
+ADAM2_017517,Unnamed peptide ADAM2_017517
+ADAM2_017518,Unnamed peptide ADAM2_017518
+ADAM2_017519,Unnamed peptide ADAM2_017519
+ADAM2_017520,Unnamed peptide ADAM2_017520
+ADAM2_017521,Unnamed peptide ADAM2_017521
+ADAM2_017528,Unnamed peptide ADAM2_017528
+ADAM2_017529,Unnamed peptide ADAM2_017529
+ADAM2_017538,Unnamed peptide ADAM2_017538
+ADAM2_017539,Unnamed peptide ADAM2_017539
+ADAM2_017540,Unnamed peptide ADAM2_017540
+ADAM2_017541,Unnamed peptide ADAM2_017541
+ADAM2_017542,Unnamed peptide ADAM2_017542
+ADAM2_017545,Unnamed peptide ADAM2_017545
+ADAM2_017579,Unnamed peptide ADAM2_017579
+ADAM2_017580,Unnamed peptide ADAM2_017580
+ADAM2_017581,Unnamed peptide ADAM2_017581
+ADAM2_017747,Unnamed peptide ADAM2_017747
+ADAM2_017748,Unnamed peptide ADAM2_017748
+ADAM2_017750,Unnamed peptide ADAM2_017750
+ADAM2_017751,Unnamed peptide ADAM2_017751
+ADAM2_017752,Unnamed peptide ADAM2_017752
+ADAM2_017753,Unnamed peptide ADAM2_017753
+ADAM2_017759,Unnamed peptide ADAM2_017759
+ADAM2_017760,Unnamed peptide ADAM2_017760
+ADAM2_017761,Unnamed peptide ADAM2_017761
+ADAM2_017762,Unnamed peptide ADAM2_017762
+ADAM2_017763,Unnamed peptide ADAM2_017763
+ADAM2_017764,Unnamed peptide ADAM2_017764
+ADAM2_017765,Unnamed peptide ADAM2_017765
+ADAM2_017767,Unnamed peptide ADAM2_017767
+ADAM2_017768,Unnamed peptide ADAM2_017768
+ADAM2_017773,Unnamed peptide ADAM2_017773
+ADAM2_017794,Unnamed peptide ADAM2_017794
+ADAM2_017798,Unnamed peptide ADAM2_017798
+ADAM2_017803,Unnamed peptide ADAM2_017803
+ADAM2_017901,Unnamed peptide ADAM2_017901
+ADAM2_017902,Unnamed peptide ADAM2_017902
+ADAM2_017903,Unnamed peptide ADAM2_017903
+ADAM2_017904,Unnamed peptide ADAM2_017904
+ADAM2_017905,Unnamed peptide ADAM2_017905
+ADAM2_017906,Unnamed peptide ADAM2_017906
+ADAM2_017907,Unnamed peptide ADAM2_017907
+ADAM2_017909,Unnamed peptide ADAM2_017909
+ADAM2_017910,Unnamed peptide ADAM2_017910
+ADAM2_017911,Unnamed peptide ADAM2_017911
+ADAM2_017912,Unnamed peptide ADAM2_017912
+ADAM2_017913,Unnamed peptide ADAM2_017913
+ADAM2_017915,Unnamed peptide ADAM2_017915
+ADAM2_017919,Unnamed peptide ADAM2_017919
+ADAM2_017920,Unnamed peptide ADAM2_017920
+ADAM2_017921,Unnamed peptide ADAM2_017921
+ADAM2_017922,Unnamed peptide ADAM2_017922
+ADAM2_017923,Unnamed peptide ADAM2_017923
+ADAM2_017924,Unnamed peptide ADAM2_017924
+ADAM2_018008,Unnamed peptide ADAM2_018008
+ADAM2_018013,Unnamed peptide ADAM2_018013
+ADAM2_018014,Unnamed peptide ADAM2_018014
+ADAM2_018016,Unnamed peptide ADAM2_018016
+ADAM2_018017,Unnamed peptide ADAM2_018017
+ADAM2_018018,Unnamed peptide ADAM2_018018
+ADAM2_018024,Unnamed peptide ADAM2_018024
+ADAM2_018025,Unnamed peptide ADAM2_018025
+ADAM2_018026,Unnamed peptide ADAM2_018026
+ADAM2_018028,Unnamed peptide ADAM2_018028
+ADAM2_018030,Unnamed peptide ADAM2_018030
+ADAM2_018031,Unnamed peptide ADAM2_018031
+ADAM2_018072,Unnamed peptide ADAM2_018072
+ADAM2_018097,Unnamed peptide ADAM2_018097
+ADAM2_018102,Unnamed peptide ADAM2_018102
+ADAM2_018103,Unnamed peptide ADAM2_018103
+ADAM2_018104,Unnamed peptide ADAM2_018104
+ADAM2_018135,Unnamed peptide ADAM2_018135
+ADAM2_018148,Unnamed peptide ADAM2_018148
+ADAM2_018151,Unnamed peptide ADAM2_018151
+ADAM2_018157,Unnamed peptide ADAM2_018157
+ADAM2_018160,Unnamed peptide ADAM2_018160
+ADAM2_018188,Unnamed peptide ADAM2_018188
+ADAM2_018289,Unnamed peptide ADAM2_018289
+ADAM2_018299,Unnamed peptide ADAM2_018299
+ADAM2_018300,Unnamed peptide ADAM2_018300
+ADAM2_018302,Unnamed peptide ADAM2_018302
+ADAM2_018303,Unnamed peptide ADAM2_018303
+ADAM2_018304,Unnamed peptide ADAM2_018304
+ADAM2_018305,Unnamed peptide ADAM2_018305
+ADAM2_018306,Unnamed peptide ADAM2_018306
+ADAM2_018307,Unnamed peptide ADAM2_018307
+ADAM2_018308,Unnamed peptide ADAM2_018308
+ADAM2_018309,Unnamed peptide ADAM2_018309
+ADAM2_018310,Unnamed peptide ADAM2_018310
+ADAM2_018311,Unnamed peptide ADAM2_018311
+ADAM2_018317,Unnamed peptide ADAM2_018317
+ADAM2_018340,Unnamed peptide ADAM2_018340
+ADAM2_018341,Unnamed peptide ADAM2_018341
+ADAM2_018368,Unnamed peptide ADAM2_018368
+ADAM2_018369,Unnamed peptide ADAM2_018369
+ADAM2_018370,Unnamed peptide ADAM2_018370
+ADAM2_018371,Unnamed peptide ADAM2_018371
+ADAM2_018373,Unnamed peptide ADAM2_018373
+ADAM2_018397,Unnamed peptide ADAM2_018397
+ADAM2_018400,Unnamed peptide ADAM2_018400
+ADAM2_018401,Unnamed peptide ADAM2_018401
+ADAM2_018402,Unnamed peptide ADAM2_018402
+ADAM2_018403,Unnamed peptide ADAM2_018403
+ADAM2_018405,Unnamed peptide ADAM2_018405
+ADAM2_018406,Unnamed peptide ADAM2_018406
+ADAM2_018407,Unnamed peptide ADAM2_018407
+ADAM2_018408,Unnamed peptide ADAM2_018408
+ADAM2_018409,Unnamed peptide ADAM2_018409
+ADAM2_018413,Unnamed peptide ADAM2_018413
+ADAM2_018415,Unnamed peptide ADAM2_018415
+ADAM2_018420,Unknown (suggested)
+ADAM2_018421,Unnamed peptide ADAM2_018421
+ADAM2_018422,Unnamed peptide ADAM2_018422
+ADAM2_018423,Unnamed peptide ADAM2_018423
+ADAM2_018425,Unnamed peptide ADAM2_018425
+ADAM2_018444,Unnamed peptide ADAM2_018444
+ADAM2_018445,Unnamed peptide ADAM2_018445
+ADAM2_018446,Unnamed peptide ADAM2_018446
+ADAM2_018452,Unnamed peptide ADAM2_018452
+ADAM2_018471,Unnamed peptide ADAM2_018471
+ADAM2_018472,Unnamed peptide ADAM2_018472
+ADAM2_018473,Unnamed peptide ADAM2_018473
+ADAM2_018481,Unnamed peptide ADAM2_018481
+ADAM2_018482,Unnamed peptide ADAM2_018482
+ADAM2_018483,Unnamed peptide ADAM2_018483
+ADAM2_018484,Unnamed peptide ADAM2_018484
+ADAM2_018485,Unnamed peptide ADAM2_018485
+ADAM2_018486,Unnamed peptide ADAM2_018486
+ADAM2_018487,Unnamed peptide ADAM2_018487
+ADAM2_018505,Unnamed peptide ADAM2_018505
+ADAM2_018506,Unnamed peptide ADAM2_018506
+ADAM2_018507,Unnamed peptide ADAM2_018507
+ADAM2_018515,Unnamed peptide ADAM2_018515
+ADAM2_018516,Unnamed peptide ADAM2_018516
+ADAM2_018535,Unnamed peptide ADAM2_018535
+ADAM2_018536,Unnamed peptide ADAM2_018536
+ADAM2_018537,Unnamed peptide ADAM2_018537
+ADAM2_018538,Unnamed peptide ADAM2_018538
+ADAM2_018539,Unnamed peptide ADAM2_018539
+ADAM2_018540,Unnamed peptide ADAM2_018540
+ADAM2_018541,Unnamed peptide ADAM2_018541
+ADAM2_018542,Unnamed peptide ADAM2_018542
+ADAM2_018543,Unnamed peptide ADAM2_018543
+ADAM2_018548,Unnamed peptide ADAM2_018548
+ADAM2_018549,Unnamed peptide ADAM2_018549
+ADAM2_018550,Unnamed peptide ADAM2_018550
+ADAM2_018551,Unnamed peptide ADAM2_018551
+ADAM2_018584,Unnamed peptide ADAM2_018584
+ADAM2_018585,Unnamed peptide ADAM2_018585
+ADAM2_018587,Unnamed peptide ADAM2_018587
+ADAM2_018590,Unnamed peptide ADAM2_018590
+ADAM2_018591,Unnamed peptide ADAM2_018591
+ADAM2_018592,Unnamed peptide ADAM2_018592
+ADAM2_018595,Unnamed peptide ADAM2_018595
+ADAM2_018596,Unnamed peptide ADAM2_018596
+ADAM2_018597,Unnamed peptide ADAM2_018597
+ADAM2_018598,Unnamed peptide ADAM2_018598
+ADAM2_018599,Unnamed peptide ADAM2_018599
+ADAM2_018600,Unnamed peptide ADAM2_018600
+ADAM2_018620,Unnamed peptide ADAM2_018620
+ADAM2_018621,Unnamed peptide ADAM2_018621
+ADAM2_018622,Unnamed peptide ADAM2_018622
+ADAM2_018623,Unnamed peptide ADAM2_018623
+ADAM2_018636,Unnamed peptide ADAM2_018636
+ADAM2_018637,Unnamed peptide ADAM2_018637
+ADAM2_018638,Unnamed peptide ADAM2_018638
+ADAM2_018641,Unnamed peptide ADAM2_018641
+ADAM2_018657,Unnamed peptide ADAM2_018657
+ADAM2_018658,Unnamed peptide ADAM2_018658
+ADAM2_018659,Unnamed peptide ADAM2_018659
+ADAM2_018660,Unnamed peptide ADAM2_018660
+ADAM2_018661,Unnamed peptide ADAM2_018661
+ADAM2_018662,Unnamed peptide ADAM2_018662
+ADAM2_018663,Unnamed peptide ADAM2_018663
+ADAM2_018664,Unnamed peptide ADAM2_018664
+ADAM2_018665,Unnamed peptide ADAM2_018665
+ADAM2_018666,Unnamed peptide ADAM2_018666
+ADAM2_018667,Unnamed peptide ADAM2_018667
+ADAM2_018668,Unnamed peptide ADAM2_018668
+ADAM2_018670,Unnamed peptide ADAM2_018670
+ADAM2_018671,Unnamed peptide ADAM2_018671
+ADAM2_018672,Unnamed peptide ADAM2_018672
+ADAM2_018673,Unnamed peptide ADAM2_018673
+ADAM2_018747,Unnamed peptide ADAM2_018747
+ADAM2_018754,Unnamed peptide ADAM2_018754
+ADAM2_018784,Unnamed peptide ADAM2_018784
+ADAM2_018786,Unnamed peptide ADAM2_018786
+ADAM2_018787,Unnamed peptide ADAM2_018787
+ADAM2_018788,Unnamed peptide ADAM2_018788
+ADAM2_018789,Unnamed peptide ADAM2_018789
+ADAM2_018790,Unnamed peptide ADAM2_018790
+ADAM2_018791,Unnamed peptide ADAM2_018791
+ADAM2_018816,Unnamed peptide ADAM2_018816
+ADAM2_018817,Unnamed peptide ADAM2_018817
+ADAM2_018825,Unknown (suggested)
+ADAM2_018826,Unnamed peptide ADAM2_018826
+ADAM2_018827,Unnamed peptide ADAM2_018827
+ADAM2_018828,Unnamed peptide ADAM2_018828
+ADAM2_018829,Unnamed peptide ADAM2_018829
+ADAM2_018834,Unnamed peptide ADAM2_018834
+ADAM2_018845,Unnamed peptide ADAM2_018845
+ADAM2_018846,Unnamed peptide ADAM2_018846
+ADAM2_018852,Unnamed peptide ADAM2_018852
+ADAM2_018853,Unnamed peptide ADAM2_018853
+ADAM2_018856,Unnamed peptide ADAM2_018856
+ADAM2_018857,Unnamed peptide ADAM2_018857
+ADAM2_018858,Unnamed peptide ADAM2_018858
+ADAM2_018859,Unnamed peptide ADAM2_018859
+ADAM2_018860,Unnamed peptide ADAM2_018860
+ADAM2_018863,Unnamed peptide ADAM2_018863
+ADAM2_018864,Unnamed peptide ADAM2_018864
+ADAM2_018870,Unnamed peptide ADAM2_018870
+ADAM2_018871,Unnamed peptide ADAM2_018871
+ADAM2_018872,Unnamed peptide ADAM2_018872
+ADAM2_018873,Unnamed peptide ADAM2_018873
+ADAM2_018874,Unnamed peptide ADAM2_018874
+ADAM2_018875,Unnamed peptide ADAM2_018875
+ADAM2_018876,Unnamed peptide ADAM2_018876
+ADAM2_018877,Unnamed peptide ADAM2_018877
+ADAM2_018887,Unnamed peptide ADAM2_018887
+ADAM2_018888,Unnamed peptide ADAM2_018888
+ADAM2_018889,Unnamed peptide ADAM2_018889
+ADAM2_018890,Unnamed peptide ADAM2_018890
+ADAM2_018891,Unnamed peptide ADAM2_018891
+ADAM2_018892,Unnamed peptide ADAM2_018892
+ADAM2_018897,Unnamed peptide ADAM2_018897
+ADAM2_018898,Unnamed peptide ADAM2_018898
+ADAM2_018899,Unnamed peptide ADAM2_018899
+ADAM2_018900,Unnamed peptide ADAM2_018900
+ADAM2_018901,Unnamed peptide ADAM2_018901
+ADAM2_018902,Unnamed peptide ADAM2_018902
+ADAM2_018904,Unnamed peptide ADAM2_018904
+ADAM2_018906,Unnamed peptide ADAM2_018906
+ADAM2_018907,Unnamed peptide ADAM2_018907
+ADAM2_018908,Unnamed peptide ADAM2_018908
+ADAM2_018909,Unnamed peptide ADAM2_018909
+ADAM2_018910,Unnamed peptide ADAM2_018910
+ADAM2_018911,Unnamed peptide ADAM2_018911
+ADAM2_018912,Unnamed peptide ADAM2_018912
+ADAM2_018913,Unnamed peptide ADAM2_018913
+ADAM2_018914,Unnamed peptide ADAM2_018914
+ADAM2_018919,Unnamed peptide ADAM2_018919
+ADAM2_018920,Unnamed peptide ADAM2_018920
+ADAM2_018921,Unnamed peptide ADAM2_018921
+ADAM2_018922,Unnamed peptide ADAM2_018922
+ADAM2_018930,Unnamed peptide ADAM2_018930
+ADAM2_018936,Unnamed peptide ADAM2_018936
+ADAM2_018947,Unnamed peptide ADAM2_018947
+ADAM2_018948,Unnamed peptide ADAM2_018948
+ADAM2_018949,Unnamed peptide ADAM2_018949
+ADAM2_018950,Unnamed peptide ADAM2_018950
+ADAM2_018952,Unnamed peptide ADAM2_018952
+ADAM2_018953,Unnamed peptide ADAM2_018953
+ADAM2_018954,Unnamed peptide ADAM2_018954
+ADAM2_018955,Unnamed peptide ADAM2_018955
+ADAM2_018956,Unnamed peptide ADAM2_018956
+ADAM2_018963,Unnamed peptide ADAM2_018963
+ADAM2_018974,Unnamed peptide ADAM2_018974
+ADAM2_018975,Unnamed peptide ADAM2_018975
+ADAM2_018976,Unnamed peptide ADAM2_018976
+ADAM2_018997,Unnamed peptide ADAM2_018997
+ADAM2_018998,Unnamed peptide ADAM2_018998
+ADAM2_019000,Unnamed peptide ADAM2_019000
+ADAM2_019001,Unnamed peptide ADAM2_019001
+ADAM2_019002,Unnamed peptide ADAM2_019002
+ADAM2_019003,Unnamed peptide ADAM2_019003
+ADAM2_019007,Unnamed peptide ADAM2_019007
+ADAM2_019008,Unnamed peptide ADAM2_019008
+ADAM2_019009,Unnamed peptide ADAM2_019009
+ADAM2_019010,Unnamed peptide ADAM2_019010
+ADAM2_019011,Unnamed peptide ADAM2_019011
+ADAM2_019012,Unnamed peptide ADAM2_019012
+ADAM2_019023,Unnamed peptide ADAM2_019023
+ADAM2_019025,Unnamed peptide ADAM2_019025
+ADAM2_019026,Unnamed peptide ADAM2_019026
+ADAM2_019027,Unnamed peptide ADAM2_019027
+ADAM2_019028,Unnamed peptide ADAM2_019028
+ADAM2_019029,Unnamed peptide ADAM2_019029
+ADAM2_019030,Unnamed peptide ADAM2_019030
+ADAM2_019031,Unnamed peptide ADAM2_019031
+ADAM2_019032,Unnamed peptide ADAM2_019032
+ADAM2_019033,Unnamed peptide ADAM2_019033
+ADAM2_019034,Unnamed peptide ADAM2_019034
+ADAM2_019035,Unnamed peptide ADAM2_019035
+ADAM2_019041,Unnamed peptide ADAM2_019041
+ADAM2_019042,Unnamed peptide ADAM2_019042
+ADAM2_019043,Unnamed peptide ADAM2_019043
+ADAM2_019050,Unnamed peptide ADAM2_019050
+ADAM2_019051,Unnamed peptide ADAM2_019051
+ADAM2_019059,Unnamed peptide ADAM2_019059
+ADAM2_019060,Unnamed peptide ADAM2_019060
+ADAM2_019073,Unnamed peptide ADAM2_019073
+ADAM2_019075,Unnamed peptide ADAM2_019075
+ADAM2_019090,Unnamed peptide ADAM2_019090
+ADAM2_019091,Unnamed peptide ADAM2_019091
+ADAM2_019092,Unnamed peptide ADAM2_019092
+ADAM2_019093,Unnamed peptide ADAM2_019093
+ADAM2_019106,Unnamed peptide ADAM2_019106
+ADAM2_019107,Unnamed peptide ADAM2_019107
+ADAM2_019108,Unnamed peptide ADAM2_019108
+ADAM2_019109,Unnamed peptide ADAM2_019109
+ADAM2_019110,Unnamed peptide ADAM2_019110
+ADAM2_019111,Unnamed peptide ADAM2_019111
+ADAM2_019125,Unnamed peptide ADAM2_019125
+ADAM2_019127,Unnamed peptide ADAM2_019127
+ADAM2_019128,Unnamed peptide ADAM2_019128
+ADAM2_019129,Unnamed peptide ADAM2_019129
+ADAM2_019130,Unnamed peptide ADAM2_019130
+ADAM2_019131,Unnamed peptide ADAM2_019131
+ADAM2_019132,cyclic nucleotide-binding protein (suggested)
+ADAM2_019136,Unnamed peptide ADAM2_019136
+ADAM2_019138,Unnamed peptide ADAM2_019138
+ADAM2_019139,Unnamed peptide ADAM2_019139
+ADAM2_019140,Unnamed peptide ADAM2_019140
+ADAM2_019141,Unnamed peptide ADAM2_019141
+ADAM2_019142,Unnamed peptide ADAM2_019142
+ADAM2_019143,Unnamed peptide ADAM2_019143
+ADAM2_019144,Unnamed peptide ADAM2_019144
+ADAM2_019166,matrix protein (suggested)
+ADAM2_019175,Unnamed peptide ADAM2_019175
+ADAM2_019176,Unnamed peptide ADAM2_019176
+ADAM2_019177,Unnamed peptide ADAM2_019177
+ADAM2_019182,Unnamed peptide ADAM2_019182
+ADAM2_019183,Unnamed peptide ADAM2_019183
+ADAM2_019190,Unnamed peptide ADAM2_019190
+ADAM2_019191,Unnamed peptide ADAM2_019191
+ADAM2_019192,Unnamed peptide ADAM2_019192
+ADAM2_019193,Unnamed peptide ADAM2_019193
+ADAM2_019194,Unnamed peptide ADAM2_019194
+ADAM2_019195,Unnamed peptide ADAM2_019195
+ADAM2_019229,Unnamed peptide ADAM2_019229
+ADAM2_019230,Unnamed peptide ADAM2_019230
+ADAM2_019237,Unnamed peptide ADAM2_019237
+ADAM2_019238,Unnamed peptide ADAM2_019238
+ADAM2_019239,Unnamed peptide ADAM2_019239
+ADAM2_019240,Unnamed peptide ADAM2_019240
+ADAM2_019241,Unnamed peptide ADAM2_019241
+ADAM2_019247,Unnamed peptide ADAM2_019247
+ADAM2_019248,Unnamed peptide ADAM2_019248
+ADAM2_019260,Unnamed peptide ADAM2_019260
+ADAM2_019281,Unnamed peptide ADAM2_019281
+ADAM2_019282,Unnamed peptide ADAM2_019282
+ADAM2_019283,Unnamed peptide ADAM2_019283
+ADAM2_019308,Unnamed peptide ADAM2_019308
+ADAM2_019309,Unnamed peptide ADAM2_019309
+ADAM2_019311,Unnamed peptide ADAM2_019311
+ADAM2_019338,Unnamed peptide ADAM2_019338
+ADAM2_019345,gag protein (suggested)
+ADAM2_019346,gag-pol fusion polyprotein (suggested)
+ADAM2_019349,Unnamed peptide ADAM2_019349
+ADAM2_019350,Unnamed peptide ADAM2_019350
+ADAM2_019366,Unnamed peptide ADAM2_019366
+ADAM2_019378,Unnamed peptide ADAM2_019378
+ADAM2_019391,Unnamed peptide ADAM2_019391
+ADAM2_019392,Unnamed peptide ADAM2_019392
+ADAM2_019405,Unnamed peptide ADAM2_019405
+ADAM2_019406,Unnamed peptide ADAM2_019406
+ADAM2_019407,Unnamed peptide ADAM2_019407
+ADAM2_019408,Unnamed peptide ADAM2_019408
+ADAM2_019409,Unnamed peptide ADAM2_019409
+ADAM2_019411,Unnamed peptide ADAM2_019411
+ADAM2_019429,Unnamed peptide ADAM2_019429
+ADAM2_019430,Unnamed peptide ADAM2_019430
+ADAM2_019431,Unnamed peptide ADAM2_019431
+ADAM2_019432,Unnamed peptide ADAM2_019432
+ADAM2_019433,Unnamed peptide ADAM2_019433
+ADAM2_019434,Unnamed peptide ADAM2_019434
+ADAM2_019440,Unnamed peptide ADAM2_019440
+ADAM2_019447,Unnamed peptide ADAM2_019447
+ADAM2_019481,Unnamed peptide ADAM2_019481
+ADAM2_019483,Unnamed peptide ADAM2_019483
+ADAM2_019484,Unnamed peptide ADAM2_019484
+ADAM2_019485,Unnamed peptide ADAM2_019485
+ADAM2_019486,Unnamed peptide ADAM2_019486
+ADAM2_019499,Unnamed peptide ADAM2_019499
+ADAM2_019500,Unnamed peptide ADAM2_019500
+ADAM2_019501,Unnamed peptide ADAM2_019501
+ADAM2_019502,Unnamed peptide ADAM2_019502
+ADAM2_019503,Unnamed peptide ADAM2_019503
+ADAM2_019505,Unnamed peptide ADAM2_019505
+ADAM2_019506,Unnamed peptide ADAM2_019506
+ADAM2_019507,Unnamed peptide ADAM2_019507
+ADAM2_019508,Unnamed peptide ADAM2_019508
+ADAM2_019514,Unnamed peptide ADAM2_019514
+ADAM2_019515,Unnamed peptide ADAM2_019515
+ADAM2_019523,Unnamed peptide ADAM2_019523
+ADAM2_019524,Unnamed peptide ADAM2_019524
+ADAM2_019525,Unnamed peptide ADAM2_019525
+ADAM2_019528,Unnamed peptide ADAM2_019528
+ADAM2_019544,Unnamed peptide ADAM2_019544
+ADAM2_019567,Unnamed peptide ADAM2_019567
+ADAM2_019568,Unnamed peptide ADAM2_019568
+ADAM2_019569,Unnamed peptide ADAM2_019569
+ADAM2_019575,Unnamed peptide ADAM2_019575
+ADAM2_019576,Unnamed peptide ADAM2_019576
+ADAM2_019577,Unnamed peptide ADAM2_019577
+ADAM2_019578,Unnamed peptide ADAM2_019578
+ADAM2_019580,Unnamed peptide ADAM2_019580
+ADAM2_019586,Unnamed peptide ADAM2_019586
+ADAM2_019587,Unnamed peptide ADAM2_019587
+ADAM2_019588,Unnamed peptide ADAM2_019588
+ADAM2_019589,Unnamed peptide ADAM2_019589
+ADAM2_019591,Unnamed peptide ADAM2_019591
+ADAM2_019593,Unnamed peptide ADAM2_019593
+ADAM2_019594,Unnamed peptide ADAM2_019594
+ADAM2_019595,Unnamed peptide ADAM2_019595
+ADAM2_019596,Unnamed peptide ADAM2_019596
+ADAM2_019597,Unnamed peptide ADAM2_019597
+ADAM2_019618,Unnamed peptide ADAM2_019618
+ADAM2_019619,Unnamed peptide ADAM2_019619
+ADAM2_019620,Unnamed peptide ADAM2_019620
+ADAM2_019626,Unnamed peptide ADAM2_019626
+ADAM2_019627,Unnamed peptide ADAM2_019627
+ADAM2_019628,Unnamed peptide ADAM2_019628
+ADAM2_019629,Unnamed peptide ADAM2_019629
+ADAM2_019630,Unnamed peptide ADAM2_019630
+ADAM2_019631,Unnamed peptide ADAM2_019631
+ADAM2_019632,Unnamed peptide ADAM2_019632
+ADAM2_019653,Unnamed peptide ADAM2_019653
+ADAM2_019664,Unnamed peptide ADAM2_019664
+ADAM2_019665,Unnamed peptide ADAM2_019665
+ADAM2_019672,Unnamed peptide ADAM2_019672
+ADAM2_019676,Unnamed peptide ADAM2_019676
+ADAM2_019677,Unnamed peptide ADAM2_019677
+ADAM2_019678,Unnamed peptide ADAM2_019678
+ADAM2_019692,Unnamed peptide ADAM2_019692
+ADAM2_019693,Unnamed peptide ADAM2_019693
+ADAM2_019694,Unnamed peptide ADAM2_019694
+ADAM2_019695,Unnamed peptide ADAM2_019695
+ADAM2_019700,Unnamed peptide ADAM2_019700
+ADAM2_019701,Unnamed peptide ADAM2_019701
+ADAM2_019721,Unnamed peptide ADAM2_019721
+ADAM2_019728,Unnamed peptide ADAM2_019728
+ADAM2_019729,Unnamed peptide ADAM2_019729
+ADAM2_019730,Unnamed peptide ADAM2_019730
+ADAM2_019731,Unnamed peptide ADAM2_019731
+ADAM2_019733,Unnamed peptide ADAM2_019733
+ADAM2_019745,Unnamed peptide ADAM2_019745
+ADAM2_019760,Unnamed peptide ADAM2_019760
+ADAM2_019761,Unnamed peptide ADAM2_019761
+ADAM2_019764,Unnamed peptide ADAM2_019764
+ADAM2_019768,Unnamed peptide ADAM2_019768
+ADAM2_019769,Unnamed peptide ADAM2_019769
+ADAM2_019771,Unnamed peptide ADAM2_019771
+ADAM2_019772,Unnamed peptide ADAM2_019772
+ADAM2_019773,Unnamed peptide ADAM2_019773
+ADAM2_019774,Unnamed peptide ADAM2_019774
+ADAM2_019775,Unnamed peptide ADAM2_019775
+ADAM2_019776,Unnamed peptide ADAM2_019776
+ADAM2_019780,Unnamed peptide ADAM2_019780
+ADAM2_019799,Unnamed peptide ADAM2_019799
+ADAM2_019800,Unnamed peptide ADAM2_019800
+ADAM2_019804,Unnamed peptide ADAM2_019804
+ADAM2_019805,Unnamed peptide ADAM2_019805
+ADAM2_019811,Unnamed peptide ADAM2_019811
+ADAM2_019812,Unnamed peptide ADAM2_019812
+ADAM2_019813,Unnamed peptide ADAM2_019813
+ADAM2_019814,Unnamed peptide ADAM2_019814
+ADAM2_019815,Unnamed peptide ADAM2_019815
+ADAM2_019816,Unnamed peptide ADAM2_019816
+ADAM2_019817,Unnamed peptide ADAM2_019817
+ADAM2_019818,Unnamed peptide ADAM2_019818
+ADAM2_019819,Unnamed peptide ADAM2_019819
+ADAM2_019821,Unnamed peptide ADAM2_019821
+ADAM2_019829,Unnamed peptide ADAM2_019829
+ADAM2_019830,Unnamed peptide ADAM2_019830
+ADAM2_019831,Unnamed peptide ADAM2_019831
+ADAM2_019832,Unnamed peptide ADAM2_019832
+ADAM2_019833,Unnamed peptide ADAM2_019833
+ADAM2_019842,Unnamed peptide ADAM2_019842
+ADAM2_019845,Unnamed peptide ADAM2_019845
+ADAM2_019846,Unnamed peptide ADAM2_019846
+ADAM2_019847,Unnamed peptide ADAM2_019847
+ADAM2_019848,Unnamed peptide ADAM2_019848
+ADAM2_019849,Unnamed peptide ADAM2_019849
+ADAM2_019850,Unnamed peptide ADAM2_019850
+ADAM2_019851,Unnamed peptide ADAM2_019851
+ADAM2_019852,Unnamed peptide ADAM2_019852
+ADAM2_019856,Unnamed peptide ADAM2_019856
+ADAM2_019857,Unnamed peptide ADAM2_019857
+ADAM2_019858,Unnamed peptide ADAM2_019858
+ADAM2_019859,Unnamed peptide ADAM2_019859
+ADAM2_019860,Unnamed peptide ADAM2_019860
+ADAM2_019868,Unnamed peptide ADAM2_019868
+ADAM2_019869,Unnamed peptide ADAM2_019869
+ADAM2_019870,Unnamed peptide ADAM2_019870
+ADAM2_019871,Unnamed peptide ADAM2_019871
+ADAM2_019872,Unnamed peptide ADAM2_019872
+ADAM2_019873,Unnamed peptide ADAM2_019873
+ADAM2_019874,Unnamed peptide ADAM2_019874
+ADAM2_019876,Unnamed peptide ADAM2_019876
+ADAM2_019877,Unnamed peptide ADAM2_019877
+ADAM2_019878,Unnamed peptide ADAM2_019878
+ADAM2_019881,Unnamed peptide ADAM2_019881
+ADAM2_019882,Unnamed peptide ADAM2_019882
+ADAM2_019883,Unnamed peptide ADAM2_019883
+ADAM2_019884,Unnamed peptide ADAM2_019884
+ADAM2_019885,Unnamed peptide ADAM2_019885
+ADAM2_019967,Unnamed peptide ADAM2_019967
+ADAM2_019968,Unnamed peptide ADAM2_019968
+ADAM2_019969,Unnamed peptide ADAM2_019969
+ADAM2_019970,Unnamed peptide ADAM2_019970
+ADAM2_019971,Unnamed peptide ADAM2_019971
+ADAM2_019976,Unnamed peptide ADAM2_019976
+ADAM2_019982,Unnamed peptide ADAM2_019982
+ADAM2_019983,Unnamed peptide ADAM2_019983
+ADAM2_019984,Unnamed peptide ADAM2_019984
+ADAM2_019985,Unnamed peptide ADAM2_019985
+ADAM2_019986,Unnamed peptide ADAM2_019986
+ADAM2_019987,Unnamed peptide ADAM2_019987
+ADAM2_019988,Unnamed peptide ADAM2_019988
+ADAM2_019989,Unnamed peptide ADAM2_019989
+ADAM2_019990,Unnamed peptide ADAM2_019990
+ADAM2_019991,Unnamed peptide ADAM2_019991
+ADAM2_019992,Unnamed peptide ADAM2_019992
+ADAM2_019993,Unnamed peptide ADAM2_019993
+ADAM2_019994,Unnamed peptide ADAM2_019994
+ADAM2_019995,Unnamed peptide ADAM2_019995
+ADAM2_019996,Unnamed peptide ADAM2_019996
+ADAM2_020016,Unnamed peptide ADAM2_020016
+ADAM2_020034,Unnamed peptide ADAM2_020034
+ADAM2_020059,Unnamed peptide ADAM2_020059
+ADAM2_020068,Unnamed peptide ADAM2_020068
+ADAM2_020082,Unnamed peptide ADAM2_020082
+ADAM2_020083,Unnamed peptide ADAM2_020083
+ADAM2_020106,Unnamed peptide ADAM2_020106
+ADAM2_020107,Unnamed peptide ADAM2_020107
+ADAM2_020108,Unnamed peptide ADAM2_020108
+ADAM2_020109,Unnamed peptide ADAM2_020109
+ADAM2_020110,Unnamed peptide ADAM2_020110
+ADAM2_020111,"6k-f17-2l16,17"
+ADAM2_020112,Unnamed peptide ADAM2_020112
+ADAM2_020113,Unnamed peptide ADAM2_020113
+ADAM2_020152,Unnamed peptide ADAM2_020152
+ADAM2_020153,Unnamed peptide ADAM2_020153
+ADAM2_020197,Unnamed peptide ADAM2_020197
+ADAM2_020233,Unnamed peptide ADAM2_020233
+ADAM2_020234,Unnamed peptide ADAM2_020234
+ADAM2_020243,Unnamed peptide ADAM2_020243
+ADAM2_020259,Unnamed peptide ADAM2_020259
+ADAM2_020267,Unnamed peptide ADAM2_020267
+ADAM2_020268,Unnamed peptide ADAM2_020268
+ADAM2_020269,Unnamed peptide ADAM2_020269
+ADAM2_020270,Unnamed peptide ADAM2_020270
+ADAM2_020305,Unnamed peptide ADAM2_020305
+ADAM2_020306,Unnamed peptide ADAM2_020306
+ADAM2_020307,Unnamed peptide ADAM2_020307
+ADAM2_020308,Unnamed peptide ADAM2_020308
+ADAM2_020309,Unnamed peptide ADAM2_020309
+ADAM2_020313,Unnamed peptide ADAM2_020313
+ADAM2_020322,Unnamed peptide ADAM2_020322
+ADAM2_020331,Unnamed peptide ADAM2_020331
+ADAM2_020332,Unnamed peptide ADAM2_020332
+ADAM2_020367,Unknown (suggested)
+ADAM2_020376,Unnamed peptide ADAM2_020376
+ADAM2_020381,Unnamed peptide ADAM2_020381
+ADAM2_020382,Unnamed peptide ADAM2_020382
+ADAM2_020383,Unnamed peptide ADAM2_020383
+ADAM2_020397,Unnamed peptide ADAM2_020397
+ADAM2_020411,Unnamed peptide ADAM2_020411
+ADAM2_020415,Unnamed peptide ADAM2_020415
+ADAM2_020417,Unnamed peptide ADAM2_020417
+ADAM2_020418,Unnamed peptide ADAM2_020418
+ADAM2_020419,Unnamed peptide ADAM2_020419
+ADAM2_020431,Unnamed peptide ADAM2_020431
+ADAM2_020432,Unnamed peptide ADAM2_020432
+ADAM2_020440,Unnamed peptide ADAM2_020440
+ADAM2_020445,Unnamed peptide ADAM2_020445
+ADAM2_020446,Unnamed peptide ADAM2_020446
+ADAM2_020447,Unnamed peptide ADAM2_020447
+ADAM2_020449,Unnamed peptide ADAM2_020449
+ADAM2_020450,Unnamed peptide ADAM2_020450
+ADAM2_020451,Unnamed peptide ADAM2_020451
+ADAM2_020453,Unnamed peptide ADAM2_020453
+ADAM2_020454,Unnamed peptide ADAM2_020454
+ADAM2_020455,Unnamed peptide ADAM2_020455
+ADAM2_020456,Unnamed peptide ADAM2_020456
+ADAM2_020457,Unnamed peptide ADAM2_020457
+ADAM2_020458,Unnamed peptide ADAM2_020458
+ADAM2_020465,Unnamed peptide ADAM2_020465
+ADAM2_020470,Unnamed peptide ADAM2_020470
+ADAM2_020471,Unnamed peptide ADAM2_020471
+ADAM2_020472,Unnamed peptide ADAM2_020472
+ADAM2_020473,Unnamed peptide ADAM2_020473
+ADAM2_020474,Unnamed peptide ADAM2_020474
+ADAM2_020475,Unnamed peptide ADAM2_020475
+ADAM2_020476,Unnamed peptide ADAM2_020476
+ADAM2_020477,Unnamed peptide ADAM2_020477
+ADAM2_020478,Unnamed peptide ADAM2_020478
+ADAM2_020479,Unnamed peptide ADAM2_020479
+ADAM2_020480,Unnamed peptide ADAM2_020480
+ADAM2_020485,Unnamed peptide ADAM2_020485
+ADAM2_020486,Unnamed peptide ADAM2_020486
+ADAM2_020487,Unnamed peptide ADAM2_020487
+ADAM2_020489,Unnamed peptide ADAM2_020489
+ADAM2_020490,Unnamed peptide ADAM2_020490
+ADAM2_020491,Unnamed peptide ADAM2_020491
+ADAM2_020492,Unnamed peptide ADAM2_020492
+ADAM2_020493,Unnamed peptide ADAM2_020493
+ADAM2_020494,Unnamed peptide ADAM2_020494
+ADAM2_020495,Unnamed peptide ADAM2_020495
+ADAM2_020516,Unnamed peptide ADAM2_020516
+ADAM2_020522,Unnamed peptide ADAM2_020522
+ADAM2_020523,Unnamed peptide ADAM2_020523
+ADAM2_020547,Unnamed peptide ADAM2_020547
+ADAM2_020567,Unnamed peptide ADAM2_020567
+ADAM2_020568,Unnamed peptide ADAM2_020568
+ADAM2_020569,Unnamed peptide ADAM2_020569
+ADAM2_020570,Unnamed peptide ADAM2_020570
+ADAM2_020571,Unnamed peptide ADAM2_020571
+ADAM2_020579,Unnamed peptide ADAM2_020579
+ADAM2_020580,Unnamed peptide ADAM2_020580
+ADAM2_020581,Unnamed peptide ADAM2_020581
+ADAM2_020582,Unnamed peptide ADAM2_020582
+ADAM2_020583,Unnamed peptide ADAM2_020583
+ADAM2_020584,Unnamed peptide ADAM2_020584
+ADAM2_020589,Unnamed peptide ADAM2_020589
+ADAM2_020590,Unnamed peptide ADAM2_020590
+ADAM2_020591,Unnamed peptide ADAM2_020591
+ADAM2_020614,Unnamed peptide ADAM2_020614
+ADAM2_020622,Unnamed peptide ADAM2_020622
+ADAM2_020623,Unnamed peptide ADAM2_020623
+ADAM2_020625,Unnamed peptide ADAM2_020625
+ADAM2_020626,Unnamed peptide ADAM2_020626
+ADAM2_020633,Unnamed peptide ADAM2_020633
+ADAM2_020634,Unnamed peptide ADAM2_020634
+ADAM2_020652,Unnamed peptide ADAM2_020652
+ADAM2_020656,Unnamed peptide ADAM2_020656
+ADAM2_020664,Unnamed peptide ADAM2_020664
+ADAM2_020670,Unnamed peptide ADAM2_020670
+ADAM2_020671,Unnamed peptide ADAM2_020671
+ADAM2_020672,Unnamed peptide ADAM2_020672
+ADAM2_020673,Unnamed peptide ADAM2_020673
+ADAM2_020674,Unnamed peptide ADAM2_020674
+ADAM2_020675,Unnamed peptide ADAM2_020675
+ADAM2_020676,Unnamed peptide ADAM2_020676
+ADAM2_020685,Unnamed peptide ADAM2_020685
+ADAM2_020686,Unnamed peptide ADAM2_020686
+ADAM2_020723,Unnamed peptide ADAM2_020723
+ADAM2_020744,Unnamed peptide ADAM2_020744
+ADAM2_020766,Unnamed peptide ADAM2_020766
+ADAM2_020767,Unnamed peptide ADAM2_020767
+ADAM2_020768,Unnamed peptide ADAM2_020768
+ADAM2_020876,Unnamed peptide ADAM2_020876
+ADAM2_020890,Unnamed peptide ADAM2_020890
+ADAM2_020895,nLytic
+ADAM2_020903,Unnamed peptide ADAM2_020903
+ADAM2_020967,Unnamed peptide ADAM2_020967
+ADAM2_020968,Unnamed peptide ADAM2_020968
+ADAM2_020969,Unnamed peptide ADAM2_020969
+ADAM2_020975,Unnamed peptide ADAM2_020975
+ADAM2_020985,Unnamed peptide ADAM2_020985
+ADAM2_021024,Unnamed peptide ADAM2_021024
+ADAM2_021035,Unnamed peptide ADAM2_021035
+ADAM2_021039,Unnamed peptide ADAM2_021039
+ADAM2_021040,Unnamed peptide ADAM2_021040
+ADAM2_021041,Unnamed peptide ADAM2_021041
+ADAM2_021042,Unnamed peptide ADAM2_021042
+ADAM2_021044,Unnamed peptide ADAM2_021044
+ADAM2_021045,Unnamed peptide ADAM2_021045
+ADAM2_021065,Unnamed peptide ADAM2_021065
+ADAM2_021069,Unnamed peptide ADAM2_021069
+ADAM2_021070,Unnamed peptide ADAM2_021070
+ADAM2_021071,Unnamed peptide ADAM2_021071
+ADAM2_021075,Unnamed peptide ADAM2_021075
+ADAM2_021085,Unnamed peptide ADAM2_021085
+ADAM2_021096,Unnamed peptide ADAM2_021096
+ADAM2_021097,Unnamed peptide ADAM2_021097
+ADAM2_021098,Unnamed peptide ADAM2_021098
+ADAM2_021099,Unnamed peptide ADAM2_021099
+ADAM2_021100,Unnamed peptide ADAM2_021100
+ADAM2_021101,Unnamed peptide ADAM2_021101
+ADAM2_021106,Unnamed peptide ADAM2_021106
+ADAM2_021107,Unnamed peptide ADAM2_021107
+ADAM2_021108,Unnamed peptide ADAM2_021108
+ADAM2_021109,Unnamed peptide ADAM2_021109
+ADAM2_021111,Unnamed peptide ADAM2_021111
+ADAM2_021112,Unnamed peptide ADAM2_021112
+ADAM2_021113,Unnamed peptide ADAM2_021113
+ADAM2_021114,Unnamed peptide ADAM2_021114
+ADAM2_021141,Unnamed peptide ADAM2_021141
+ADAM2_021145,Unnamed peptide ADAM2_021145
+ADAM2_021146,Unnamed peptide ADAM2_021146
+ADAM2_021147,Unnamed peptide ADAM2_021147
+ADAM2_021148,Unnamed peptide ADAM2_021148
+ADAM2_021149,Unnamed peptide ADAM2_021149
+ADAM2_021150,Unnamed peptide ADAM2_021150
+ADAM2_021151,Unnamed peptide ADAM2_021151
+ADAM2_021152,Unnamed peptide ADAM2_021152
+ADAM2_021153,Unnamed peptide ADAM2_021153
+ADAM2_021177,Unnamed peptide ADAM2_021177
+ADAM2_021199,Unnamed peptide ADAM2_021199
+ADAM2_021200,Unnamed peptide ADAM2_021200
+ADAM2_021201,Unnamed peptide ADAM2_021201
+ADAM2_021249,Unnamed peptide ADAM2_021249
+ADAM2_021274,Unnamed peptide ADAM2_021274
+ADAM2_021280,Unnamed peptide ADAM2_021280
+ADAM2_021282,Unnamed peptide ADAM2_021282
+ADAM2_021283,Unnamed peptide ADAM2_021283
+ADAM2_021285,Unnamed peptide ADAM2_021285
+ADAM2_021326,Unnamed peptide ADAM2_021326
+ADAM2_021335,Unnamed peptide ADAM2_021335
+ADAM2_021337,Unnamed peptide ADAM2_021337
+ADAM2_021338,Unnamed peptide ADAM2_021338
+ADAM2_021357,Unnamed peptide ADAM2_021357
+ADAM2_021358,Unnamed peptide ADAM2_021358
+ADAM2_021359,Unnamed peptide ADAM2_021359
+ADAM2_021361,Unnamed peptide ADAM2_021361
+ADAM2_021362,Unnamed peptide ADAM2_021362
+ADAM2_021364,Unnamed peptide ADAM2_021364
+ADAM2_021369,Unnamed peptide ADAM2_021369
+ADAM2_021370,Unnamed peptide ADAM2_021370
+ADAM2_021371,Unnamed peptide ADAM2_021371
+ADAM2_021372,Unnamed peptide ADAM2_021372
+ADAM2_021373,Unnamed peptide ADAM2_021373
+ADAM2_021374,Unnamed peptide ADAM2_021374
+ADAM2_021375,Unnamed peptide ADAM2_021375
+ADAM2_021376,Unnamed peptide ADAM2_021376
+ADAM2_021397,Unnamed peptide ADAM2_021397
+ADAM2_021404,Unnamed peptide ADAM2_021404
+ADAM2_021405,Unnamed peptide ADAM2_021405
+ADAM2_021406,Unnamed peptide ADAM2_021406
+ADAM2_021407,Unnamed peptide ADAM2_021407
+ADAM2_021408,Unnamed peptide ADAM2_021408
+ADAM2_021409,Unnamed peptide ADAM2_021409
+ADAM2_021410,Unnamed peptide ADAM2_021410
+ADAM2_021411,Unnamed peptide ADAM2_021411
+ADAM2_021412,Unnamed peptide ADAM2_021412
+ADAM2_021413,Unnamed peptide ADAM2_021413
+ADAM2_021414,Unnamed peptide ADAM2_021414
+ADAM2_021415,Unnamed peptide ADAM2_021415
+ADAM2_021416,Unnamed peptide ADAM2_021416
+ADAM2_021417,Unnamed peptide ADAM2_021417
+ADAM2_021418,Unnamed peptide ADAM2_021418
+ADAM2_021421,Unnamed peptide ADAM2_021421
+ADAM2_021422,Unnamed peptide ADAM2_021422
+ADAM2_021423,Unnamed peptide ADAM2_021423
+ADAM2_021424,Unnamed peptide ADAM2_021424
+ADAM2_021425,GS14G4
+ADAM2_021429,Unnamed peptide ADAM2_021429
+ADAM2_021430,Unnamed peptide ADAM2_021430
+ADAM2_021431,Unnamed peptide ADAM2_021431
+ADAM2_021432,Unnamed peptide ADAM2_021432
+ADAM2_021433,Unnamed peptide ADAM2_021433
+ADAM2_021434,Unnamed peptide ADAM2_021434
+ADAM2_021435,Unnamed peptide ADAM2_021435
+ADAM2_021436,Unnamed peptide ADAM2_021436
+ADAM2_021437,Unnamed peptide ADAM2_021437
+ADAM2_021438,Unnamed peptide ADAM2_021438
+ADAM2_021439,Unnamed peptide ADAM2_021439
+ADAM2_021440,Unnamed peptide ADAM2_021440
+ADAM2_021441,Unnamed peptide ADAM2_021441
+ADAM2_021442,Unnamed peptide ADAM2_021442
+ADAM2_021443,Unnamed peptide ADAM2_021443
+ADAM2_021465,Unnamed peptide ADAM2_021465
+ADAM2_021466,Unnamed peptide ADAM2_021466
+ADAM2_021467,Unnamed peptide ADAM2_021467
+ADAM2_021469,Unnamed peptide ADAM2_021469
+ADAM2_021470,Unnamed peptide ADAM2_021470
+ADAM2_021471,Unnamed peptide ADAM2_021471
+ADAM2_021472,Unnamed peptide ADAM2_021472
+ADAM2_021473,Unnamed peptide ADAM2_021473
+ADAM2_021474,Unnamed peptide ADAM2_021474
+ADAM2_021481,Unnamed peptide ADAM2_021481
+ADAM2_021482,Unnamed peptide ADAM2_021482
+ADAM2_021483,Unnamed peptide ADAM2_021483
+ADAM2_021486,Unnamed peptide ADAM2_021486
+ADAM2_021487,Unnamed peptide ADAM2_021487
+ADAM2_021488,Unnamed peptide ADAM2_021488
+ADAM2_021489,Unnamed peptide ADAM2_021489
+ADAM2_021490,Unnamed peptide ADAM2_021490
+ADAM2_021491,Unnamed peptide ADAM2_021491
+ADAM2_021503,Unnamed peptide ADAM2_021503
+ADAM2_021504,Unnamed peptide ADAM2_021504
+ADAM2_021505,Unnamed peptide ADAM2_021505
+ADAM2_021506,Unnamed peptide ADAM2_021506
+ADAM2_021507,Unnamed peptide ADAM2_021507
+ADAM2_021508,Unnamed peptide ADAM2_021508
+ADAM2_021509,Unnamed peptide ADAM2_021509
+ADAM2_021510,Unnamed peptide ADAM2_021510
+ADAM2_021511,Unnamed peptide ADAM2_021511
+ADAM2_021512,Unnamed peptide ADAM2_021512
+ADAM2_021513,Unnamed peptide ADAM2_021513
+ADAM2_021514,Unnamed peptide ADAM2_021514
+ADAM2_021515,Unnamed peptide ADAM2_021515
+ADAM2_021516,Unnamed peptide ADAM2_021516
+ADAM2_021517,Unnamed peptide ADAM2_021517
+ADAM2_021518,Unnamed peptide ADAM2_021518
+ADAM2_021519,Unnamed peptide ADAM2_021519
+ADAM2_021521,Unnamed peptide ADAM2_021521
+ADAM2_021522,Unnamed peptide ADAM2_021522
+ADAM2_021523,Unnamed peptide ADAM2_021523
+ADAM2_021524,Unnamed peptide ADAM2_021524
+ADAM2_021525,Unnamed peptide ADAM2_021525
+ADAM2_021526,Unnamed peptide ADAM2_021526
+ADAM2_021527,Unnamed peptide ADAM2_021527
+ADAM2_021528,Unnamed peptide ADAM2_021528
+ADAM2_021529,LK12(3.6)
+ADAM2_021534,Unnamed peptide ADAM2_021534
+ADAM2_021551,cystatin-S precursor (suggested)
+ADAM2_021563,Unnamed peptide ADAM2_021563
+ADAM2_021564,Unnamed peptide ADAM2_021564
+ADAM2_021565,Unnamed peptide ADAM2_021565
+ADAM2_021566,Unnamed peptide ADAM2_021566
+ADAM2_021567,Unnamed peptide ADAM2_021567
+ADAM2_021568,Unnamed peptide ADAM2_021568
+ADAM2_021569,Unnamed peptide ADAM2_021569
+ADAM2_021597,Unnamed peptide ADAM2_021597
+ADAM2_021598,Unnamed peptide ADAM2_021598
+ADAM2_021599,Unnamed peptide ADAM2_021599
+ADAM2_021600,Unnamed peptide ADAM2_021600
+ADAM2_021601,Unnamed peptide ADAM2_021601
+ADAM2_021602,Unnamed peptide ADAM2_021602
+ADAM2_021638,Unnamed peptide ADAM2_021638
+ADAM2_021650,Unnamed peptide ADAM2_021650
+ADAM2_021665,Unnamed peptide ADAM2_021665
+ADAM2_021723,"[T5k]temporin-DRa (Frogs, amphibians, animals) (suggested)"
+ADAM2_021741,"[D]L3,4,8,10-K3L8Wm"
+ADAM2_021742,"[D]L3,4,8,10-K3L8Wc"
+ADAM2_021743,"[D]L3,4,8,10-K5L6Wn"
+ADAM2_021744,"[D]L3,4,8,10-K5L6Wm"
+ADAM2_021745,"[D]L3,4,8,10-K5L6Wc"
+ADAM2_021746,"[D]L4,8,10-K7L4Wn"
+ADAM2_021756,"[D]L3,4,8,10-K7L4Wm"
+ADAM2_021757,"[D]L3,4,8-K7L4Wc"
+ADAM2_021761,Unnamed peptide ADAM2_021761
+ADAM2_021764,Unnamed peptide ADAM2_021764
+ADAM2_021765,"[D]L3,4,8,10-K3L8Wn"
+ADAM2_021786,Unnamed peptide ADAM2_021786
+ADAM2_021813,Unnamed peptide ADAM2_021813
+ADAM2_021836,Unnamed peptide ADAM2_021836
+ADAM2_021846,Unnamed peptide ADAM2_021846
+ADAM2_021847,Unnamed peptide ADAM2_021847
+ADAM2_021848,Unnamed peptide ADAM2_021848
+ADAM2_021864,Unnamed peptide ADAM2_021864
+ADAM2_021871,Unnamed peptide ADAM2_021871
+ADAM2_021872,Unnamed peptide ADAM2_021872
+ADAM2_021882,Unnamed peptide ADAM2_021882
+ADAM2_021885,Unnamed peptide ADAM2_021885
+ADAM2_021886,Unnamed peptide ADAM2_021886
+ADAM2_021890,Unnamed peptide ADAM2_021890
+ADAM2_021891,Unnamed peptide ADAM2_021891
+ADAM2_021892,Unnamed peptide ADAM2_021892
+ADAM2_021893,Unnamed peptide ADAM2_021893
+ADAM2_021901,Unnamed peptide ADAM2_021901
+ADAM2_021902,Unnamed peptide ADAM2_021902
+ADAM2_021926,Unnamed peptide ADAM2_021926
+ADAM2_021927,Unnamed peptide ADAM2_021927
+ADAM2_021937,Unnamed peptide ADAM2_021937
+ADAM2_021961,Unnamed peptide ADAM2_021961
+ADAM2_021965,Unnamed peptide ADAM2_021965
+ADAM2_021966,Unnamed peptide ADAM2_021966
+ADAM2_021967,Unnamed peptide ADAM2_021967
+ADAM2_021968,Unnamed peptide ADAM2_021968
+ADAM2_021973,Unnamed peptide ADAM2_021973
+ADAM2_021974,Unnamed peptide ADAM2_021974
+ADAM2_021975,Unnamed peptide ADAM2_021975
+ADAM2_021976,Unnamed peptide ADAM2_021976
+ADAM2_021990,Unnamed peptide ADAM2_021990
+ADAM2_021991,Unnamed peptide ADAM2_021991
+ADAM2_022019,Unnamed peptide ADAM2_022019
+ADAM2_022048,Unnamed peptide ADAM2_022048
+ADAM2_022050,Unnamed peptide ADAM2_022050
+ADAM2_022051,Unnamed peptide ADAM2_022051
+ADAM2_022058,Unnamed peptide ADAM2_022058
+ADAM2_022109,Unnamed peptide ADAM2_022109
+ADAM2_022112,Unnamed peptide ADAM2_022112
+ADAM2_022138,Unnamed peptide ADAM2_022138
+ADAM2_022204,Unnamed peptide ADAM2_022204
+ADAM2_022254,Unnamed peptide ADAM2_022254
+ADAM2_022268,Unnamed peptide ADAM2_022268
+ADAM2_022290,Unnamed peptide ADAM2_022290
+ADAM2_022301,Unnamed peptide ADAM2_022301
+ADAM2_022358,Unnamed peptide ADAM2_022358
+ADAM2_022382,OAK 7 (suggested)
+ADAM2_022397,Unnamed peptide ADAM2_022397
+ADAM2_022404,Fd (suggested)
+ADAM2_022455,Unnamed peptide ADAM2_022455
+ADAM2_022480,Unnamed peptide ADAM2_022480
+ADAM2_022488,Unnamed peptide ADAM2_022488
+ADAM2_022498,Unnamed peptide ADAM2_022498
+ADAM2_022499,Unnamed peptide ADAM2_022499
+ADAM2_022500,Unnamed peptide ADAM2_022500
+ADAM2_022501,Unnamed peptide ADAM2_022501
+ADAM2_022548,Unnamed peptide ADAM2_022548
+ADAM2_022549,Unnamed peptide ADAM2_022549
+ADAM2_022555,Unnamed peptide ADAM2_022555
+ADAM2_022562,Unnamed peptide ADAM2_022562
+ADAM2_022569,Unnamed peptide ADAM2_022569
+ADAM2_022570,Unnamed peptide ADAM2_022570
+ADAM2_022577,Antimicrobial peptide 143 (suggested)
+ADAM2_022596,Unnamed peptide ADAM2_022596
+ADAM2_022607,Unnamed peptide ADAM2_022607
+ADAM2_022608,Unnamed peptide ADAM2_022608
+ADAM2_022609,Unnamed peptide ADAM2_022609
+ADAM2_022610,Unnamed peptide ADAM2_022610
+ADAM2_022611,Unnamed peptide ADAM2_022611
+ADAM2_022612,Unnamed peptide ADAM2_022612
+ADAM2_022613,Unnamed peptide ADAM2_022613
+ADAM2_022614,Unnamed peptide ADAM2_022614
+ADAM2_022615,Unnamed peptide ADAM2_022615
+ADAM2_022616,Unnamed peptide ADAM2_022616
+ADAM2_022619,Unnamed peptide ADAM2_022619
+ADAM2_022626,Unnamed peptide ADAM2_022626
+ADAM2_022650,Unnamed peptide ADAM2_022650
+ADAM2_022652,Antimicrobial peptide 364 (suggested)
+ADAM2_022663,Unnamed peptide ADAM2_022663
+ADAM2_022664,Unnamed peptide ADAM2_022664
+ADAM2_022665,Unnamed peptide ADAM2_022665
+ADAM2_022666,Unnamed peptide ADAM2_022666
+ADAM2_022669,Unnamed peptide ADAM2_022669
+ADAM2_022670,Unnamed peptide ADAM2_022670
+ADAM2_022688,Unnamed peptide ADAM2_022688
+ADAM2_022692,Unnamed peptide ADAM2_022692
+ADAM2_022701,Unnamed peptide ADAM2_022701
+ADAM2_022710,Unnamed peptide ADAM2_022710
+ADAM2_022711,Unnamed peptide ADAM2_022711
+ADAM2_022712,Unnamed peptide ADAM2_022712
+ADAM2_022715,Unnamed peptide ADAM2_022715
+ADAM2_022716,Unnamed peptide ADAM2_022716
+ADAM2_022717,Unnamed peptide ADAM2_022717
+ADAM2_022718,Unnamed peptide ADAM2_022718
+ADAM2_022720,[Aba5-14] BTD-2 (suggested)
+ADAM2_022724,Unnamed peptide ADAM2_022724
+ADAM2_022725,Unnamed peptide ADAM2_022725
+ADAM2_022731,Unnamed peptide ADAM2_022731
+ADAM2_022732,Unnamed peptide ADAM2_022732
+ADAM2_022896,Unnamed peptide ADAM2_022896
+ADAM2_022922,Unnamed peptide ADAM2_022922
+ADAM2_022923,Unnamed peptide ADAM2_022923
+ADAM2_022924,Unnamed peptide ADAM2_022924
+ADAM2_022949,Unnamed peptide ADAM2_022949
+ADAM2_022950,Unnamed peptide ADAM2_022950
+ADAM2_022982,Unnamed peptide ADAM2_022982
+ADAM2_022983,Unnamed peptide ADAM2_022983
+ADAM2_022985,Unnamed peptide ADAM2_022985
+ADAM2_022986,Unnamed peptide ADAM2_022986
+ADAM2_023007,Unnamed peptide ADAM2_023007
+ADAM2_023008,Unnamed peptide ADAM2_023008
+ADAM2_023047,Unnamed peptide ADAM2_023047
+ADAM2_023048,Unnamed peptide ADAM2_023048
+ADAM2_023053,Unnamed peptide ADAM2_023053
+ADAM2_023055,Unnamed peptide ADAM2_023055
+ADAM2_023056,Unnamed peptide ADAM2_023056
+ADAM2_023057,Unnamed peptide ADAM2_023057
+ADAM2_023078,Unnamed peptide ADAM2_023078
+ADAM2_023093,Unnamed peptide ADAM2_023093
+ADAM2_023094,Unnamed peptide ADAM2_023094
+ADAM2_023095,Unnamed peptide ADAM2_023095
+ADAM2_023107,Unnamed peptide ADAM2_023107
+ADAM2_023116,Unnamed peptide ADAM2_023116
+ADAM2_023117,Unnamed peptide ADAM2_023117
+ADAM2_023128,Unnamed peptide ADAM2_023128
+ADAM2_023135,Unnamed peptide ADAM2_023135
+ADAM2_023177,Unnamed peptide ADAM2_023177
+ADAM2_023194,Unnamed peptide ADAM2_023194
+ADAM2_023195,Unnamed peptide ADAM2_023195
+ADAM2_023200,Unnamed peptide ADAM2_023200
+ADAM2_023206,Unnamed peptide ADAM2_023206
+ADAM2_023218,Unnamed peptide ADAM2_023218
+ADAM2_023255,Unnamed peptide ADAM2_023255
+ADAM2_023333,Unnamed peptide ADAM2_023333
+ADAM2_023454,Antimicrobial peptide (suggested)
+ADAM2_023505,Unnamed peptide ADAM2_023505
+ADAM2_023545,Unnamed peptide ADAM2_023545
+ADAM2_023546,Unnamed peptide ADAM2_023546
+ADAM2_023625,Unnamed peptide ADAM2_023625
+ADAM2_023630,Unnamed peptide ADAM2_023630
+ADAM2_023682,Unnamed peptide ADAM2_023682
+ADAM2_023983,Unnamed peptide ADAM2_023983
+ADAM2_024092,Unnamed peptide ADAM2_024092
+ADAM2_024112,Unnamed peptide ADAM2_024112
+ADAM2_024278,Unnamed peptide ADAM2_024278
+ADAM2_024303,Unnamed peptide ADAM2_024303
+ADAM2_024306,Unnamed peptide ADAM2_024306
+ADAM2_024310,Unnamed peptide ADAM2_024310
+ADAM2_024390,Unnamed peptide ADAM2_024390
+ADAM2_024410,Unnamed peptide ADAM2_024410
+ADAM2_024411,Unnamed peptide ADAM2_024411
+ADAM2_024749,Unnamed peptide ADAM2_024749
+ADAM2_024773,Unnamed peptide ADAM2_024773
+ADAM2_024791,Unnamed peptide ADAM2_024791
+ADAM2_024881,Unnamed peptide ADAM2_024881
+ADAM2_025054,Unnamed peptide ADAM2_025054
+ADAM2_025135,Unnamed peptide ADAM2_025135
+ADAM2_025310,Unnamed peptide ADAM2_025310
+ADAM2_025321,Unnamed peptide ADAM2_025321
+ADAM2_025390,Unnamed peptide ADAM2_025390
+ADAM2_025392,Unnamed peptide ADAM2_025392
+ADAM2_025499,Unnamed peptide ADAM2_025499
+ADAM2_025500,Unnamed peptide ADAM2_025500
+ADAM2_025506,Unnamed peptide ADAM2_025506
+ADAM2_025507,Unnamed peptide ADAM2_025507
+ADAM2_025508,Unnamed peptide ADAM2_025508
+ADAM2_025513,Unnamed peptide ADAM2_025513
+ADAM2_025514,Unnamed peptide ADAM2_025514
+ADAM2_025515,Unnamed peptide ADAM2_025515
+ADAM2_025516,Unnamed peptide ADAM2_025516
+ADAM2_025517,Unnamed peptide ADAM2_025517
+ADAM2_025518,Unnamed peptide ADAM2_025518
+ADAM2_025520,Unnamed peptide ADAM2_025520
+ADAM2_025523,Unnamed peptide ADAM2_025523
+ADAM2_025524,Unnamed peptide ADAM2_025524
+ADAM2_025525,Unnamed peptide ADAM2_025525
+ADAM2_025528,Unnamed peptide ADAM2_025528
+ADAM2_025529,Unnamed peptide ADAM2_025529
+ADAM2_025530,Unnamed peptide ADAM2_025530
+ADAM2_025531,Unnamed peptide ADAM2_025531
+ADAM2_025532,Unnamed peptide ADAM2_025532
+ADAM2_025542,Unnamed peptide ADAM2_025542
+ADAM2_025543,Unnamed peptide ADAM2_025543
+ADAM2_025544,Unnamed peptide ADAM2_025544
+ADAM2_025545,Unnamed peptide ADAM2_025545
+ADAM2_025546,Unnamed peptide ADAM2_025546
+ADAM2_025548,Unnamed peptide ADAM2_025548
+ADAM2_025552,Unnamed peptide ADAM2_025552
+ADAM2_025553,Unnamed peptide ADAM2_025553
+ADAM2_025554,Unnamed peptide ADAM2_025554
+ADAM2_025586,Unnamed peptide ADAM2_025586
+ADAM2_025607,Unnamed peptide ADAM2_025607
+ADAM2_025608,Unnamed peptide ADAM2_025608
+ADAM2_025609,Unnamed peptide ADAM2_025609
+ADAM2_025610,Unnamed peptide ADAM2_025610
+ADAM2_025611,Unnamed peptide ADAM2_025611
+ADAM2_025618,Unnamed peptide ADAM2_025618
+ADAM2_025619,Unnamed peptide ADAM2_025619
+ADAM2_025620,Unnamed peptide ADAM2_025620
+ADAM2_025621,Unnamed peptide ADAM2_025621
+ADAM2_025669,Unnamed peptide ADAM2_025669
+ADAM2_025674,Unnamed peptide ADAM2_025674
+ADAM2_025679,Unnamed peptide ADAM2_025679
+ADAM2_025685,Unnamed peptide ADAM2_025685
+ADAM2_025689,Unnamed peptide ADAM2_025689
+ADAM2_025690,Unnamed peptide ADAM2_025690
+ADAM2_025692,Unnamed peptide ADAM2_025692
+ADAM2_025695,Unnamed peptide ADAM2_025695
+ADAM2_025696,Unnamed peptide ADAM2_025696
+ADAM2_025697,Unnamed peptide ADAM2_025697
+ADAM2_025698,Unnamed peptide ADAM2_025698
+ADAM2_025699,Unnamed peptide ADAM2_025699
+ADAM2_025714,Unnamed peptide ADAM2_025714
+ADAM2_025715,Unnamed peptide ADAM2_025715
+ADAM2_025718,Unnamed peptide ADAM2_025718
+ADAM2_025719,Unnamed peptide ADAM2_025719
+ADAM2_025720,Unnamed peptide ADAM2_025720
+ADAM2_025880,Unnamed peptide ADAM2_025880
+ADAM2_025881,Unnamed peptide ADAM2_025881
+ADAM2_025894,Unnamed peptide ADAM2_025894
+ADAM2_026081,Unnamed peptide ADAM2_026081
+ADAM2_026107,Unnamed peptide ADAM2_026107
+ADAM2_026110,Unnamed peptide ADAM2_026110
+ADAM2_026111,Unnamed peptide ADAM2_026111
+ADAM2_026119,Unnamed peptide ADAM2_026119
+ADAM2_026123,Unnamed peptide ADAM2_026123
+ADAM2_026124,Unnamed peptide ADAM2_026124
+ADAM2_026125,Unnamed peptide ADAM2_026125
+ADAM2_026127,Unnamed peptide ADAM2_026127
+ADAM2_026138,Unnamed peptide ADAM2_026138
+ADAM2_026140,Unnamed peptide ADAM2_026140
+ADAM2_026141,Unnamed peptide ADAM2_026141
+ADAM2_026142,Unnamed peptide ADAM2_026142
+ADAM2_026143,Unnamed peptide ADAM2_026143
+ADAM2_026144,Unnamed peptide ADAM2_026144
+ADAM2_026145,Unnamed peptide ADAM2_026145
+ADAM2_026146,Unnamed peptide ADAM2_026146
+ADAM2_026164,Unnamed peptide ADAM2_026164
+ADAM2_026168,Unnamed peptide ADAM2_026168
+ADAM2_026268,Unnamed peptide ADAM2_026268
+ADAM2_026330,Unnamed peptide ADAM2_026330
+ADAM2_026331,Unnamed peptide ADAM2_026331
+ADAM2_026332,Unnamed peptide ADAM2_026332
+ADAM2_026333,Unnamed peptide ADAM2_026333
+ADAM2_026343,Unnamed peptide ADAM2_026343
+ADAM2_026352,Unnamed peptide ADAM2_026352
+ADAM2_026353,Unnamed peptide ADAM2_026353
+ADAM2_026368,Unnamed peptide ADAM2_026368
+ADAM2_026373,Unnamed peptide ADAM2_026373
+ADAM2_026378,Unnamed peptide ADAM2_026378
+ADAM2_026379,Unnamed peptide ADAM2_026379
+ADAM2_026381,Unnamed peptide ADAM2_026381
+ADAM2_026382,Unnamed peptide ADAM2_026382
+ADAM2_026383,Unnamed peptide ADAM2_026383
+ADAM2_026384,Unnamed peptide ADAM2_026384
+ADAM2_026390,Unnamed peptide ADAM2_026390
+ADAM2_026758,Unnamed peptide ADAM2_026758
+ADAM2_029262,4-alpha-glucanotransferase (suggested)
+ADAM2_029263,Unknown (suggested)
+ADAM2_029264,lytic transglycosylase (suggested)
+ADAM2_029266,Unknown (suggested)
+ADAM2_029267,Unknown (suggested)
+ADAM2_029268,putative pectinesterase family protein (suggested)
+ADAM2_029269,Unknown (suggested)
+ADAM2_029270,Unknown (suggested)
+ADAM2_029271,Unknown (suggested)
+ADAM2_029273,Unknown (suggested)
+ADAM2_029274,Unknown (suggested)
+ADAM2_029275,movement protein (suggested)
+ADAM2_029276,TPR-like protein (suggested)
+ADAM2_029278,Unknown (suggested)
+ADAM2_029324,x-prolyl-dipeptidyl aminopeptidase (suggested)
+ADAM2_029340,Ornithine-acyl (suggested)
+ADAM2_029341,peptidase T (suggested)
+ADAM2_029342,peptidase T (suggested)
+ADAM2_029343,ABC multidrug transporter (suggested)
+ADAM2_029344,peptidase T (suggested)
+ADAM2_029345,Ornithine-acyl (suggested)
+ADAM2_029346,Ribonucleotide reductase (suggested)
+ADAM2_029347,Unknown (suggested)
+ADAM2_029348,Electrin-4 (suggested)
+ADAM2_029349,mg317 gene product (suggested)
+ADAM2_029350,mg317 gene product (suggested)
+ADAM2_029351,mg317 gene product (suggested)
+ADAM2_029352,Unknown (suggested)
+ADAM2_029353,Unknown (suggested)
+ADAM2_029354,phage putative head morphogenesis protein (suggested)
+ADAM2_029355,Unknown (suggested)
+ADAM2_029356,putative Fic family filamentation induced by cAMP cell division protein (suggested)
+ADAM2_029357,MB-38 (suggested)
+ADAM2_029358,4-alpha-glucanotransferase (suggested)
+ADAM2_029359,mg317 gene product (suggested)
+ADAM2_029364,Unknown (suggested)
+ADAM2_029366,Ornithine-acyl (suggested)
+ADAM2_029367,glycosyl transferase (suggested)
+ADAM2_029368,sulfate transporter subunit (suggested)
+ADAM2_029369,Xre-like DNA-binding protein (suggested)
+ADAM2_029370,Unknown (suggested)
+ADAM2_029371,Unknown (suggested)
+ADAM2_029753,Unnamed peptide ADAM2_029753
+ADAM2_029754,Unnamed peptide ADAM2_029754
+ADAM2_029755,Unnamed peptide ADAM2_029755
+ADAM2_029756,Unnamed peptide ADAM2_029756
+ADAM2_029757,Unnamed peptide ADAM2_029757
+ADAM2_029772,Unnamed peptide ADAM2_029772
+ADAM2_029793,Unnamed peptide ADAM2_029793
+ADAM2_029794,Unnamed peptide ADAM2_029794
+ADAM2_029795,Unnamed peptide ADAM2_029795
+ADAM2_030233,Unnamed peptide ADAM2_030233
+ADAM2_030234,Unnamed peptide ADAM2_030234
+ADAM2_030235,Unnamed peptide ADAM2_030235
+ADAM2_030238,Unnamed peptide ADAM2_030238
+ADAM2_030239,Unnamed peptide ADAM2_030239
+ADAM2_030240,Unnamed peptide ADAM2_030240
+ADAM2_030243,Unnamed peptide ADAM2_030243
+ADAM2_030244,Unnamed peptide ADAM2_030244
+ADAM2_030252,Unnamed peptide ADAM2_030252
+ADAM2_030263,Unnamed peptide ADAM2_030263
+ADAM2_030264,Unnamed peptide ADAM2_030264
+ADAM2_030265,Unnamed peptide ADAM2_030265
+ADAM2_030266,Unnamed peptide ADAM2_030266
+ADAM2_030267,Unnamed peptide ADAM2_030267
+ADAM2_030268,Unnamed peptide ADAM2_030268
+ADAM2_030269,Unnamed peptide ADAM2_030269
+ADAM2_030270,Unnamed peptide ADAM2_030270
+ADAM2_030271,Unnamed peptide ADAM2_030271
+ADAM2_030272,Unnamed peptide ADAM2_030272
+ADAM2_030273,Unnamed peptide ADAM2_030273
+ADAM2_030274,Unnamed peptide ADAM2_030274
+ADAM2_030275,Unnamed peptide ADAM2_030275
+ADAM2_030317,Unnamed peptide ADAM2_030317
+ADAM2_030330,Unnamed peptide ADAM2_030330
+ADAM2_030331,Unnamed peptide ADAM2_030331
+ADAM2_030350,Unnamed peptide ADAM2_030350
+ADAM2_030493,Unnamed peptide ADAM2_030493
+ADAM2_030752,Unnamed peptide ADAM2_030752
+ADAM2_034816,Sema3A(aa363-377) -nLytic
+ADAM2_034825,IL-4Rα-lytic peptide
+ADAM2_034827,Sema3A(aa363-377) -kLytic
+ADAM2_034833,Sema3A(aa371-377) -nLytic
+ADAM2_034834,VEGFR2-Lytic
+ADAM2_034952,EB(H2R)-lytic
+ADAM2_034955,Transferrin receptor (TfR)-lytic hybrid
+ADAM2_034958,Lytic
+ADAM2_034965,EB-lytic
+ADAM2_044470,L6Q (suggested)
+ADAM2_044471,L7Q (suggested)
+ADAM2_044473,L3Q (suggested)
+ADAM2_044474,L11Q (suggested)
+ADAM2_044475,L18Q (suggested)
+ADAM2_044476,Hgn (suggested)
+ADAM2_044480,Cupiennin-1a (suggested)
+ADAM2_044481,Protein synthesis inhibitor I (suggested)
+ADAM2_044484,Phyllospetin-H3 (suggested)
+ADAM2_044485,Phylloseptin-H2 (suggested)
+ADAM2_044487,Microcin J25 (suggested)
+ADAM2_044489,Neutrophil defensin 1 (suggested)
+ADAM2_044490,Neutrophil defensin 1 (suggested)
+ADAM2_044491,"Chain A, Solution Structure Of Apo-Neocarzinostatin (suggested)"
+ADAM2_044492,Neutrophil defensin 1 (suggested)
+ADAM2_044493,Neutrophil defensin 1 (suggested)
+ADAM2_044496,Cyanovirin-N (suggested)
+ADAM2_044497,Phylloseptin-H1 (suggested)
+ADAM2_044498,Bone marrow stromal antigen 2 (suggested)
+ADAM2_044499,L-amino-acid oxidase (suggested)
+ADAM2_044500,L-amino-acid oxidase BjussuLAAO-I (suggested)
+ADAM2_044501,Neutrophil defensin 1 (suggested)
+ADAM2_044502,Neutrophil defensin 1 (suggested)
+ADAM2_044504,Platelet basic protein (suggested)
+ADAM2_044505,Neutrophil defensin 1 (suggested)
+ADAM2_044506,Neutrophil defensin 1 (suggested)
+ADAM2_044507,Neutrophil defensin 1 (suggested)
+ADAM2_044508,Neutrophil defensin 1 (suggested)
+ADAM2_044509,Neutrophil defensin 1 (suggested)
+ADAM2_044510,Neutrophil defensin 1 (suggested)
+ADAM2_044511,Magainins (suggested)
+ADAM2_044512,Kalata-B1 (suggested)
+ADAM2_044513,Bone marrow stromal antigen 2 (suggested)
+ADAM2_044521,Large ribosomal subunit protein uL1 (suggested)
+ADAM2_044522,Large ribosomal subunit protein uL1 (suggested)
+ADAM2_044523,Large ribosomal subunit protein uL1 (suggested)
+ADAM2_044524,Large ribosomal subunit protein uL1 (suggested)
+ADAM2_044525,Large ribosomal subunit protein uL1 (suggested)
+ADAM2_044527,Aurein-1.2 (suggested)
+ADAM2_044529,Maculatin-1.1 (suggested)
+ADAM2_044530,Maculatin-1.1 (suggested)
+ADAM2_044531,Bone marrow stromal antigen 2 (suggested)
+ADAM2_044533,Large ribosomal subunit protein uL1 (suggested)
+ADAM2_044534,Defensin alpha 4 (suggested)
+ADAM2_044535,Defensin alpha 4 (suggested)
+ADAM2_044536,Defensin alpha 4 (suggested)
+ADAM2_044538,Antiviral protein alpha (suggested)
+ADAM2_044539,Heat-labile enterotoxin B chain (suggested)
+ADAM2_044540,Lactotransferrin (suggested)
+ADAM2_044541,L-amino-acid oxidase (suggested)
+ADAM2_044542,Anoplin (suggested)
+ADAM2_044543,Anoplin (suggested)
+ADAM2_044545,Anoplin (suggested)
+ADAM2_044546,Cathelicidin antimicrobial peptide (suggested)
+ADAM2_044549,Beta-defensin 12 (suggested)
+ADAM2_044550,C-C motif chemokine 4 (suggested)
+ADAM2_044555,Antimicrobial protein CAP18 (suggested)
+ADAM2_044556,Piscidin-3 (suggested)
+ADAM2_044558,Ribosome-inactivating protein dianthin-30 (suggested)
+ADAM2_044559,Ribosome-inactivating protein dianthin-30 (suggested)
+ADAM2_044561,Dermaseptin-DI1 (suggested)
+ADAM2_044579,Ripening-associated protein (suggested)
+ADAM2_044581,Growth-regulated alpha protein (suggested)
+ADAM2_044582,Lectin MVL (suggested)
+ADAM2_044583,Defensin alpha 5 (suggested)
+ADAM2_044584,Defensin alpha 5 (suggested)
+ADAM2_044585,Lactotransferrin (suggested)
+ADAM2_044607,Defensin (suggested)
+ADAM2_044608,Osmotin (suggested)
+ADAM2_044609,Osmotin-like protein NP24-I (suggested)
+ADAM2_044614,Zinc finger CCCH-type antiviral protein 1 (suggested)
+ADAM2_044615,DNA dC->dU-editing enzyme APOBEC-3G (suggested)
+ADAM2_044616,DNA dC->dU-editing enzyme APOBEC-3G (suggested)
+ADAM2_044617,DNA dC->dU-editing enzyme APOBEC-3G (suggested)
+ADAM2_044618,Antiviral protein SKI8 (suggested)
+ADAM2_044619,DNA dC->dU-editing enzyme APOBEC-3G (suggested)
+ADAM2_044620,Neutrophil gelatinase-associated lipocalin (suggested)
+ADAM2_044629,Zeamatin (suggested)
+ADAM2_044630,ASABF (suggested)
+ADAM2_044631,Defensin alpha 5 (suggested)
+ADAM2_044644,Granulysin (suggested)
+ADAM2_044645,Cathelicidin-6 (suggested)
+ADAM2_044652,Lactotransferrin (suggested)
+ADAM2_044653,Protein synthesis inhibitor I (suggested)
+ADAM2_044654,Lactotransferrin (suggested)
+ADAM2_044655,Lactotransferrin (suggested)
+ADAM2_044656,Lactotransferrin (suggested)
+ADAM2_044657,Lactotransferrin (suggested)
+ADAM2_044658,Lactotransferrin (suggested)
+ADAM2_044659,Lactotransferrin (suggested)
+ADAM2_044660,Lactotransferrin (suggested)
+ADAM2_044661,Lactotransferrin (suggested)
+ADAM2_044662,Lactotransferrin (suggested)
+ADAM2_044663,Lactotransferrin (suggested)
+ADAM2_044664,Lactotransferrin (suggested)
+ADAM2_044665,Lactotransferrin (suggested)
+ADAM2_044666,Lactotransferrin (suggested)
+ADAM2_044667,Lactotransferrin (suggested)
+ADAM2_044668,Lactotransferrin (suggested)
+ADAM2_044677,CRISPR-associated endonuclease Cas1 (suggested)
+ADAM2_044678,Protegrin-3 (suggested)
+ADAM2_044679,Cathelicidin antimicrobial peptide (suggested)
+ADAM2_044680,Cyanovirin-N homolog (suggested)
+ADAM2_044681,Cyanovirin-N homolog (suggested)
+ADAM2_044691,Griffithsin (suggested)
+ADAM2_044726,Moronecidin (suggested)
+ADAM2_044727,Pleurocidin (suggested)
+ADAM2_044749,DNA dC->dU-editing enzyme APOBEC-3G (suggested)
+ADAM2_044768,Hemagglutinin (suggested)
+ADAM2_044769,Hylin-a1 (suggested)
+ADAM2_044978,Cytotoxic linear peptide IsCT (suggested)
+ADAM2_044979,Cytotoxic linear peptide IsCT (suggested)
+ADAM2_044980,Cytotoxic linear peptide IsCT (suggested)
+ADAM2_044981,Cytotoxic linear peptide IsCT (suggested)
+ADAM2_044982,Cathelicidin-4 (suggested)
+ADAM2_044983,Cathelicidin-4 (suggested)
+ADAM2_044986,rRNA N-glycosylase (suggested)
+ADAM2_044987,Antiviral protein S (suggested)
+ADAM2_044988,Mastoparan-L (suggested)
+ADAM2_044989,Lantibiotic nisin-Z (suggested)
+ADAM2_044991,Azurocidin (suggested)
+ADAM2_044992,Azurocidin (suggested)
+ADAM2_044993,Azurocidin (suggested)
+ADAM2_044994,Islet amyloid polypeptide (suggested)
+ADAM2_044995,Lactotransferrin (suggested)
+ADAM2_044997,Colicin E3 (suggested)
+ADAM2_044998,"M protein, serotype 5 (suggested)"
+ADAM2_045004,C-C motif chemokine 8 (suggested)
+ADAM2_045005,Stromal cell-derived factor 1 (suggested)
+ADAM2_045006,Pro-hevein (suggested)
+ADAM2_045008,Bone marrow stromal antigen 2 (suggested)
+ADAM2_045018,Extracellular membrane protein CFEM domain-containing protein (suggested)
+ADAM2_045019,Defensin (suggested)
+ADAM2_045022,Tachyplesin-1 (suggested)
+ADAM2_045023,Proline rich bombesin-related protein (suggested)
+ADAM2_045024,Defensin-like protein 1 (suggested)
+ADAM2_045026,Bacteriocin leucocin-A (suggested)
+ADAM2_045027,Bacteriocin leucocin-A (suggested)
+ADAM2_045028,Tachyplesin-1 (suggested)
+ADAM2_045032,Viral macrophage inflammatory protein 2 (suggested)
+ADAM2_045033,Cyanovirin-N (suggested)
+ADAM2_045034,Cyanovirin-N (suggested)
+ADAM2_045037,Cyanovirin-N (suggested)
+ADAM2_045038,Cyanovirin-N (suggested)
+ADAM2_045188,Interferon alpha-2 (suggested)
+ADAM2_045189,Root cyclotide 1 (suggested)
+ADAM2_045408,Lysostaphin (suggested)
+ADAM2_045409,Lysostaphin (suggested)
+ADAM2_045410,Protein synthesis inhibitor I (suggested)
+ADAM2_045411,Lectin-like bacteriocin (suggested)
+ADAM2_045412,"Chain A, Crystal Structure Of The Bacteriocin Llpa From Pseudomonas Sp. (suggested)"
+ADAM2_045413,Interferon-stimulated gene 20 kDa protein (suggested)
+ADAM2_045785,L-lysine 6-oxidase (suggested)
+ADAM2_045787,Bacteriocin (suggested)
+ADAM2_045788,Membrane protein (suggested)
+ADAM2_045865,Ribosome-inactivating protein alpha-trichosanthin (suggested)
+ADAM2_045866,Ribosome-inactivating protein alpha-trichosanthin (suggested)
+ADAM2_045888,Type 1 encapsulin shell protein (suggested)
+ADAM2_047065,2'-5'-oligoadenylate synthase 1 (suggested)
+ADAM2_047066,Bacteriocin microcin B17 (suggested)
+ADAM2_047067,Colicin-E2 immunity protein (suggested)
+ADAM2_047068,Colicin-E9 immunity protein (suggested)
+ADAM2_047100,Colicin-M (suggested)
+ADAM2_047101,Colicin-M (suggested)
+ADAM2_047103,Colicin-E9 (suggested)
+ADAM2_047138,Colicin-M (suggested)
+ADAM2_047139,Colicin-M (suggested)
+ADAM2_047140,Colicin-M (suggested)
+ADAM2_047334,Colicin E3 immunity protein (suggested)
+ADAM2_047335,Protein S100-A12 (suggested)
+ADAM2_047336,Protein S100-A12 (suggested)
+ADAM2_047337,Non-structural protein 1 (suggested)
+ADAM2_047338,Colicin-Ia (suggested)
+ADAM2_047339,CRISPR-associated aCascade subunit Cas7/Csa2 2 (suggested)
+ADAM2_047340,CRISPR locus-related putative DNA-binding protein Csa3 (suggested)
+ADAM2_047341,Colicin-E7 (suggested)
+ADAM2_047342,Regenerating islet-derived protein 3-alpha (suggested)
+ADAM2_047354,Ribonuclease 7 (suggested)
+ADAM2_048218,Bacteriocin carnobacteriocin B2 (suggested)
+ADAM2_048219,L-amino-acid oxidase BjussuLAAO-I (suggested)
+ADAM2_048220,Cyanovirin-N homolog (suggested)
+ADAM2_048221,Neutrophil gelatinase-associated lipocalin (suggested)
+ADAM2_048222,Neutrophil gelatinase-associated lipocalin (suggested)
+ADAM2_048223,Neutrophil gelatinase-associated lipocalin (suggested)
+ADAM2_048224,Neutrophil gelatinase-associated lipocalin (suggested)
+ADAM2_048225,Neutrophil gelatinase-associated lipocalin (suggested)
+ADAM2_048226,C-C motif chemokine 13 (suggested)
+ADAM2_048242,Eosinophil cationic protein (suggested)
+ADAM2_048249,Saposin B-type domain-containing protein (suggested)
+ADAM2_048250,Colicin E3 (suggested)
+ADAM2_048251,Colicin E3 (suggested)
+ADAM2_048252,Colicin E3 (suggested)
+ADAM2_048253,Colicin-E2 (suggested)
+ADAM2_048254,"Endolysin PlyC, large catalytic subunit (suggested)"
+ADAM2_048255,Antiviral protein SKI8 (suggested)
+ADAM2_048257,"Endolysin PlyC, small cell-wall binding subunit (suggested)"
+ADAM2_048269,Interferon lambda-3 (suggested)
+ADAM2_048270,"Nucleoside diphosphate kinase, cytosolic (suggested)"
+ADAM2_048271,Lysozyme (suggested)
+ADAM2_048275,Interferon-induced GTP-binding protein Mx1 (suggested)
+ADAM2_048276,Defensin-like protein (suggested)
+ADAM2_048277,Angiogenin (suggested)
+ADAM2_048278,Peptidoglycan recognition protein 1 (suggested)
+ADAM2_048279,Anti-lipopolysaccharide factor isoform 3 (suggested)
+ADAM2_048280,Gomesin (suggested)
+ADAM2_048281,Kalata-B1 (suggested)
+ADAM2_048282,Antiviral protein II/III (suggested)
+ADAM2_048283,Subtilosin-A (suggested)
+ADAM2_048291,Apidaecins type 73 (suggested)
+ADAM2_048295,Ribosome-inactivating protein alpha-trichosanthin (suggested)
+ADAM2_048299,Big defensin (suggested)
+ADAM2_048300,Perforin-1 (suggested)
+ADAM2_048305,Metchnikowin (suggested)
+ADAM2_048306,Defensin beta 4A (suggested)
+ADAM2_048307,Cathelicidin-3 (suggested)
+ADAM2_048308,Protegrin-3 (suggested)
+ADAM2_048309,Neutrophil gelatinase-associated lipocalin (suggested)
+ADAM2_048310,Angiogenin (suggested)
+ADAM2_048317,Platelet basic protein (suggested)
+ADAM2_048971,Regenerating islet-derived protein 3-alpha (suggested)
+ADAM2_048977,Polyphemusin-1 (suggested)
+ADAM2_048978,Polyphemusin-1 (suggested)
+ADAM2_048979,Lactotransferrin (suggested)
+ADAM2_048980,Lactotransferrin (suggested)
+ADAM2_048981,Lactotransferrin (suggested)
+ADAM2_048982,Lactotransferrin (suggested)
+ADAM2_048983,Lactotransferrin (suggested)
+ADAM2_048987,Beta-defensin 1 (suggested)
+ADAM2_048988,Beta-defensin 1 (suggested)
+ADAM2_048989,Beta-defensin 1 (suggested)
+ADAM2_048990,Beta-defensin 1 (suggested)
+ADAM2_048991,Beta-defensin 1 (suggested)
+ADAM2_048992,Beta-defensin 1 (suggested)
+ADAM2_048993,Beta-defensin 1 (suggested)
+ADAM2_048994,Beta-defensin 1 (suggested)
+ADAM2_048995,Beta-defensin 1 (suggested)
+ADAM2_048996,Beta-defensin 1 (suggested)
+ADAM2_048997,Cecropin (suggested)
+ADAM2_048998,Actinohivin (suggested)
+ADAM2_048999,C-C motif chemokine 21 (suggested)
+ADAM2_049000,Gastrodianin-4A (suggested)
+ADAM2_049001,Antifungal protein (suggested)
+ADAM2_049002,Thiocillin GE2270 (suggested)
+ADAM2_049003,Nosiheptide precursor (suggested)
+ADAM2_049004,PDF1 (suggested)
+ADAM2_049005,Thiocillin GE2270 (suggested)
+ADAM2_049008,Antimicrobial peptide 1 (suggested)
+ADAM2_049009,Neutrophil defensin 3 (suggested)
+ADAM2_049010,Neutrophil defensin 3 (suggested)
+ADAM2_049011,Basic phospholipase A2 homolog bothropstoxin-I (suggested)
+ADAM2_049016,Colicin-E7 (suggested)
+ADAM2_049017,C-C motif chemokine 1 (suggested)
+ADAM2_049022,Neutrophil defensin 3 (suggested)
+ADAM2_049024,Interferon-induced helicase C domain-containing protein 1 (suggested)
+ADAM2_049025,Protein S100-A7 (suggested)
+ADAM2_049030,Antifungal peptide (suggested)
+ADAM2_049032,26 kDa endochitinase 2 (suggested)
+ADAM2_049036,Lantibiotic mersacidin (suggested)
+ADAM2_049037,Anti-lipopolysaccharide factor (suggested)
+ADAM2_049039,Protein S100-A9 (suggested)
+ADAM2_049040,Lactotransferrin (suggested)
+ADAM2_049050,Protein S100-A12 (suggested)
+ADAM2_049058,Kalata-B1 (suggested)
+ADAM2_049060,Antimicrobial peptide 2 (suggested)
+ADAM2_049061,Antimicrobial peptide 2 (suggested)
+ADAM2_049063,Antimicrobial peptide 2 (suggested)
+ADAM2_049064,Bactericidal permeability-increasing protein (suggested)
+ADAM2_049065,Bactericidal permeability-increasing protein (suggested)
+ADAM2_049066,C-X-C motif chemokine 10 (suggested)
+ADAM2_049067,Bactericidal permeability-increasing protein (suggested)
+ADAM2_049068,Antiviral protein I (suggested)
+ADAM2_049071,Prophenin and tritrpticin precursor (suggested)
+ADAM2_049072,Prophenin and tritrpticin precursor (suggested)
+ADAM2_049078,Prophenin and tritrpticin precursor (suggested)
+ADAM2_049079,Lactotransferrin (suggested)
+ADAM2_049080,Lactotransferrin (suggested)
+ADAM2_049083,Lantibiotic lichenicidin VK21 A1 (suggested)
+ADAM2_049084,Lantibiotic epilancin 15X (suggested)
+ADAM2_049085,Neutrophil defensin 1 (suggested)
+ADAM2_049086,Kalata-B7 (suggested)
+ADAM2_049087,Kalata-B1 (suggested)
+ADAM2_049088,Kalata-B1 (suggested)
+ADAM2_049089,Griffithsin (suggested)
+ADAM2_049090,Kalata-B8 (suggested)
+ADAM2_049099,Lantibiotic lichenicidin VK21 A2 (suggested)
+ADAM2_049100,Tachycitin (suggested)
+ADAM2_049101,Lactotransferrin (suggested)
+ADAM2_049102,Lactotransferrin (suggested)
+ADAM2_049105,Pro-adrenomedullin (suggested)
+ADAM2_049346,Kalata-B2 (suggested)
+ADAM2_049347,Pro-tricyclons (suggested)
+ADAM2_052311,C-C motif chemokine 27 (suggested)
+ADAM2_052325,Protein synthesis inhibitor II (suggested)
+ADAM2_052333,Tricyclon A protein (suggested)
+ADAM2_052373,L-amino-acid oxidase (suggested)
+ADAM2_052374,L-amino-acid oxidase (suggested)
+ADAM2_052375,L-amino-acid oxidase (suggested)
+ADAM2_052379,L-amino-acid oxidase (suggested)
+ADAM2_052394,Crotamine-IV-2 (suggested)
+ADAM2_052435,L-amino-acid oxidase (suggested)
+ADAM2_052436,antimicrobial peptide precursor (suggested)
+ADAM2_052441,antimicrobial peptide precursor (suggested)
+ADAM2_052442,antimicrobial peptide precursor (suggested)
+ADAM2_052444,antimicrobial peptide precursor (suggested)
+ADAM2_052447,antimicrobial peptide precursor (suggested)
+ADAM2_052453,antimicrobial peptide precursor (suggested)
+ADAM2_052455,antimicrobial peptide precursor (suggested)
+ADAM2_052461,Maximins 34/H10 precursor (suggested)
+ADAM2_052463,antimicrobial peptide precursor (suggested)
+ADAM2_052493,L-amino-acid oxidase (suggested)
+ADAM2_052494,L-amino-acid oxidase apoxin-1 (suggested)
+ADAM2_052497,Lactotransferrin (suggested)
+ADAM2_052501,L-amino-acid oxidase BmooLAAO-I (suggested)
+ADAM2_052502,L-amino-acid oxidase (suggested)
+ADAM2_052503,Defensin-6 (suggested)
+ADAM2_052626,Ovotransferrin (suggested)
+ADAM2_052682,antimicrobial peptide precursor (suggested)
+ADAM2_052728,Odorranain-M2 antimicrobial peptide (suggested)
+ADAM2_052733,antimicrobial peptide precursor (suggested)
+ADAM2_052735,N-acetylmuramoyl-L-alanine amidase sle1 (suggested)
+ADAM2_052740,Probable N-acetylmuramidase (suggested)
+ADAM2_052741,Probable N-acetylmuramidase (suggested)
+ADAM2_052746,antimicrobial peptide precursor (suggested)
+ADAM2_052849,antimicrobial peptide precursor (suggested)
+ADAM2_052894,L-amino-acid oxidase (suggested)
+ADAM2_053027,Unnamed peptide ADAM2_053027
+ADAM2_053042,Melittin (suggested)
+ADAM2_053043,SPBc2 prophage-derived bacteriocin sublancin-168 (suggested)
+ADAM2_053048,Haptoglobin (suggested)
+ADAM2_053056,Pathogenesis-related thaumatin superfamily protein isoform 2 (suggested)
+ADAM2_053088,Cecropin-A (suggested)
+ADAM2_053089,Zinc metalloproteinase-disintegrin-like BjussuMP-1 (suggested)
+ADAM2_053166,Cecropin-A (suggested)
+ADAM2_053183,antimicrobial peptide precursor (suggested)
+ADAM2_053200,Peptidoglycan recognition protein 4 (suggested)
+ADAM2_053205,Basic endochitinase B (suggested)
+ADAM2_053228,Pathogenesis-related thaumatin superfamily protein isoform 4 (suggested)
+ADAM2_053235,Serotransferrin (suggested)
+ADAM2_053252,BPI fold-containing family B member 3 (suggested)
+ADAM2_053256,Basic endochitinase A (suggested)
+ADAM2_053281,Bactericidal permeability-increasing protein (suggested)
+ADAM2_053294,Bactericidal permeability-increasing protein (suggested)
+ADAM2_053295,Bactericidal permeability-increasing protein (suggested)
+ADAM2_053324,"Casbene synthase, chloroplastic (suggested)"
+ADAM2_053331,Lactotransferrin (suggested)
+ADAM2_053333,antimicrobial peptide precursor (suggested)
+ADAM2_053346,Beta-defensin (suggested)
+ADAM2_053349,L-amino-acid oxidase (suggested)
+ADAM2_053350,antimicrobial peptide precursor (suggested)
+ADAM2_053356,antimicrobial peptide precursor (suggested)
+ADAM2_053371,antimicrobial peptide precursor (suggested)
+ADAM2_053411,L-amino-acid oxidase (suggested)
+ADAM2_053419,halocin H4 precursor (suggested)
+ADAM2_053429,Aplysianin-A (suggested)
+ADAM2_053467,Hymenoptaecin (suggested)
+ADAM2_053468,Hymenoptaecin (suggested)
+ADAM2_053469,Hymenoptaecin (suggested)
+ADAM2_053545,Hevein-like antimicrobial peptide (suggested)
+ADAM2_053572,Bactericidal permeability-increasing protein (suggested)
+ADAM2_053573,Cathelicidin precursor (suggested)
+ADAM2_053578,Sarcotoxin II-2 (suggested)
+ADAM2_053586,Cecropin-A (suggested)
+ADAM2_053587,Cecropin-A (suggested)
+ADAM2_053616,Perforin-1 (suggested)
+ADAM2_053617,Perforin-1 (suggested)
+ADAM2_053626,Cecropin-A (suggested)
+ADAM2_053635,Peptidoglycan recognition protein 3 (suggested)
+ADAM2_053662,"Pathogenesis-related thaumatin superfamily protein, putative isoform 2 (suggested)"
+ADAM2_053663,Bactericidal permeability-increasing protein (suggested)
+ADAM2_053665,Lysozyme (suggested)
+ADAM2_053666,Thaumatin-like protein (suggested)
+ADAM2_053668,Transferrin (suggested)
+ADAM2_053669,Thaumatin-like protein (suggested)
+ADAM2_053672,Halocin C8 (suggested)
+ADAM2_053673,Thaumatin-like protein (suggested)
+ADAM2_053674,Thaumatin family protein (suggested)
+ADAM2_053675,Halocin (suggested)
+ADAM2_053680,Thaumatin family protein (suggested)
+ADAM2_053681,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_053682,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_053683,Lysenin-related protein 2 (suggested)
+ADAM2_053685,At1g20030 (suggested)
+ADAM2_053687,Thaumatin-like protein (suggested)
+ADAM2_053689,Halocin C8 (suggested)
+ADAM2_053690,Pathogenesis-related thaumatin family protein (suggested)
+ADAM2_053700,Lactotransferrin (suggested)
+ADAM2_053701,Thaumatin-like protein (suggested)
+ADAM2_053702,Thaumatin-like protein (suggested)
+ADAM2_053705,Transferrin (suggested)
+ADAM2_053709,Lactotransferrin (suggested)
+ADAM2_053711,Pathogenesis-related thaumatin family protein (suggested)
+ADAM2_053712,Lysenin-related protein 3 (suggested)
+ADAM2_053714,Achacin (suggested)
+ADAM2_053716,Probable antibacterial peptide polyprotein (suggested)
+ADAM2_053718,Lactotransferrin (suggested)
+ADAM2_053728,Caerin 11 (suggested)
+ADAM2_053731,Lactotransferrin (suggested)
+ADAM2_053732,Thaumatin family protein (suggested)
+ADAM2_053733,Lactotransferrin (suggested)
+ADAM2_053734,Lactoferrin (suggested)
+ADAM2_053735,Lactotransferrin (suggested)
+ADAM2_053736,Lactotransferrin (suggested)
+ADAM2_053742,Lactotransferrin (suggested)
+ADAM2_053743,Signal recognition particle receptor subunit beta (suggested)
+ADAM2_053748,Thaumatin-like protein (suggested)
+ADAM2_053749,Thaumatin-like protein (suggested)
+ADAM2_053750,Thaumatin family protein (suggested)
+ADAM2_053751,Thaumatin-like protein (suggested)
+ADAM2_053752,Transferrin 2 (suggested)
+ADAM2_053753,Pathogenesis-related thaumatin family protein (suggested)
+ADAM2_053754,Thaumatin-like protein (suggested)
+ADAM2_053766,Type 1 encapsulin shell protein (suggested)
+ADAM2_053767,Linocin_M18 bacteriocin protein (suggested)
+ADAM2_053769,Type 1 encapsulin shell protein (suggested)
+ADAM2_053770,Linocin_M18 bacteriocin protein (suggested)
+ADAM2_053771,Bacteriocin protein (suggested)
+ADAM2_053772,Bacteriocin (suggested)
+ADAM2_053773,Linocin_M18 bacteriocin protein (suggested)
+ADAM2_053774,Antimicrobial peptide (suggested)
+ADAM2_053775,Serotransferrin (suggested)
+ADAM2_053776,Maltose/maltodextrin-binding periplasmic protein (suggested)
+ADAM2_053777,Ovotransferrin (suggested)
+ADAM2_053781,Antimicrobial peptide (suggested)
+ADAM2_053782,Antimicrobial peptide (suggested)
+ADAM2_053783,Antimicrobial peptide (suggested)
+ADAM2_053784,Antimicrobial peptide (suggested)
+ADAM2_053785,Antimicrobial peptide (suggested)
+ADAM2_053807,Antimicrobial peptide (suggested)
+ADAM2_053808,Antimicrobial peptide (suggested)
+ADAM2_053809,Antimicrobial peptide (suggested)
+ADAM2_053810,Antimicrobial peptide (suggested)
+ADAM2_053811,Antimicrobial peptide (suggested)
+ADAM2_053812,Antimicrobial peptide (suggested)
+ADAM2_053813,Antimicrobial peptide (suggested)
+ADAM2_053814,Antimicrobial peptide (suggested)
+ADAM2_053815,Antimicrobial peptide (suggested)
+ADAM2_053816,Antimicrobial peptide (suggested)
+ADAM2_053817,Antimicrobial peptide (suggested)
+ADAM2_053818,Antimicrobial peptide (suggested)
+ADAM2_053819,Antimicrobial peptide (suggested)
+ADAM2_053820,Antimicrobial peptide (suggested)
+ADAM2_053821,Antimicrobial peptide (suggested)
+ADAM2_053822,Antimicrobial peptide (suggested)
+ADAM2_053823,Antimicrobial peptide (suggested)
+ADAM2_053824,Antimicrobial peptide (suggested)
+ADAM2_053825,Antimicrobial peptide (suggested)
+ADAM2_053826,Antimicrobial peptide (suggested)
+ADAM2_053827,Antimicrobial peptide (suggested)
+ADAM2_053828,Antimicrobial peptide (suggested)
+ADAM2_053829,Antimicrobial peptide (suggested)
+ADAM2_053830,Antimicrobial peptide (suggested)
+ADAM2_053831,Antimicrobial peptide (suggested)
+ADAM2_053832,Antimicrobial peptide (suggested)
+ADAM2_053833,Antimicrobial peptide (suggested)
+ADAM2_053834,Antimicrobial peptide (suggested)
+ADAM2_053835,Antimicrobial peptide (suggested)
+ADAM2_053836,Antimicrobial peptide (suggested)
+ADAM2_053837,Antimicrobial peptide (suggested)
+ADAM2_053838,Antimicrobial peptide (suggested)
+ADAM2_053839,Antimicrobial peptide (suggested)
+ADAM2_053840,Antimicrobial peptide (suggested)
+ADAM2_053841,Antimicrobial peptide (suggested)
+ADAM2_053842,Antimicrobial peptide (suggested)
+ADAM2_053843,Antimicrobial peptide (suggested)
+ADAM2_053844,Antimicrobial peptide (suggested)
+ADAM2_053845,Antimicrobial peptide (suggested)
+ADAM2_053846,Antimicrobial peptide (suggested)
+ADAM2_053847,Antimicrobial peptide (suggested)
+ADAM2_053848,Antimicrobial peptide (suggested)
+ADAM2_053849,Antimicrobial peptide (suggested)
+ADAM2_053850,Antimicrobial peptide (suggested)
+ADAM2_053851,Antimicrobial peptide (suggested)
+ADAM2_053852,Antimicrobial peptide (suggested)
+ADAM2_053853,Antimicrobial peptide (suggested)
+ADAM2_053854,Antimicrobial peptide (suggested)
+ADAM2_053855,Type 1 encapsulin shell protein (suggested)
+ADAM2_053856,Antimicrobial peptide (suggested)
+ADAM2_053857,Putative thaumatin (suggested)
+ADAM2_053858,Putative thaumatin-like protein (suggested)
+ADAM2_053859,Putative thaumatin (suggested)
+ADAM2_053860,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_053861,Antimicrobial peptide (suggested)
+ADAM2_053862,Antimicrobial peptide (suggested)
+ADAM2_053863,Transferrin (suggested)
+ADAM2_053889,BPI fold-containing family B member 4 (suggested)
+ADAM2_053890,Osmotin (suggested)
+ADAM2_053892,Transferrin (suggested)
+ADAM2_053894,Osmotin (suggested)
+ADAM2_053921,Serotransferrin (suggested)
+ADAM2_053922,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_053926,Serotransferrin (suggested)
+ADAM2_053928,Thaumatin-like protein (suggested)
+ADAM2_053962,Caerin 21 (suggested)
+ADAM2_053964,Pathogenesis-related thaumatin family protein (suggested)
+ADAM2_053965,Pathogenesis-related thaumatin family protein (suggested)
+ADAM2_053968,Thaumatin-like protein (suggested)
+ADAM2_053970,Thaumatin-like protein 1 (suggested)
+ADAM2_053971,Phylloseptin-S1 (suggested)
+ADAM2_053974,Lactotransferrin (suggested)
+ADAM2_053978,"Pathogenesis-related thaumatin superfamily protein, putative isoform 1 (suggested)"
+ADAM2_053980,Thaumatin-like protein (suggested)
+ADAM2_053981,Thaumatin-like protein 1 (suggested)
+ADAM2_053986,Transferrin (suggested)
+ADAM2_053987,Pathogenesis-related thaumatin family protein (suggested)
+ADAM2_053988,Transferrin (suggested)
+ADAM2_053990,Thaumatin-like protein (suggested)
+ADAM2_053991,Thaumatin-like protein (suggested)
+ADAM2_053992,Pathogenesis-related thaumatin family protein (suggested)
+ADAM2_053993,Thaumatin-like protein (suggested)
+ADAM2_053994,Thaumatin-like protein (suggested)
+ADAM2_053996,Thaumatin-like protein 1 (suggested)
+ADAM2_053997,Thaumatin-like protein 1 (suggested)
+ADAM2_053998,Thaumatin-like protein (suggested)
+ADAM2_053999,Thaumatin-like protein 1a (suggested)
+ADAM2_054001,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054002,Pathogenesis-related thaumatin family protein (suggested)
+ADAM2_054003,Pathogenesis-related protein (suggested)
+ADAM2_054004,Thaumatin-like protein (suggested)
+ADAM2_054005,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054006,Allergen Pru du 2.04 (suggested)
+ADAM2_054009,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054010,Thaumatin-like protein 3 (suggested)
+ADAM2_054012,Lactotransferrin (suggested)
+ADAM2_054013,Thaumatin-like protein (suggested)
+ADAM2_054015,Guanylate-binding protein 2 (suggested)
+ADAM2_054016,Serotransferrin (suggested)
+ADAM2_054017,Lactotransferrin (suggested)
+ADAM2_054018,Lactotransferrin (suggested)
+ADAM2_054019,Ovotransferrin (suggested)
+ADAM2_054020,Lactotransferrin (suggested)
+ADAM2_054021,Lactoferrin (suggested)
+ADAM2_054022,Lactotransferrin (suggested)
+ADAM2_054023,Lactotransferrin (suggested)
+ADAM2_054024,Lactotransferrin (suggested)
+ADAM2_054025,Lactotransferrin (suggested)
+ADAM2_054026,Lactotransferrin (suggested)
+ADAM2_054027,Transferrin (suggested)
+ADAM2_054028,Thaumatin-like protein 1 (suggested)
+ADAM2_054029,Guanylate-binding protein 2 (suggested)
+ADAM2_054030,Guanylate-binding protein 1 (suggested)
+ADAM2_054031,Thaumatin-like protein (suggested)
+ADAM2_054032,"Osmotin, thaumatin-like protein (suggested)"
+ADAM2_054033,Transferrin-like domain-containing protein (suggested)
+ADAM2_054034,Thaumatin-like protein 1 (suggested)
+ADAM2_054035,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054037,Thaumatin-like protein 1 (suggested)
+ADAM2_054040,Thaumatin-like protein 1 (suggested)
+ADAM2_054041,Hymenoptaecin (suggested)
+ADAM2_054042,Hymenoptaecin (suggested)
+ADAM2_054044,Lactotransferrin (suggested)
+ADAM2_054045,Lactotransferrin (suggested)
+ADAM2_054046,Transferrin (suggested)
+ADAM2_054047,Lactotransferrin (suggested)
+ADAM2_054048,Hymenoptaecin (suggested)
+ADAM2_054049,Pathogenesis-related thaumatin superfamily protein isoform 2 (suggested)
+ADAM2_054050,Pathogenesis-related thaumatin superfamily protein isoform 1 (suggested)
+ADAM2_054051,Thaumatin-like protein 1 (suggested)
+ADAM2_054053,Guanylate-binding protein 2 (suggested)
+ADAM2_054054,Guanylate-binding protein 1 (suggested)
+ADAM2_054055,Guanylate-binding protein 1 (suggested)
+ADAM2_054056,Guanylate-binding protein 1 (suggested)
+ADAM2_054057,Ovotransferrin (suggested)
+ADAM2_054058,Ovotransferrin (suggested)
+ADAM2_054059,Ovotransferrin (suggested)
+ADAM2_054060,Ovotransferrin (suggested)
+ADAM2_054061,Lactotransferrin (suggested)
+ADAM2_054062,Lactotransferrin (suggested)
+ADAM2_054063,Lactotransferrin (suggested)
+ADAM2_054064,Lactotransferrin (suggested)
+ADAM2_054065,Lactotransferrin (suggested)
+ADAM2_054066,Hymenoptaecin (suggested)
+ADAM2_054067,Lactoferrin (suggested)
+ADAM2_054069,Lactotransferrin (suggested)
+ADAM2_054070,Lactotransferrin (suggested)
+ADAM2_054071,Lactotransferrin (suggested)
+ADAM2_054072,Lactotransferrin (suggested)
+ADAM2_054073,Lactotransferrin (suggested)
+ADAM2_054074,Lactotransferrin (suggested)
+ADAM2_054075,Lactotransferrin (suggested)
+ADAM2_054076,Lactotransferrin (suggested)
+ADAM2_054077,Lactotransferrin (suggested)
+ADAM2_054078,Lactotransferrin (suggested)
+ADAM2_054079,Lactotransferrin (suggested)
+ADAM2_054080,Transferrin-like protein (suggested)
+ADAM2_054081,Ovotransferrin (suggested)
+ADAM2_054082,Lactoferrin (suggested)
+ADAM2_054083,Lactotransferrin (suggested)
+ADAM2_054084,Serotransferrin (suggested)
+ADAM2_054085,Lactotransferrin (suggested)
+ADAM2_054086,Thaumatin-like protein 1 (suggested)
+ADAM2_054088,Thaumatin-like protein (suggested)
+ADAM2_054090,Thaumatin-like protein (suggested)
+ADAM2_054091,Thaumatin-like protein 1 (suggested)
+ADAM2_054093,Thaumatin-like protein (suggested)
+ADAM2_054095,Antimicrobial peptide (suggested)
+ADAM2_054096,Crotamine Ile-19 (suggested)
+ADAM2_054097,Myotoxin-A (suggested)
+ADAM2_054098,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054099,Thaumatin-like protein (suggested)
+ADAM2_054100,Pathogenesis-related thaumatin family protein (suggested)
+ADAM2_054101,Transferrin 2 (suggested)
+ADAM2_054102,Thaumatin-like protein (suggested)
+ADAM2_054103,Ovotransferrin (suggested)
+ADAM2_054105,Ovotransferrin (suggested)
+ADAM2_054106,Antimicrobial peptide (suggested)
+ADAM2_054107,Antimicrobial peptide (suggested)
+ADAM2_054108,Antimicrobial peptide (suggested)
+ADAM2_054109,Antimicrobial peptide (suggested)
+ADAM2_054112,Pathogenesis-related thaumatin superfamily protein isoform 2 (suggested)
+ADAM2_054113,Transferrin (suggested)
+ADAM2_054116,THAUMATIN-LIKE PROTEIN 1 (suggested)
+ADAM2_054119,Thaumatin-like protein (suggested)
+ADAM2_054120,Thaumatin-like protein 1 (suggested)
+ADAM2_054121,Lysin (suggested)
+ADAM2_054122,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054123,Transferrin-like domain-containing protein (suggested)
+ADAM2_054124,Thaumatin-like protein 1 (suggested)
+ADAM2_054125,At5g24620 (suggested)
+ADAM2_054126,Thaumatin-like protein 1b (suggested)
+ADAM2_054127,Thaumatin-like protein 1b (suggested)
+ADAM2_054128,Thaumatin-like protein 1 (suggested)
+ADAM2_054130,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054131,Thaumatin-like protein 1 (suggested)
+ADAM2_054133,Thaumatin-like protein (suggested)
+ADAM2_054134,Thaumatin-like protein (suggested)
+ADAM2_054135,Putative thaumatin-like protein (suggested)
+ADAM2_054136,Lactotransferrin (suggested)
+ADAM2_054138,Pathogenesis-related protein 5 (suggested)
+ADAM2_054139,Thaumatin-like protein (suggested)
+ADAM2_054141,Bradykinin (suggested)
+ADAM2_054142,Thaumatin-like protein (suggested)
+ADAM2_054144,LINOCIN M18 (suggested)
+ADAM2_054145,Thaumatin-like protein 1 (suggested)
+ADAM2_054146,Pathogenesis-related thaumatin family protein (suggested)
+ADAM2_054147,Thaumatin-like protein 1b (suggested)
+ADAM2_054148,Zeamatin (suggested)
+ADAM2_054153,Thaumatin-like protein 1b (suggested)
+ADAM2_054154,Putative thaumatin-like protein (suggested)
+ADAM2_054155,Thaumatin (suggested)
+ADAM2_054156,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054157,Linocin_M18 bacteriocin protein (suggested)
+ADAM2_054159,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054160,Thaumatin-like protein (suggested)
+ADAM2_054161,Thaumatin-like protein 1b (suggested)
+ADAM2_054162,Thaumatin-like protein 1b (suggested)
+ADAM2_054163,Thaumatin-like protein (suggested)
+ADAM2_054164,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054167,Pathogenesis-related thaumatin superfamily protein isoform 1 (suggested)
+ADAM2_054168,Kininogen-1 (suggested)
+ADAM2_054171,Type 1 encapsulin shell protein (suggested)
+ADAM2_054172,Kininogen-1 (suggested)
+ADAM2_054174,Kininogen-1 (suggested)
+ADAM2_054175,Pathogenesis-related thaumatin superfamily protein (suggested)
+ADAM2_054177,Thaumatin-like protein 1a (suggested)
+ADAM2_054179,Pathogenesis-related protein 5 (suggested)
+ADAM2_054180,Thaumatin-like protein 1 (suggested)
+ADAM2_054181,Thaumatin-like protein 1 (suggested)
+ADAM2_054182,Thaumatin-like protein (suggested)
+ADAM2_054183,Thaumatin protein (suggested)
+ADAM2_054217,Defensin MGD-1 (suggested)
+ADAM2_054243,magainins preproprotein (suggested)
+ADAM2_054269,transferrin (suggested)
+ADAM2_054299,ENV (suggested)
+ADAM2_054308,Brevinin-1PLc (suggested)
+ADAM2_054345,human PAB-beta fusion protein (suggested)
+ADAM2_054395,pediocin L50 {C-terminal} (suggested)
+ADAM2_054396,Aurelin (suggested)
+ADAM2_054401,"NP24 protein precursor, partial (suggested)"
+ADAM2_054421,Antimicrobial peptide microplusin (suggested)
+ADAM2_054471,hepcidin-like antimicrobial peptide (suggested)
+ADAM2_054502,"Chain A, Nk-Lysin From Pig, Nmr, 20 Structures (suggested)"
+ADAM2_054503,Citropin-2.1.3 (suggested)
+ADAM2_054506,Pyocin-S1 (suggested)
+ADAM2_054600,Caerin-3.1 (suggested)
+ADAM2_054662,CvaC (suggested)
+ADAM2_054668,biopolymer transporter Tol (suggested)
+ADAM2_054742,Unnamed peptide ADAM2_054742
+ADAM2_054758,unnamed protein product (suggested)
+ADAM2_054801,magainins preproprotein (suggested)
+ADAM2_054857,"colicin-K, partial (suggested)"
+ADAM2_054860,xenopsin peptides precursor (suggested)
+ADAM2_054868,"Chain A, Nmr Structure Of Microplusin A Antimicrobial Peptide From Rhipicephalus (Boophilus) Microplus (suggested)"
+ADAM2_054880,antimicrobial peptide precursor (suggested)
+ADAM2_054881,Cecropin-B (suggested)
+ADAM2_054883,putative DNA-directed RNA polymerase subunit (suggested)
+ADAM2_054884,plantaricin S beta chain=bacteriocin {N-terminal} (suggested)
+ADAM2_054889,Glycine-rich protein GWK (suggested)
+ADAM2_054901,plantaricin SA6 - Lactobacillus plantarum (strain SA6) (fragment) (suggested)
+ADAM2_054912,patatin (suggested)
+ADAM2_054913,"Chain A, Structure Of The Rsv F Protein In The Post-Fusion Conformation (suggested)"
+ADAM2_054917,DNA-directed RNA polymerase subunit beta (suggested)
+ADAM2_054918,Intracellular growth attenuator protein igaA (suggested)
+ADAM2_054923,cyclotide precursor 2 (suggested)
+ADAM2_054931,Histone H2B (suggested)
+ADAM2_054933,precursor of an antimircobial peptide with kunitz domain (suggested)
+ADAM2_054934,stylicine 2 (suggested)
+ADAM2_054935,L-amino-acid oxidase (suggested)
+ADAM2_054936,Acaloleptin A (suggested)
+ADAM2_054939,Diptericin-A (suggested)
+ADAM2_054940,Theromyzin (suggested)
+ADAM2_054941,AGAP011273-PA (suggested)
+ADAM2_054943,crustin antimicrobial peptide (suggested)
+ADAM2_054944,klebicin C phage associated protein (suggested)
+ADAM2_054945,male-specific defensin (suggested)
+ADAM2_054947,"Chain A, Structure Of Caenopore-5 (81 Pro Cis Conformer) (suggested)"
+ADAM2_054948,galiomicin (suggested)
+ADAM2_054949,lactacin F - Lactobacillus acidophilus (fragment) (suggested)
+ADAM2_054951,Colicin-E5 (suggested)
+ADAM2_054954,chemotaxis protein CheY (suggested)
+ADAM2_054958,fumarylacetoacetase (suggested)
+ADAM2_054959,envelope glycoprotein (suggested)
+ADAM2_054960,closticin 574 (suggested)
+ADAM2_054961,crustin-like antimicrobial peptide (suggested)
+ADAM2_054963,tyrosine phenol-lyase (suggested)
+ADAM2_054964,"Chain A, Solution Structure Of Cecropin A(1-8)-Magainin 2(1-12) Hybrid Peptide (suggested)"
+ADAM2_054965,ENV (suggested)
+ADAM2_054974,Turmerin (suggested)
+ADAM2_054979,signal transduction histidine kinase LytS (suggested)
+ADAM2_054993,ENV (suggested)
+ADAM2_055004,protease-activated antimicrobial peptide (suggested)
+ADAM2_055006,Cathelin-related antimicrobial peptide (suggested)
+ADAM2_055007,CCL28 (suggested)
+ADAM2_055008,Antifungal protein (suggested)
+ADAM2_055010,Styelin-D (suggested)
+ADAM2_055015,unnamed protein product (suggested)
+ADAM2_055026,Achacin (suggested)
+ADAM2_055030,Hepcidin (suggested)
+ADAM2_055061,Microcin E492 (suggested)
+ADAM2_055062,microcin L precursor (suggested)
+ADAM2_055064,pore-forming peptide ameobapore A precursor (suggested)
+ADAM2_055065,Microcin E492 (suggested)
+ADAM2_055066,defensin (suggested)
+ADAM2_055067,cylL-L protein (suggested)
+ADAM2_055068,L-cystatin (suggested)
+ADAM2_055069,Peptide BmKb1 (suggested)
+ADAM2_055070,Defensin Lc-def (suggested)
+ADAM2_055071,mitochondrial ATP synthase (suggested)
+ADAM2_055072,lantibiotic epidermin (suggested)
+ADAM2_055073,"lantibiotic precursor, partial (suggested)"
+ADAM2_055074,GntR family transcriptional regulator (suggested)
+ADAM2_055077,protegrin-3 precursor (suggested)
+ADAM2_055078,protegrin-2 precursor (suggested)
+ADAM2_055079,protegrin-1 precursor (suggested)
+ADAM2_055080,Antibacterial peptide PMAP-37 (suggested)
+ADAM2_055081,antibacterial peptide PMAP-23 precursor (suggested)
+ADAM2_055082,Antibacterial protein PR-39 (suggested)
+ADAM2_055083,antibacterial peptide PMAP-36 precursor (suggested)
+ADAM2_055086,cathelicidin-3 precursor (suggested)
+ADAM2_055087,signal peptide protein (suggested)
+ADAM2_055089,Compound 12 (suggested)
+ADAM2_055103,Compound 8 (suggested)
+ADAM2_055104,"bacteriocin, lactococcin 972 (suggested)"
+ADAM2_055105,cystatin-11 isoform 1 precursor (suggested)
+ADAM2_055106,Maximins 3/H5 (suggested)
+ADAM2_055107,Abp118 bacteriocin alpha peptide (suggested)
+ADAM2_055108,Holotricin-2 (suggested)
+ADAM2_055109,Rhinocerosin (suggested)
+ADAM2_055110,cylL-S protein (suggested)
+ADAM2_055111,peptidoglycan recognition protein 4 precursor (suggested)
+ADAM2_055112,lipase/ esterase (suggested)
+ADAM2_055113,M-zodatoxin-Lt8a (suggested)
+ADAM2_055114,M-zodatoxin-Lt8g (suggested)
+ADAM2_055115,M-zodatoxin-Lt8c (suggested)
+ADAM2_055116,M-zodatoxin-Lt8d (suggested)
+ADAM2_055117,M-zodatoxin-Lt8b (suggested)
+ADAM2_055118,M-zodatoxin-Lt8e (suggested)
+ADAM2_055119,Vespid chemotactic peptide 5h (suggested)
+ADAM2_055120,bacteriocin inducing peptide (suggested)
+ADAM2_055121,sperm associated antigen 11 isoform E (suggested)
+ADAM2_055122,cathelicidin-1 precursor (suggested)
+ADAM2_055123,M-zodatoxin-Lt5a (suggested)
+ADAM2_055124,M-zodatoxin-Lt2a (suggested)
+ADAM2_055125,M-zodatoxin-Lt1a (suggested)
+ADAM2_055126,M-zodatoxin-Lt8h (suggested)
+ADAM2_055127,M-zodatoxin-Lt8f (suggested)
+ADAM2_055130,Maximins 9/H3 (suggested)
+ADAM2_055131,Maximins 1/H1 (suggested)
+ADAM2_055132,Maximins 3/H14 (suggested)
+ADAM2_055137,Maximins 1/H12 (suggested)
+ADAM2_055138,Maximins 3/H2 (suggested)
+ADAM2_055140,cytochrome BD oxidase subunit I (suggested)
+ADAM2_055141,Cecropin (suggested)
+ADAM2_055142,Lysozyme 3 (suggested)
+ADAM2_055143,Lysozyme 1 (suggested)
+ADAM2_055144,TruE3 (suggested)
+ADAM2_055145,patellamide precursor protein (suggested)
+ADAM2_055146,GTP-binding protein Der (suggested)
+ADAM2_055147,translation initiation factor IF-2 (suggested)
+ADAM2_055148,lamg domain-containing protein jellyroll fold domain-containing protein (suggested)
+ADAM2_055149,"antibacterial peptide, putative (suggested)"
+ADAM2_055150,Bombinin-like peptides 2 (suggested)
+ADAM2_055151,Bombinin-like peptides 3 (suggested)
+ADAM2_055152,Bombinin-like peptides 1 (suggested)
+ADAM2_055153,chemokine (C-X-C motif) ligand 12 isoform gamma precursor (suggested)
+ADAM2_055154,chemokine (C-X-C motif) ligand 12 isoform gamma precursor (suggested)
+ADAM2_055155,anti-FecI sigma factor FecR (suggested)
+ADAM2_055156,Lysozyme 2 (suggested)
+ADAM2_055157,Bombinin-like peptides 1 (suggested)
+ADAM2_055158,AmfS protein (suggested)
+ADAM2_055159,histone H2B type 2-E (suggested)
+ADAM2_055160,histone H2B type 1-K (suggested)
+ADAM2_055161,histone H2B type 1-C/E/F/G/I (suggested)
+ADAM2_055162,Histone H2B type F-S (suggested)
+ADAM2_055163,histone H2B 7 (suggested)
+ADAM2_055164,Opistoporin-1 (suggested)
+ADAM2_055165,Gomesin (suggested)
+ADAM2_055166,Heteroscorpine-1 (suggested)
+ADAM2_055167,bacteriocin (suggested)
+ADAM2_055168,microbisporicin structural preproprotein (suggested)
+ADAM2_055169,unnamed protein product (suggested)
+ADAM2_055170,"COG1501: Alpha-glucosidases, family 31 of glycosyl hydrolases (suggested)"
+ADAM2_055171,Histone H2B (suggested)
+ADAM2_055172,"Chain D, The Nucleosome Containing A Testis-Specific Histone Variant, Human H3t (suggested)"
+ADAM2_055173,Propionicin-F (suggested)
+ADAM2_055174,bacteriocin BlpJ (suggested)
+ADAM2_055175,bacteriocin peptide (suggested)
+ADAM2_055176,Opiscorpine-1 (suggested)
+ADAM2_055177,patellamide precursor protein (suggested)
+ADAM2_055178,patellamide precursor protein (suggested)
+ADAM2_055179,2-oxoacid ferredoxin oxidoreductase subunit beta (suggested)
+ADAM2_055180,propionicin SM1 (suggested)
+ADAM2_055181,pediocin (suggested)
+ADAM2_055203,hymenoptaecin preproprotein (suggested)
+ADAM2_055204,"cytochrome b, partial (mitochondrion) (suggested)"
+ADAM2_055205,mesentericin B105 (suggested)
+ADAM2_055206,BlpM (suggested)
+ADAM2_055207,bacteriocin BlpI (suggested)
+ADAM2_055209,cathelicidin-4 precursor (suggested)
+ADAM2_055210,diptericin (suggested)
+ADAM2_055211,Plectasin (suggested)
+ADAM2_055212,PapA (suggested)
+ADAM2_055213,Antimicrobial peptide ISAMP (suggested)
+ADAM2_055214,lysozyme C II precursor (suggested)
+ADAM2_055215,MceS2 (suggested)
+ADAM2_055216,bacteriocin (suggested)
+ADAM2_055217,bacteriocin 28b (suggested)
+ADAM2_055218,Non-histone chromosomal protein H6 (suggested)
+ADAM2_055219,Potassium channel toxin MeuTXK-beta-1 (suggested)
+ADAM2_055220,BlpN protein (suggested)
+ADAM2_055221,BlpN protein (suggested)
+ADAM2_055222,L-amino-acid oxidase (suggested)
+ADAM2_055223,enterocin NKR-5-3A prepeptide (suggested)
+ADAM2_055224,lysozyme precursor (suggested)
+ADAM2_055225,sakacin Q bacteriocin (suggested)
+ADAM2_055226,sakacin Q bacteriocin (suggested)
+ADAM2_055231,bovicin 255 peptide precursor (suggested)
+ADAM2_055232,bacteriocin BlpU (suggested)
+ADAM2_055233,putative membrane protein (suggested)
+ADAM2_055234,BlpN protein (suggested)
+ADAM2_055235,closticin 574 (suggested)
+ADAM2_055236,Cypemycin (suggested)
+ADAM2_055237,beta-defensin 8 precursor (suggested)
+ADAM2_055238,Penaeidin-3d (suggested)
+ADAM2_055239,Penaeidin-3h (suggested)
+ADAM2_055240,Penaeidin-3i (suggested)
+ADAM2_055241,Penaeidin-3g (suggested)
+ADAM2_055242,Penaeidin-3j (suggested)
+ADAM2_055243,Gallinacin-1 alpha (suggested)
+ADAM2_055244,gallinacin-11 precursor (suggested)
+ADAM2_055245,Beta-defensin 11 (suggested)
+ADAM2_055246,penaeidin (suggested)
+ADAM2_055247,Penaeidin-2b (suggested)
+ADAM2_055248,Penaeidin-2d (suggested)
+ADAM2_055249,Penaeidin-3m (suggested)
+ADAM2_055250,colicin-V (Microcin-V bacteriocin) (suggested)
+ADAM2_055251,lysozyme (suggested)
+ADAM2_055252,bacteriocin (suggested)
+ADAM2_055253,bacteriocin (suggested)
+ADAM2_055254,beta-defensin 10 precursor (suggested)
+ADAM2_055255,gallinacin-13 precursor (suggested)
+ADAM2_055256,microcyclamide precursor protein (suggested)
+ADAM2_055257,microcin L precursor (suggested)
+ADAM2_055258,colicin V (suggested)
+ADAM2_055259,colicin V (suggested)
+ADAM2_055260,bactericidal permeability-increasing protein precursor (suggested)
+ADAM2_055261,Unknown (suggested)
+ADAM2_055262,dermcidin preproprotein (suggested)
+ADAM2_055284,Penaeidin-4c (suggested)
+ADAM2_055285,penaeidin (suggested)
+ADAM2_055286,Penaeidin-4d (suggested)
+ADAM2_055287,Prophenin-1 (suggested)
+ADAM2_055291,envelope polyprotein (suggested)
+ADAM2_055292,ENV (suggested)
+ADAM2_055293,ENV (suggested)
+ADAM2_055294,ENV (suggested)
+ADAM2_055295,ENV (suggested)
+ADAM2_055296,ENV (suggested)
+ADAM2_055297,ENV (suggested)
+ADAM2_055298,Envelope glycoprotein gp150 (suggested)
+ADAM2_055299,oral alpha defensin 1 precursor (suggested)
+ADAM2_055300,Ruminococcin-A (suggested)
+ADAM2_055301,ENV (suggested)
+ADAM2_055302,ENV (suggested)
+ADAM2_055303,ENV (suggested)
+ADAM2_055304,envelope glycoprotein (suggested)
+ADAM2_055305,theta defensin subunit D precursor (suggested)
+ADAM2_055306,theta defensin subunit B precursor (suggested)
+ADAM2_055307,Defensin (suggested)
+ADAM2_055308,Penaeidin-3k (suggested)
+ADAM2_055309,Penaeidin-3n (suggested)
+ADAM2_055310,Penaeidin-3l (suggested)
+ADAM2_055311,CvaC (suggested)
+ADAM2_055312,Defensin-C (suggested)
+ADAM2_055313,colicin-Ia domain protein (suggested)
+ADAM2_055314,Chromogranin-A (suggested)
+ADAM2_055315,Lysozyme C (suggested)
+ADAM2_055316,Antimicrobial protein 1 (suggested)
+ADAM2_055317,Scygonadin (suggested)
+ADAM2_055318,theta defensin subunit C precursor (suggested)
+ADAM2_055319,theta defensin subunit A precursor (suggested)
+ADAM2_055336,colicin-Ia domain protein (suggested)
+ADAM2_055337,colicin Ib protein (suggested)
+ADAM2_055344,ENV (suggested)
+ADAM2_055345,ENV (suggested)
+ADAM2_055346,Unknown (suggested)
+ADAM2_055347,Mastoparan-like peptide 12c (suggested)
+ADAM2_055348,Ixosin (suggested)
+ADAM2_055349,klebicin D activity protein (suggested)
+ADAM2_055350,Halocin-S8 (suggested)
+ADAM2_055351,colicin B activity protein (suggested)
+ADAM2_055352,ENV (suggested)
+ADAM2_055353,"Chain A, Efficacy Of An Hiv-1 Entry Inhibitor Targeting The Gp41 Fusion Peptide (suggested)"
+ADAM2_055354,lantibiotic prepeptide (suggested)
+ADAM2_055355,halocin H4 precursor | Halocin H4 (suggested)
+ADAM2_055356,lantibiotic ericin Sa (suggested)
+ADAM2_055357,EtnS (suggested)
+ADAM2_055358,unknown (suggested)
+ADAM2_055359,Attacin-C (suggested)
+ADAM2_055360,Histone H2A (suggested)
+ADAM2_055361,Basic phospholipase A2 homolog bothropstoxin-1 (suggested)
+ADAM2_055362,Phospholipase A2 homolog 1 (suggested)
+ADAM2_055363,neutrophil cationic peptide 1 type B preproprotein (suggested)
+ADAM2_055364,GP-CS2=corticostatic peptide (suggested)
+ADAM2_055365,Hydramacin-1 (suggested)
+ADAM2_055366,ENV (suggested)
+ADAM2_055367,alveicin B bacteriocin toxin (suggested)
+ADAM2_055368,"colicin-E7, partial (suggested)"
+ADAM2_055369,Colicin-E7 (suggested)
+ADAM2_055370,colicin E9 (suggested)
+ADAM2_055373,Histone H2A (suggested)
+ADAM2_055374,Histone H2A (suggested)
+ADAM2_055377,large component of pyocin AP41 (suggested)
+ADAM2_055378,putative colicin activity protein (suggested)
+ADAM2_055379,Protocadherin Fat 3 (suggested)
+ADAM2_055380,Non-specific lipid-transfer protein 1 (suggested)
+ADAM2_055381,Histone H4 (suggested)
+ADAM2_055382,acyl-CoA-binding protein (suggested)
+ADAM2_055383,Unknown (suggested)
+ADAM2_055384,Unknown (suggested)
+ADAM2_055385,amino acid adenylation domain-containing protein (suggested)
+ADAM2_055386,DEAD/DEAH box helicase (suggested)
+ADAM2_055387,platelet basic protein preproprotein (suggested)
+ADAM2_055388,Sulfotransferase 16 (suggested)
+ADAM2_055389,pesticin (suggested)
+ADAM2_055390,microcin S precursor (suggested)
+ADAM2_055391,Alpha-1-antitrypsin (suggested)
+ADAM2_055392,alpha-1-antitrypsin (aa 268-394) (suggested)
+ADAM2_055393,alpha-1-antitrypsin (aa 268-394) (suggested)
+ADAM2_055394,"inhibitor,alpha1 protease (suggested)"
+ADAM2_055395,alpha-1-antitrypsin precursor (suggested)
+ADAM2_055396,oxidoreductase (suggested)
+ADAM2_055397,colicin-Ia domain protein (suggested)
+ADAM2_055398,colicin-Ia (suggested)
+ADAM2_055399,colicin-Ia domain protein (suggested)
+ADAM2_055400,colicin-Ia domain protein (suggested)
+ADAM2_055401,colicin-Ia domain protein (suggested)
+ADAM2_055416,alpha-1-antitrypsin precursor (suggested)
+ADAM2_055417,Alpha-1-antitrypsin (suggested)
+ADAM2_055418,"Chain A, Intact Recombined Alpha1-Antitrypsin Mutant Phe 51 To Leu (suggested)"
+ADAM2_055419,Venom peptide 3 (suggested)
+ADAM2_055424,salivaricin D (suggested)
+ADAM2_055425,"Chain A, Discovery And Optimization Of A Natural Hiv-1 Entry Inhibitor Targeting The Gp41 Fusion Peptide (suggested)"
+ADAM2_055426,"Chain A, Discovery And Optimization Of A Natural Hiv-1 Entry Inhibitor Targeting The Gp41 Fusion Peptide (suggested)"
+ADAM2_055427,"Chain A, Crystal Structure Of A1pi-Pittsburgh In The Native Conformation (suggested)"
+ADAM2_055428,"inhibitor,alpha1 protease (suggested)"
+ADAM2_055429,"inhibitor,alpha1 protease (suggested)"
+ADAM2_055430,bacteriocin (suggested)
+ADAM2_055431,anacyclamide precursor (suggested)
+ADAM2_055432,prenylagaramide B precursor peptide (suggested)
+ADAM2_055433,prenylagaramide C precursor peptide (suggested)
+ADAM2_055434,protein S100-A12 (suggested)
+ADAM2_055436,Plantazolicin (suggested)
+ADAM2_055437,enterocin CRL 35=pediocin-like bacteriocin {N-terminal} (suggested)
+ADAM2_055438,major royal jelly protein 1 precursor (suggested)
+ADAM2_055439,azurocidin preproprotein (suggested)
+ADAM2_055440,Big defensin (suggested)
+ADAM2_055441,Arenicin-1 (suggested)
+ADAM2_055442,Arenicin-2 (suggested)
+ADAM2_055443,bacteriocin associated protein (suggested)
+ADAM2_055446,Wheatwin-2 (suggested)
+ADAM2_055447,lantibiotic mersacidin (suggested)
+ADAM2_055448,enterocin NKR-5-3D prepeptide (suggested)
+ADAM2_055456,lebocin-3 precursor (suggested)
+ADAM2_055458,"Chain A, Structure Of Diferric Mare Lactoferrin At 2.62a Resolution (suggested)"
+ADAM2_055459,cyclotide precursor cter A (suggested)
+ADAM2_055461,Lactose-binding lectin l-2 (suggested)
+ADAM2_055462,acidocin B (suggested)
+ADAM2_055463,dysgalacticin preprotein (suggested)
+ADAM2_055464,Cicadin (suggested)
+ADAM2_055465,WAP four-disulfide core domain 12 (suggested)
+ADAM2_055466,lebocin-1/2 precursor (suggested)
+ADAM2_055467,Antimicrobial peptide Ar-AMP (suggested)
+ADAM2_055468,Neocarzinostatin (suggested)
+ADAM2_055469,eosinophil cationic protein precursor (suggested)
+ADAM2_055470,Antimicrobial peptides (suggested)
+ADAM2_055471,Antimicrobial protein Ace-AMP1 (suggested)
+ADAM2_055472,weissellicin M (suggested)
+ADAM2_055473,Bactericidal permeability-increasing protein (suggested)
+ADAM2_055474,colicin Y (suggested)
+ADAM2_055475,bacteriocin helveticin J (suggested)
+ADAM2_055476,circularin A/uberolysin family circular bacteriocin (suggested)
+ADAM2_055477,"cyclic bacteriocin, class V (suggested)"
+ADAM2_055478,Unknown (suggested)
+ADAM2_055479,bacteriocin (suggested)
+ADAM2_055493,Phylloseptin-12 (suggested)
+ADAM2_055503,Protein SPP-1 (suggested)
+ADAM2_055504,"Chain A, Crystal Structure Of Connective Tissue Activating Peptide- Iii(Ctap-Iii) Complexed With Polyvinylsulfonic Acid (suggested)"
+ADAM2_055509,Endonuclease/exonuclease/phosphatase-like protein (suggested)
+ADAM2_055514,Sphingosine-1-phosphate phosphatase 2 (suggested)
+ADAM2_055515,ovotransferrin CC type (suggested)
+ADAM2_055516,Stromal cell-derived factor 1 (suggested)
+ADAM2_055517,2S albumin (suggested)
+ADAM2_055518,defensin-5 preproprotein (suggested)
+ADAM2_055519,Vicilin-like antimicrobial peptides 2-3 (suggested)
+ADAM2_055523,cystathionine gamma-synthase (suggested)
+ADAM2_055524,Unknown (suggested)
+ADAM2_055525,Unknown (suggested)
+ADAM2_055526,cathelicidin-B1 (suggested)
+ADAM2_055528,carocin D (suggested)
+ADAM2_055529,ENV (suggested)
+ADAM2_055532,"Chain A, Solution Structure Of Cecropin A(1-8)-Magainin 2(1-12) Hybrid Peptide (suggested)"
+ADAM2_055533,"Chain A, Solution Structure Of Cecropin A(1-8)-Magainin 2(1-12) Hybrid Peptide (suggested)"
+ADAM2_055534,"Chain A, Solution Structure Of Cecropin A(1-8)-Magainin 2(1-12) Hybrid Peptide (suggested)"
+ADAM2_055535,choloylglycine hydrolase (suggested)
+ADAM2_055536,Antimicrobial peptide NK-lysin (suggested)
+ADAM2_055538,signal peptidase (suggested)
+ADAM2_055539,Unknown (suggested)
+ADAM2_055543,"apolipoprotein B, partial (suggested)"
+ADAM2_055549,Citropin-3.1.2 (suggested)
+ADAM2_055550,Citropin-3.1.2 (suggested)
+ADAM2_055552,fusion protein (suggested)
+ADAM2_055553,Beta-defensin 1 (suggested)
+ADAM2_055555,Antimicrobial peptides (suggested)
+ADAM2_055556,colicin E9 (suggested)
+ADAM2_055557,Colicin-E8 (suggested)
+ADAM2_055558,unnamed protein product (suggested)
+ADAM2_055560,acidocin 8912=bacteriocin {N-terminal} (suggested)
+ADAM2_055595,GJ19999 (suggested)
+ADAM2_055596,stromal cell-derived factor 1 precursor (suggested)
+ADAM2_055597,"Chain A, Structure Of Diferric Human Lactoferrin (suggested)"
+ADAM2_055598,"Chain A, Structure Of Diferric Human Lactoferrin (suggested)"
+ADAM2_055602,excinuclease ABC subunit C (suggested)
+ADAM2_055603,diptericin (suggested)
+ADAM2_055606,secretory leukocyte peptidase inhibitor precursor (suggested)
+ADAM2_055607,Lysozyme C (suggested)
+ADAM2_055608,Dermaseptin-H5 (suggested)
+ADAM2_055609,spore maturation protein A (suggested)
+ADAM2_055610,histidine kinase (suggested)
+ADAM2_055619,klebicin D phage-associated protein (suggested)
+ADAM2_055633,crustin-1 (suggested)
+ADAM2_055645,klebicin C activity (suggested)
+ADAM2_055646,klebicin C activity (suggested)
+ADAM2_055655,Phylloseptin-7 (suggested)
+ADAM2_055656,Phylloseptin-7 (suggested)
+ADAM2_055657,Apolipophorin-3 (suggested)
+ADAM2_055658,Wheatwin-1 (suggested)
+ADAM2_055660,chemokine (C-X-C motif) ligand 12 isoform gamma precursor (suggested)
+ADAM2_055661,chemokine (C-X-C motif) ligand 12 isoform gamma precursor (suggested)
+ADAM2_055662,chemokine (C-X-C motif) ligand 12 isoform gamma precursor (suggested)
+ADAM2_055663,Apidaecins type 73 (suggested)
+ADAM2_055677,Dermaseptin-B4 (suggested)
+ADAM2_055683,HSV (suggested)
+ADAM2_055684,Lytic transglycosylase (suggested)
+ADAM2_055691,plantaricin S alpha chain=bacteriocin {N-terminal} (suggested)
+ADAM2_055708,transmembrane amino acid transporter (suggested)
+ADAM2_055710,HSV (suggested)
+ADAM2_055711,Glycine-rich protein GWK (suggested)
+ADAM2_055712,beta-defensin (suggested)
+ADAM2_055730,fusion glycoprotein (suggested)
+ADAM2_055731,"Marek,s disease virus? (suggested)"
+ADAM2_055732,bovicin 255 variant (suggested)
+ADAM2_055733,bovicin 255 variant (suggested)
+ADAM2_055794,Snakin-1 (suggested)
+ADAM2_055810,Envelope glycoprotein gp150 (suggested)
+ADAM2_055825,Brevinin-2GHc (suggested)
+ADAM2_055971,ATPase (suggested)
+ADAM2_055972,Gallinacin-2 precursor (suggested)
+ADAM2_055973,"Chain B, Solution Structure Of The Respiratory Syncytial Virus (Rsv)six-Helix Bundle Complexed With Tmc353121, A Small-Moleucule Inhibitor Of Rsv (suggested)"
+ADAM2_056317,Cecropin-A (suggested)
+ADAM2_056515,Histone H1 (suggested)
+ADAM2_056516,Raniseptin-1 (suggested)
+ADAM2_056517,Phylloseptin-2 (suggested)
+ADAM2_056518,Adenoregulin (suggested)
+ADAM2_056528,Defensin-1 (suggested)
+ADAM2_056529,Longicornsin (suggested)
+ADAM2_056530,Histone H1 (suggested)
+ADAM2_056555,lactococcin G peptide alpha 2=bacteriocin (suggested)
+ADAM2_056602,Dermaseptin DRG3 (suggested)
+ADAM2_056603,Dermaseptin-1 (suggested)
+ADAM2_056604,Dermaseptin-B3 (suggested)
+ADAM2_056605,Dermaseptin-H4 (suggested)
+ADAM2_056606,Acanthoscurrin-1 (suggested)
+ADAM2_056607,Mannose-specific lectin (suggested)
+ADAM2_056615,Snakin-2 (suggested)
+ADAM2_056616,Defensin-like protein 1 (suggested)
+ADAM2_056641,Kalata-B1 (suggested)
+ADAM2_056642,50S ribosomal protein L1 (suggested)
+ADAM2_056643,Defensin (suggested)
+ADAM2_056694,"Chain A, Co-Complex Of The Of Ns3-4a Protease With The Inhibitory  Peptide Cp5-46-A (suggested)"
+ADAM2_056768,Unknown (suggested)
+ADAM2_056769,unknown (suggested)
+ADAM2_056833,Thaumatin-like protein (suggested)
+ADAM2_056846,zoocin A endopeptidase (suggested)
+ADAM2_056848,"peptidase, M23 family (suggested)"
+ADAM2_056942,bacteriocin prepeptide/bacteriocin synthesis inducing factor (suggested)
+ADAM2_056943,Venom peptide 2-long (suggested)
+ADAM2_056944,Eumenine mastoparan-OD (suggested)
+ADAM2_056945,bacteriocin-type signal sequence (suggested)
+ADAM2_056946,zoocin A endopeptidase (suggested)
+ADAM2_056962,Caerin-1.10 (suggested)
+ADAM2_056968,AmfS protein (suggested)
+ADAM2_056969,AmfS protein (suggested)
+ADAM2_056973,enterocin 1071B (suggested)
+ADAM2_056974,Abp118 bacteriocin beta peptide (suggested)
+ADAM2_056975,antifungal protein (suggested)
+ADAM2_056976,lactotransferrin isoform 1 precursor (suggested)
+ADAM2_056977,lantibiotic salivaricin A precursor (suggested)
+ADAM2_056978,bacteriocin class II with double-glycine leader peptide family protein (suggested)
+ADAM2_056984,salivaricin A4 precursor (suggested)
+ADAM2_056985,salivaricin A5 precursor (suggested)
+ADAM2_056986,salivaricin A2 precursor (suggested)
+ADAM2_056995,colicin A 20kd fragment (suggested)
+ADAM2_057002,SmbA precursor (suggested)
+ADAM2_057003,SmbA precursor (suggested)
+ADAM2_057004,putative type-A lantibiotic (suggested)
+ADAM2_057005,lactococcin Q beta (suggested)
+ADAM2_057006,microcin protein (suggested)
+ADAM2_057007,weissellicin Y (suggested)
+ADAM2_057008,Ceratotoxin-A (suggested)
+ADAM2_057009,ceratotoxin A (suggested)
+ADAM2_057010,bacteriocin (suggested)
+ADAM2_057011,Ribonuclease 7 (suggested)
+ADAM2_057012,Sarcotoxin-2A (suggested)
+ADAM2_057013,bacteriocin precursor peptide PlnN () (suggested)
+ADAM2_057014,eosinophil granule major basic protein 1 preproprotein (suggested)
+ADAM2_057015,Pilosulin-4 (suggested)
+ADAM2_057016,Pilosulin-3 (suggested)
+ADAM2_057017,proenkephalin-A precursor (suggested)
+ADAM2_057018,Floral defensin-like protein 1 (suggested)
+ADAM2_057023,apolipoprotein A-II precursor (suggested)
+ADAM2_057024,WAP four-disulfide core domain protein 15B precursor (suggested)
+ADAM2_057032,Preprofallaxidin-6 (suggested)
+ADAM2_057033,Preprofallaxidin-8 (suggested)
+ADAM2_057034,Preprofallaxidin-9 (suggested)
+ADAM2_057035,Preprofallaxidin-3 (suggested)
+ADAM2_057036,Preprofallaxidin-2 (suggested)
+ADAM2_057037,Preprofallaxidin-1 (suggested)
+ADAM2_057038,Pilosulin-1 (suggested)
+ADAM2_057039,dysgalacticin preprotein (suggested)
+ADAM2_057040,Ixosin-B (suggested)
+ADAM2_057041,labyrinthopeptin A1/A3 prepropeptide (suggested)
+ADAM2_057042,labyrinthopeptin A2 prepropeptide (suggested)
+ADAM2_057044,Tachyplesin-2 (suggested)
+ADAM2_057045,bacteriocin (suggested)
+ADAM2_057046,amoebapore C (suggested)
+ADAM2_057047,defensin-1 preproprotein (suggested)
+ADAM2_057048,Floral defensin-like protein 2 (suggested)
+ADAM2_057049,Flower-specific defensin (suggested)
+ADAM2_057051,apidaecins type 14 precursor (suggested)
+ADAM2_057052,apidaecins type 22 precursor (suggested)
+ADAM2_057054,RH31634p (suggested)
+ADAM2_057055,Defensin-A (suggested)
+ADAM2_057056,Big defensin (suggested)
+ADAM2_057057,Ctenidin-3 (suggested)
+ADAM2_057058,Ctenidin-1 (suggested)
+ADAM2_057059,Bacteriocin helveticin-J (suggested)
+ADAM2_057060,Imcroporin (suggested)
+ADAM2_057061,enterolysin A (suggested)
+ADAM2_057062,M-zodatoxin-Lt4b (suggested)
+ADAM2_057063,M-zodatoxin-Lt4a (suggested)
+ADAM2_057064,putative bacteriocin (suggested)
+ADAM2_057065,"bacteriocin, lactococcin 972 family protein (suggested)"
+ADAM2_057066,Non-specific lipid-transfer protein AP10 (suggested)
+ADAM2_057067,parB-like partition protein (suggested)
+ADAM2_057069,beta-defensin 38 precursor (suggested)
+ADAM2_057070,bacteriocin (suggested)
+ADAM2_057071,ElxA (suggested)
+ADAM2_057072,bacteriocin (suggested)
+ADAM2_057073,Leucocin K (suggested)
+ADAM2_057074,Moronecidin (suggested)
+ADAM2_057075,Moronecidin (suggested)
+ADAM2_057076,hymenoptaecin preproprotein (suggested)
+ADAM2_057077,AGAP007199-PA (suggested)
+ADAM2_057078,Antimicrobial peptide 1 (suggested)
+ADAM2_057082,diguanylate cyclase (suggested)
+ADAM2_057083,diguanylate cyclase (suggested)
+ADAM2_057084,lactococcin Q alpha (suggested)
+ADAM2_057085,alpha-S2-casein precursor (suggested)
+ADAM2_057090,bacteriocin precursor peptide PlnK (suggested)
+ADAM2_057091,divergicin A immunity protein (suggested)
+ADAM2_057092,Gallinacin-4 (suggested)
+ADAM2_057129,"Tyrocidine B1, TrcB1 (suggested)"
+ADAM2_057130,"Tyrocidine C1, TrcC1 (suggested)"
+ADAM2_057143,"Tyrocidine A1, TrcA1 (suggested)"
+ADAM2_057146,Puroindoline-A (suggested)
+ADAM2_057147,lysozyme C-1 precursor (suggested)
+ADAM2_057159,Theromyzin (suggested)
+ADAM2_057160,"Chain A, Structure Of Lasso Peptide Astexin1 (suggested)"
+ADAM2_057161,Cecropin-P2 (suggested)
+ADAM2_057162,bacteriocin (suggested)
+ADAM2_057165,pore-forming peptide bacteriocin (suggested)
+ADAM2_057166,Colicin-N (suggested)
+ADAM2_057167,peptidoglycan recognition protein 3 precursor (suggested)
+ADAM2_057168,carocin D (suggested)
+ADAM2_057169,bacteriocin (suggested)
+ADAM2_057193,Cathelicidin-B1 (suggested)
+ADAM2_057194,pore-forming peptide bacteriocin (suggested)
+ADAM2_057195,Surfactant protein B (suggested)
+ADAM2_057200,"beta defensin 103, partial (suggested)"
+ADAM2_057201,Ribonuclease-like 3 (suggested)
+ADAM2_057202,patellamide precursor protein (suggested)
+ADAM2_057203,pathogenesis-related leaf protein 6 precursor (suggested)
+ADAM2_057204,Thiocillin GE37468 (suggested)
+ADAM2_057205,Unknown (suggested)
+ADAM2_057207,splicing factor Spf30 (suggested)
+ADAM2_057208,"Unknown | colicin-5, partial (suggested)"
+ADAM2_057209,Aplysianin-A (suggested)
+ADAM2_057210,esculentin-1LTa (suggested)
+ADAM2_057211,Ranacyclin-T (suggested)
+ADAM2_057212,Diapause-specific peptide (suggested)
+ADAM2_057213,Brevinin-2GHb (suggested)
+ADAM2_057227,Brevinin-2GHc (suggested)
+ADAM2_057228,Dermaseptin BI (suggested)
+ADAM2_057229,granulysin isoform NKG5 precursor (suggested)
+ADAM2_057239,Pleurain-A2 (suggested)
+ADAM2_057240,Brevinin-1Pb (suggested)
+ADAM2_057253,Putative carnobacteriocin-B2 immunity protein (suggested)
+ADAM2_057264,Nosiheptide precursor (suggested)
+ADAM2_057265,Thiostrepton (suggested)
+ADAM2_057278,bacteriocin BlpO (suggested)
+ADAM2_057279,bacteriocin BlpK (suggested)
+ADAM2_057280,Serine protease inhibitor Cvsi-1 (suggested)
+ADAM2_057281,Colicin-10 (suggested)
+ADAM2_057282,thiomuracin prepropeptide (suggested)
+ADAM2_057289,bacteriocin BlpM (suggested)
+ADAM2_057290,BlpM (suggested)
+ADAM2_057292,Japonicin-1CDYa (suggested)
+ADAM2_057293,Gaegurin-5 (suggested)
+ADAM2_057294,Brevinin-1DYb (suggested)
+ADAM2_057300,Dipeptide 5 (suggested)
+ADAM2_057319,Dybowskin-1CDYa (suggested)
+ADAM2_057320,Temporin-CDYb (suggested)
+ADAM2_057321,Temporin-G (suggested)
+ADAM2_057322,Cathelicidin-BF antimicrobial peptide (suggested)
+ADAM2_057325,Cecropin-P4 (suggested)
+ADAM2_057326,circularin A precursor (suggested)
+ADAM2_057327,Periculin-1 (suggested)
+ADAM2_057328,colicin (suggested)
+ADAM2_057330,Dybowskin-2CDYa (suggested)
+ADAM2_057331,Brevinin-1CDYa (suggested)
+ADAM2_057334,actagardine prepeptide (suggested)
+ADAM2_057335,histatin-1 precursor (suggested)
+ADAM2_057336,bacteriocin (suggested)
+ADAM2_057342,Cathelicidin-2 (suggested)
+ADAM2_057343,cathelicidin-2 precursor (suggested)
+ADAM2_057346,Peptide BmKn2 (suggested)
+ADAM2_057347,colicin E1 (suggested)
+ADAM2_057348,colicin E1 protein (suggested)
+ADAM2_057349,colicin E1 protein (suggested)
+ADAM2_057350,colicin E1 protein (suggested)
+ADAM2_057351,lantibiotic salivaricin A (suggested)
+ADAM2_057352,Lac705beta (suggested)
+ADAM2_057353,cathelicidin-1 precursor (suggested)
+ADAM2_057354,"DNA/RNA helicase, superfamily II, SNF2 family (suggested)"
+ADAM2_057355,prepeptide GarQ (suggested)
+ADAM2_057356,bacteriocin lactococcin A (suggested)
+ADAM2_057357,colicin E1 protein (suggested)
+ADAM2_057358,antimicrobial protein CAP18 precursor (suggested)
+ADAM2_057359,gene cea (suggested)
+ADAM2_057360,bacteriocin biosynthesis protein (suggested)
+ADAM2_057361,bacteriocin biosynthesis protein (suggested)
+ADAM2_057362,Cecropin-P1 (suggested)
+ADAM2_057363,Cecropin-P3 (suggested)
+ADAM2_057364,klebicin C phage associated protein (suggested)
+ADAM2_057365,aspartyl-tRNA synthase (suggested)
+ADAM2_057369,M-zodatoxin-Lt3b (suggested)
+ADAM2_057370,M-zodatoxin-Lt3a (suggested)
+ADAM2_057371,Mucroporin (suggested)
+ADAM2_057372,cathelicidin antimicrobial peptide precursor (suggested)
+ADAM2_057373,M-theraphotoxin-Gr1a (suggested)
+ADAM2_057377,alpha-defensin 4 precursor (suggested)
+ADAM2_057378,Antifungal protein ginkbilobin-2 (suggested)
+ADAM2_057379,peptidase M15A (suggested)
+ADAM2_057380,Peptide Hp1090 (suggested)
+ADAM2_057381,Cytotoxic linear peptide IsCT (suggested)
+ADAM2_057382,Cytotoxic linear peptide IsCT2 (suggested)
+ADAM2_057383,Cathelicidin antimicrobial peptide (suggested)
+ADAM2_057384,SakT beta (suggested)
+ADAM2_057385,Puroindoline-B (suggested)
+ADAM2_057386,unnamed protein product (suggested)
+ADAM2_057388,Unknown (suggested)
+ADAM2_057389,Unknown (suggested)
+ADAM2_057390,Unknown (suggested)
+ADAM2_057391,Unknown (suggested)
+ADAM2_057392,Unknown (suggested)
+ADAM2_057451,unknown (suggested)
+ADAM2_057452,unknown (suggested)
+ADAM2_057455,Unknown (suggested)
+ADAM2_057456,Unknown (suggested)
+ADAM2_057472,Unknown (suggested)
+ADAM2_057473,Unknown (suggested)
+ADAM2_057474,Unknown (suggested)
+ADAM2_057475,Unknown (suggested)
+ADAM2_057476,Unknown (suggested)
+ADAM2_057478,Unknown (suggested)
+ADAM2_057479,Unknown (suggested)
+ADAM2_057481,Unknown (suggested)

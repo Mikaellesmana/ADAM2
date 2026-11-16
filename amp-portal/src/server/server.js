@@ -4,7 +4,8 @@ const XLSX      = require("xlsx");
 const fs        = require("fs");
 const path      = require("path");
 const https     = require("https");
-const { spawn } = require("child_process");
+const { spawn, execFileSync } = require("child_process");
+try { process.loadEnvFile(path.join(__dirname, ".env")); } catch { /* no .env: Excel data, AI off */ }
 const { inferOrigin, fillFromSequence, fillFromFamily } = require("./origin_curation");
 const { createAssistant } = require("./assistant");
 const aiInfo = require("./assistant_ai");
@@ -29,7 +30,7 @@ console.log("Server directory:", SERVER_DIR);
 console.log("Python directory:", PYTHON_DIR);
 
 const app  = express();
-const PORT = 5000;
+const PORT = Number(process.env.PORT) || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -58,16 +59,36 @@ if (fs.existsSync(clusterDetailPath)) {
 }
 
 /* ===========================
-   Load peptide database from Excel
+   Load peptide database: PostgreSQL (ADAM2 v10) or Excel
 =========================== */
-console.log("Loading peptide database...");
+// DATA_SOURCE=postgres in .env reads the v10 PostgreSQL database through
+// pg_source.js, which returns rows with the Excel file's column names. If the
+// database cannot be reached the server falls back to the Excel file, so the
+// site always starts.
+const EXCEL_FILE = "ADAM2_database_57385.xlsx";
 
-const workbook = XLSX.readFile(path.join(SERVER_DIR, "ADAM2_database_57385.xlsx"));
-// The current file keeps its rows in a "peptides" sheet and a column
-// dictionary in a second "fields" sheet; the older ADAMV2(2).xlsx had a single
-// sheet. Taking the first sheet picks the right one in both.
-const sheet    = workbook.Sheets[workbook.SheetNames[0]];
-const rawRows  = XLSX.utils.sheet_to_json(sheet);
+function loadRows() {
+  if ((process.env.DATA_SOURCE || "").trim().toLowerCase() === "postgres") {
+    const { describe } = require("./pg_source");
+    try {
+      const out = execFileSync(process.execPath, [path.join(SERVER_DIR, "pg_source.js")],
+        { encoding: "utf8", maxBuffer: 1024 * 1024 * 1024, timeout: 120000, stdio: ["ignore", "pipe", "pipe"] });
+      return { rows: JSON.parse(out), source: describe() };
+    } catch (e) {
+      const why = String(e.stderr || e.message || e).trim().split("\n")[0];
+      console.warn(`PostgreSQL unavailable (${why}) — falling back to ${EXCEL_FILE}`);
+    }
+  }
+  const workbook = XLSX.readFile(path.join(SERVER_DIR, EXCEL_FILE));
+  // The current file keeps its rows in a "peptides" sheet and a column
+  // dictionary in a second "fields" sheet; the older ADAMV2(2).xlsx had a single
+  // sheet. Taking the first sheet picks the right one in both.
+  return { rows: XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]), source: EXCEL_FILE };
+}
+
+console.log("Loading peptide database...");
+const { rows: rawRows, source: DATA_SOURCE } = loadRows();
+console.log(`Data source: ${DATA_SOURCE}`);
 
 // ADAM2_database_57385.xlsx names its columns in lower-case snake_case where
 // ADAMV2(2).xlsx capitalised them ("peptide_name" vs "Peptide_Name"). Folding
@@ -85,7 +106,9 @@ const peptides = rawRows.map(raw => {
     Source:                  r["source_organism"]       ?? null,
     Source_Category:         r["source_category"]       ?? null,
     Source_Databases:        r["source_databases"]      ?? null,
-    Tax:                     r["taxonomy"]              ?? null,
+    // v10 PostgreSQL has no free-text taxonomy; its curated `taxon` group
+    // ("Amphibian", "Plant", …) fills the field instead.
+    Tax:                     r["taxonomy"]              ?? r["taxon"] ?? null,
     Uniprot:                 r["uniprot_id"]            ?? null,
     PDB:                     r["pdb_id"]                ?? null,
     Targets:                 r["target_organism"]       ?? null,
@@ -474,7 +497,9 @@ const statsOverview = (() => {
 
     // Rows can carry several validation terms ("Experimentally validated;
     // Predicted"); any experimental evidence at all counts here.
-    if (String(p.Validation ?? "").includes("Experimentally validated")) validated++;
+    // The Excel file writes "Experimentally validated"; v10 PostgreSQL writes
+    // the evidence level "Experimental".
+    if (/experiment/i.test(String(p.Validation ?? ""))) validated++;
   }
 
   lengths.sort((a, b) => a - b);
@@ -605,7 +630,7 @@ function buildDownloads() {
       csvBytes: csv.length,
       fastaSequences: fastaCount,
       fastaBytes: fastaBuf.length,
-      sourceFile: "ADAM2_database_57385.xlsx",
+      sourceFile: DATA_SOURCE,
     },
   };
   return downloadCache;

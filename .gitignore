@@ -30,3 +30,7 @@ amp-portal/src/server/python/flm_final_epoch_checkpoint/
 # Training runtime leftovers
 *.pid
 *_backup.json
+
+# Reports and papers stay local
+*.docx
+*.pdf
