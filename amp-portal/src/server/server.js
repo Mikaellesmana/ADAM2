@@ -14,11 +14,14 @@ const SERVER_DIR  = __dirname;
 const PYTHON_DIR  = path.join(SERVER_DIR, "python");
 
 const WSL_EXE      = "wsl.exe";
-const FOLDSEEK_BIN = "/home/asus/foldseek/bin/foldseek";
-const MMSEQS_BIN   = "/home/asus/mmseqs/bin/mmseqs";
-const STRUCT_DB     = "/home/asus/adam_db/struct_db";
-const SEQ_DB        = "/home/asus/adam_db/seq_db";
-const WSL_TMP        = "/home/asus/adam_db/tmp";
+// Folder inside WSL holding foldseek/, mmseqs/ and adam_db/. SEARCH_TOOLS_DIR
+// in .env overrides it (deploy/setup_server.ps1 installs them to /opt/adam).
+const TOOLS_DIR    = (process.env.SEARCH_TOOLS_DIR || "/home/asus").replace(/\/+$/, "");
+const FOLDSEEK_BIN = `${TOOLS_DIR}/foldseek/bin/foldseek`;
+const MMSEQS_BIN   = `${TOOLS_DIR}/mmseqs/bin/mmseqs`;
+const STRUCT_DB    = `${TOOLS_DIR}/adam_db/struct_db`;
+const SEQ_DB       = `${TOOLS_DIR}/adam_db/seq_db`;
+const WSL_TMP      = `${TOOLS_DIR}/adam_db/tmp`;
 
 // "D:\Final Project\..." -> "/mnt/d/Final Project/..."
 function winToWsl(p) {
@@ -933,6 +936,32 @@ app.post("/api/feedback", (req, res) => {
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
   res.json({ message: "Feedback saved" });
 });
+
+/* ===========================
+   WEBSITE (production build)
+=========================== */
+// After `npm run build`, amp-portal/dist holds the finished site. Serving it
+// here puts the pages and the API on one address, so a single port (and one
+// tunnel or port forward) is all a server needs. In development Vite serves
+// the pages instead and this does nothing until dist exists.
+// Cluster network thumbnails come from the original ADAM server; Vite proxies
+// /adam in development, and this does the same in production.
+app.get(/^\/adam\/(?!.*\.\.)[\w\/.-]+$/, (req, res) => {
+  https.get(`https://bioinformatics.cs.ntou.edu.tw${req.path}`, { rejectUnauthorized: false }, (up) => {
+    res.status(up.statusCode || 502);
+    if (up.headers["content-type"]) res.setHeader("Content-Type", up.headers["content-type"]);
+    res.setHeader("Cache-Control", "public, max-age=86400");
+    up.pipe(res);
+  }).on("error", () => res.sendStatus(502));
+});
+
+const DIST_DIR = path.join(SERVER_DIR, "..", "..", "dist");
+if (fs.existsSync(path.join(DIST_DIR, "index.html"))) {
+  app.use(express.static(DIST_DIR, { index: false, maxAge: "1h" }));
+  // Any other page address (/search, /result/52 …) is a React route.
+  app.get(/^\/(?!api\/).*/, (req, res) => res.sendFile(path.join(DIST_DIR, "index.html")));
+  console.log(`Serving website from ${DIST_DIR}`);
+}
 
 /* ===========================
    START

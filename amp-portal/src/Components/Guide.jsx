@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useRevealOnScroll from "../useRevealOnScroll";
 import DatabaseStats from "./DatabaseStats";
+import { API_BASE } from "../api";
 
 const guideSteps = [
   {
@@ -61,7 +62,7 @@ export default function Guide() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      const response = await fetch("http://localhost:5000/api/feedback", {
+      const response = await fetch(`${API_BASE}/api/feedback`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

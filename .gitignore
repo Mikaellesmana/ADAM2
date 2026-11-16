@@ -34,3 +34,9 @@ amp-portal/src/server/python/flm_final_epoch_checkpoint/
 # Reports and papers stay local
 *.docx
 *.pdf
+
+# Per-machine watchdog settings (written by deploy/setup_server.ps1)
+portal.settings.json
+
+# Server bundle (model weights, search tools) made by deploy/make_bundle.ps1
+ADAM2_server_bundle/

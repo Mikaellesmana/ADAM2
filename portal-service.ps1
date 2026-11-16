@@ -58,6 +58,20 @@ $Python = "C:\Users\asus\AppData\Local\Python\pythoncore-3.14-64\python.exe"   #
 $Node   = Resolve-Exe "node.exe" "D:\aplikasi\node.exe"
 $Vite   = Join-Path $Amp "node_modules\vite\bin\vite.js"
 
+# Another machine (the lab server) sets its own paths in portal.settings.json
+# next to this script, written by deploy\setup_server.ps1:
+#   { "python": "C:\\...\\python.exe", "node": "C:\\...\\node.exe", "production": true }
+# production: the Node backend serves the built site (amp-portal\dist) on port
+# 5000, so the Vite dev server is not started.
+$Production = $false
+$SettingsFile = Join-Path $Root "portal.settings.json"
+if (Test-Path $SettingsFile) {
+    $cfg = Get-Content $SettingsFile -Raw | ConvertFrom-Json
+    if ($cfg.python)     { $Python = $cfg.python }
+    if ($cfg.node)       { $Node = $cfg.node }
+    if ($cfg.production) { $Production = $true }
+}
+
 # Grace: seconds to wait after a start before treating "port not listening" as
 # a failure. The Python server loads model weights and the Node backend parses
 # 57k spreadsheet rows, so both need longer than Vite.
@@ -73,6 +87,8 @@ $Services = @(
     @{ Name = "node";   Port = 5000; File = $Node;   Args = "server.js";     Dir = $ServerDir; Grace = 120 },
     @{ Name = "vite";   Port = 5173; File = $Node;   Args = "`"$Vite`"";     Dir = $Amp;       Grace = 90  }
 )
+if ($Production) { $Services = @($Services | Where-Object { $_.Name -ne "vite" }) }
+$SiteUrl = if ($Production) { "http://localhost:5000" } else { "http://localhost:5173" }
 
 # Consecutive failed checks (15 s apart) before an alive, quiet process is
 # restarted. One slow moment is not a crash.
@@ -279,7 +295,7 @@ function Show-Status {
             "{0,-15}: DOWN  port {1}" -f $s.Name, $s.Port
         }
     }
-    "Website        : http://localhost:5173"
+    "Website        : $SiteUrl"
     if (Test-Path $WatchLog) { ""; "Recent watchdog log:"; Get-Content $WatchLog -Tail 6 | ForEach-Object { "  $_" } }
 }
 

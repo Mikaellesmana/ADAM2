@@ -1,0 +1,15 @@
+# Exact versions the trained models were saved with (svm_model.pkl, hmm_model.pkl,
+# esmc_head.pkl and the ESMC FLM weights). Other versions may fail to load them.
+# torch comes from the CPU-only index (see setup_server.ps1).
+torch==2.11.0
+transformers==5.14.1
+tokenizers==0.22.2
+safetensors==0.8.0
+huggingface_hub==1.24.0
+einops==0.8.2
+Flask==3.1.3
+scikit-learn==1.8.0
+joblib==1.5.3
+numpy==2.4.4
+pandas==3.0.2
+openpyxl==3.1.5
