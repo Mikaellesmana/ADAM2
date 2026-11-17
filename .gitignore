@@ -40,3 +40,11 @@ portal.settings.json
 
 # Server bundle (model weights, search tools) made by deploy/make_bundle.ps1
 ADAM2_server_bundle/
+
+# AlphaFold / ESMFold result archives read by the Research Results page
+# (about 1.3 GB; the ESMFold zip alone is over GitHub's 100 MB file limit)
+AlphaFold/
+esmfold/
+
+# Runtime logs from portal-service.ps1
+logs/
