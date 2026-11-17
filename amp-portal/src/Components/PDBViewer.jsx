@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-export default function PDBViewer({ clusterId, height = 350 }) {
+export default function PDBViewer({ clusterId, structureUrl, height = 350 }) {
   const viewerRef  = useRef(null);
   const stageRef   = useRef(null);
   const [error, setError]     = useState(false);
@@ -28,7 +28,11 @@ export default function PDBViewer({ clusterId, height = 350 }) {
       });
       stageRef.current = stage;
 
-      stage.loadFile(`/pdb/${clusterId}.pdb`, { ext: "pdb" })
+      const fileUrl = structureUrl || `/pdb/${clusterId}.pdb`;
+      const parsedUrl = new URL(fileUrl, window.location.href);
+      const sourceName = parsedUrl.searchParams.get("file") || parsedUrl.pathname;
+      const ext = structureUrl ? (sourceName.split(".").pop() || "pdb") : "pdb";
+      stage.loadFile(fileUrl, { ext })
         .then(component => {
           if (cancelled) return;
           component.addRepresentation("cartoon", {
@@ -56,7 +60,7 @@ export default function PDBViewer({ clusterId, height = 350 }) {
         stageRef.current = null;
       }
     };
-  }, [clusterId]);
+  }, [clusterId, structureUrl]);
 
   if (error) return (
     <div style={{
