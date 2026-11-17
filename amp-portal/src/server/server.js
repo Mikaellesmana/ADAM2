@@ -1024,7 +1024,11 @@ app.post("/api/feedback", async (req, res) => {
   };
   if (!entry.message) return res.status(400).json({ success: false, error: "Please write a message." });
 
-  const ip = req.headers["cf-connecting-ip"] || req.ip;
+  // Visitors arriving through a tunnel (Tailscale Funnel, Cloudflare) all
+  // connect from this machine; the tunnel passes the real address along.
+  const local = /^(::1|127\.|::ffff:127\.)/.test(req.ip || "");
+  const forwarded = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim();
+  const ip = req.headers["cf-connecting-ip"] || (local && forwarded) || req.ip;
   const now = Date.now();
   const recent = (feedbackHits.get(ip) || []).filter((t) => now - t < 60_000);
   if (recent.length >= 5) return res.status(429).json({ success: false, error: "Too many submissions. Please wait a minute." });
