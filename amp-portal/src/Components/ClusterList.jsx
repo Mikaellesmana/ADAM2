@@ -3,6 +3,22 @@ import { API_BASE } from "../api";
 import PDBViewer from "./PDBViewer";
 import ClusterNetwork from "./ClusterNetwork";
 
+// Structural fold thumbnail: the image rendered from the cluster's 3D structure
+// (public/fold/AC_xxx.webp: the original PDB for 1–30, AlphaFold after that),
+// then the RCSB picture of the representative PDB entry, then a placeholder.
+function FoldThumb({ cid, label, pdb4, onOpen }) {
+  const sources = [`/fold/${label}.webp`];
+  if (pdb4) sources.push(`https://cdn.rcsb.org/images/structures/${pdb4.slice(1, 3).toLowerCase()}/${pdb4.toLowerCase()}/${pdb4.toLowerCase()}_assembly-1.jpeg`);
+  const [idx, setIdx] = useState(0);
+  if (idx >= sources.length) return <span className="cl-pdb-placeholder">NO IMG</span>;
+  return (
+    <img className="cl-pdb-img" key={cid} src={sources[idx]} alt={`${label} structural fold`}
+      title={idx === 0 ? `${label}: open the interactive 3D structure` : `${label}: ${pdb4} (RCSB image)`}
+      style={{ cursor: "pointer" }} loading="lazy"
+      onClick={onOpen} onError={() => setIdx(i => i + 1)} />
+  );
+}
+
 export default function ClusterList() {
 
   const [view, setView]                       = useState("list");
@@ -48,6 +64,10 @@ export default function ClusterList() {
   };
   const cLabel = (id) => `AC_${String(id).padStart(3, "0")}`;
   const useAlphaFold = selectedCluster > LOCAL_PDB_MAX;
+  // Pfam names are stored space-separated ("Defensin_2 Toxin_3"). The old Pfam
+  // site (pfam.sanger.ac.uk) is retired; its families now live in InterPro.
+  const splitPfam = (s) => (s || "").split(/[\s,]+/).filter(Boolean);
+  const pfamUrl   = (d) => `https://www.ebi.ac.uk/interpro/search/text/${encodeURIComponent(d)}/`;
 
   const filtered = clusters.filter(c => {
     if (!search.trim()) return true;
@@ -410,9 +430,7 @@ export default function ClusterList() {
                             const pdbFull = (row.pdb_id || "").toUpperCase();
                             const pdb4    = pdbFull.slice(0, 4);
                             const chain   = pdbFull.slice(4, 5) || row.chain || "—";
-                            const pfams   = row.pfam_domains
-                              ? row.pfam_domains.split(",").map(d => d.trim()).filter(Boolean)
-                              : [];
+                            const pfams   = splitPfam(row.pfam_domains);
                             return (
                               <tr key={i}>
                                 <td><span style={{ fontFamily: "var(--mono)", fontWeight: 500, color: "var(--accent)" }}>{cLabel(selectedCluster)}</span></td>
@@ -421,7 +439,7 @@ export default function ClusterList() {
                                 <td>{row.seq_count != null ? <span className="cd-seq-link">{row.seq_count}</span> : "—"}</td>
                                 <td>
                                   {pfams.length > 0
-                                    ? pfams.map((d, j) => <a key={j} className="cd-pfam-link" href={`http://pfam.sanger.ac.uk/family/${d}`} target="_blank" rel="noreferrer">{d}</a>)
+                                    ? pfams.map((d, j) => <a key={j} className="cd-pfam-link" href={pfamUrl(d)} target="_blank" rel="noreferrer">{d}</a>)
                                     : <span style={{ color: "var(--muted)", fontSize: 12 }}>NA</span>}
                                 </td>
                                 <td>
@@ -470,7 +488,7 @@ export default function ClusterList() {
                   { val: clusters.length.toLocaleString(), lbl: "Total Clusters" },
                   { val: [...new Set(clusters.map(c => c.cath_c).filter(Boolean))].length.toLocaleString(), lbl: "CATH Classes" },
                   { val: [...new Set(clusters.map(c => c.scop_c).filter(Boolean))].length.toLocaleString(), lbl: "SCOP Classes" },
-                  { val: [...new Set(clusters.flatMap(c => c.pfam_domain ? c.pfam_domain.split(",") : []).filter(Boolean))].length.toLocaleString(), lbl: "Pfam Domains" },
+                  { val: [...new Set(clusters.flatMap(c => splitPfam(c.pfam_domain)).filter(Boolean))].length.toLocaleString(), lbl: "Pfam Domains" },
                 ].map(s => (
                   <div className="cl-stat" key={s.lbl}>
                     <span className="cl-stat-val">{loading ? "—" : s.val}</span>
@@ -570,19 +588,10 @@ export default function ClusterList() {
                                 )}
                               </td>
 
-                              {/* Structural fold — RCSB thumbnail */}
+                              {/* Structural fold — rendered from the cluster's 3D structure */}
                               <td style={{ textAlign: "center" }}>
-                                {hasPdb ? (
-                                  <a href={`http://www.rcsb.org/pdb/explore.do?structureId=${pdb4}`}
-                                    target="_blank" rel="noreferrer">
-                                    <img className="cl-pdb-img"
-                                      src={`https://cdn.rcsb.org/images/structures/${pdb4.slice(1,3).toLowerCase()}/${pdb4.toLowerCase()}/${pdb4.toLowerCase()}_assembly-1.jpeg`}
-                                      alt={pdb4}
-                                      onError={e => { e.target.style.display = "none"; }} />
-                                  </a>
-                                ) : (
-                                  <span className="cl-pdb-placeholder">NO IMG</span>
-                                )}
+                                <FoldThumb cid={cid} label={cLabel(cid)} pdb4={hasPdb ? pdb4 : null}
+                                  onOpen={() => openDetail(cid)} />
                               </td>
 
                               {/* #SEQ */}
@@ -593,10 +602,10 @@ export default function ClusterList() {
                               {/* Pfam Domain */}
                               <td>
                                 {cluster.pfam_domain
-                                  ? cluster.pfam_domain.split(",").map((d, j) => (
+                                  ? splitPfam(cluster.pfam_domain).map((d, j) => (
                                       <a key={j} className="cl-pfam-link"
-                                        href={`http://pfam.sanger.ac.uk/family/${d.trim()}`}
-                                        target="_blank" rel="noreferrer">{d.trim()}</a>
+                                        href={pfamUrl(d)}
+                                        target="_blank" rel="noreferrer">{d}</a>
                                     ))
                                   : <span style={{ color: "var(--muted)", fontSize: 12 }}>NA</span>}
                               </td>
