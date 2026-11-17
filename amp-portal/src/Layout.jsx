@@ -4,7 +4,6 @@ import Assistant from "./Components/Assistant";
 
 const navLinks = [
   { label: "Clustering List", href: "/cluster" },
-  { label: "Research Results", href: "/research-results" },
   { label: "Prediction System", href: "/prediction" },
   { label: "Help", href: "/guide" },
 ];
@@ -389,7 +388,6 @@ export default function Layout() {
               <li><a href="/search/structure">Structure Search</a></li>
               <li><a href="/search/sequence">Sequence Search</a></li>
               <li><a href="/cluster">Clustering List</a></li>
-              <li><a href="/research-results">Research Results</a></li>
               <li><a href="/prediction">Prediction System</a></li>
               <li><a href="/guide">Help</a></li>
             </ul>

@@ -19,7 +19,6 @@ const StructureSearch = lazy(() => import("./Components/StructureSearch"));
 const SequenceSearch  = lazy(() => import("./Components/SequenceSearch"));
 const Download        = lazy(() => import("./Components/Download"));
 const NotFound        = lazy(() => import("./Components/NotFound"));
-const ResearchResults = lazy(() => import("./Components/ResearchResults"));
 
 // Matches the page background so a chunk load reads as a brief pause rather
 // than a white flash between the header and footer.
@@ -50,7 +49,6 @@ function App() {
             <Route path="search/structure" element={<StructureSearch />} />
             <Route path="search/sequence" element={<SequenceSearch />} />
             <Route path="download" element={<Download />} />
-            <Route path="research-results" element={<ResearchResults />} />
             {/* Anything else: an explicit not-found page instead of an empty one. */}
             <Route path="*" element={<NotFound />} />
           </Route>
