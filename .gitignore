@@ -48,3 +48,7 @@ esmfold/
 
 # Runtime logs from portal-service.ps1
 logs/
+
+# Feedback backup: visitors' names, emails and messages. Never commit it;
+# submissions also go to the team's Google Form. server.js creates it.
+amp-portal/src/server/feedback.json
