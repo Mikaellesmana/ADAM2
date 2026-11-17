@@ -479,6 +479,19 @@ const statsOverview = (() => {
   const uniqueSeq = new Set();
   let validated   = 0;
 
+  // ADAM merges four databases. Source_Databases lists every database that
+  // holds the peptide ("dbAMP3; ADAM; DADP"); the first of the four named is
+  // the one it was taken from, so each entry counts once and the four rows
+  // add up to the Unclassified total.
+  const ADAM_DATABASES = ["DRAMP", "CAMP", "dbAMP3", "DBAASP"];
+  function primaryDatabase(value) {
+    for (const part of String(value ?? "").split(/[;,]/)) {
+      const hit = ADAM_DATABASES.find((db) => db.toLowerCase() === part.trim().toLowerCase());
+      if (hit) return hit;
+    }
+    return "Other";
+  }
+
   // What the entries still without an origin do (and do not) record.
   const uncKinds    = { seqonly: 0, nameonly: 0, vague: 0, other: 0 };
   const uncExamples = { nameonly: {}, vague: {}, other: {} };
@@ -486,7 +499,7 @@ const statsOverview = (() => {
   const srcAll      = {};   // entries per source database, whole dataset
 
   for (const p of peptides) {
-    const srcName = String(p.Source_Databases ?? "").trim() || "Not recorded";
+    const srcName = primaryDatabase(p.Source_Databases);
     srcAll[srcName] = (srcAll[srcName] || 0) + 1;
 
     origin[p.Origin ?? "Unclassified"]++;

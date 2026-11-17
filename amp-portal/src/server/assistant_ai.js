@@ -149,12 +149,12 @@ function coreFacts(stats) {
   return `ADAM is an antimicrobial peptide database from National Taiwan Ocean University, merging DRAMP, CAMP, dbAMP3 and DBAASP. Live figures: ${s.totalEntries} entries, ${s.uniqueSequences} unique sequences, ${s.sourceOrganisms} source organisms, median length ${s.medianLength}.`;
 }
 
-// Fixed reply for questions that are not about ADAM or antimicrobial peptides.
-// Set CONTACT_EMAIL in .env to the real address.
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || "abc@efg.com";
+// Fixed reply for questions that are not about ADAM or antimicrobial peptides:
+// point to the Help guide. The /guide path also becomes a link button under
+// the reply (see linksIn in assistant.js).
 const OFF_TOPIC = {
-  zh: `目前資料庫中沒有相關資訊，建議您聯繫客服信箱 ${CONTACT_EMAIL}。`,
-  en: `There is no related information in the database at the moment. Please contact our support email: ${CONTACT_EMAIL}.`,
+  zh: "目前資料庫中沒有相關資訊，請參考說明頁面 /guide 了解如何使用 ADAM。",
+  en: "There is no related information in the database at the moment. Please see the Help guide (/guide) for how to use ADAM.",
 };
 
 const offTopicReply = (question) => (/[㐀-鿿]/.test(question) ? OFF_TOPIC.zh : OFF_TOPIC.en);

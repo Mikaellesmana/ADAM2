@@ -290,7 +290,7 @@ function createAssistant(peptides, stats) {
       usedTerms: search?.terms, corrected, intent,
     });
     // An off-topic verdict is trusted only when the search found nothing.
-    if (ai?.offTopic && !results.length) return { reply: ai.reply, links: [], results: [] };
+    if (ai?.offTopic && !results.length) return { reply: ai.reply, links: linksIn(ai.reply, zh), results: [] };
     if (ai && !ai.offTopic) return { reply: ai.reply, links: linksIn(ai.reply, zh), results, total, searched, note, sources: ai.sources, intent, ai: true };
 
     if (results.length) return { reply: say(UI.found(total, MAX_RESULTS)), links: [], results, total, searched, note };
@@ -336,7 +336,8 @@ function createAssistant(peptides, stats) {
     return PAGES
       .filter(([p]) => reply.includes(p) && !seen.has(p.split("#")[0]) && seen.add(p.split("#")[0]))
       .slice(0, 3)
-      .map(([p, name]) => ({ label: (zh ? "前往 " : "") + name.replace(/\s*\(.*\)$/, ""), href: p }));
+      // Button text is the page name only: drop "(details)" and ": details".
+      .map(([p, name]) => ({ label: (zh ? "前往 " : "") + name.replace(/\s*\(.*\)$/, "").split(":")[0], href: p }));
   }
 
   return { answer, aiAvailable };
