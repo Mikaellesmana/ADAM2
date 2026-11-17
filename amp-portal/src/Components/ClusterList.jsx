@@ -22,7 +22,7 @@ export default function ClusterList() {
   useEffect(() => {
     fetch(`${API_BASE}/api/clusters`)
       .then(r => r.json())
-      .then(data => { setClusters(Array.isArray(data) ? data.filter(c => c.cluster_id <= 30) : []); setLoading(false); })
+      .then(data => { setClusters(Array.isArray(data) ? data : []); setLoading(false); })
       .catch(() => setLoading(false));
   }, []);
 
@@ -38,11 +38,16 @@ export default function ClusterList() {
 
   const openDetail      = (id) => { setSelectedCluster(id); setView("detail"); };
   const closeDetail     = ()   => { setView("list"); setDetail(null); setSelectedCluster(null); };
+  // Clusters 1–30 have original ADAM structure files (public/pdb) and network
+  // thumbnails; the rest show their AlphaFold prediction instead.
+  const LOCAL_PDB_MAX   = 30;
+  const lastCluster     = clusters.reduce((m, c) => Math.max(m, c.cluster_id), 0) || LOCAL_PDB_MAX;
   const navigateCluster = (delta) => {
     const next = selectedCluster + delta;
-    if (next >= 1 && next <= 30) setSelectedCluster(next);
+    if (next >= 1 && next <= lastCluster) setSelectedCluster(next);
   };
   const cLabel = (id) => `AC_${String(id).padStart(3, "0")}`;
+  const useAlphaFold = selectedCluster > LOCAL_PDB_MAX;
 
   const filtered = clusters.filter(c => {
     if (!search.trim()) return true;
@@ -259,9 +264,9 @@ export default function ClusterList() {
                     onClick={() => navigateCluster(-1)}>
                     ‹ {selectedCluster > 1 ? cLabel(selectedCluster - 1) : ""}
                   </button>
-                  <button className="cd-nav-btn" disabled={selectedCluster >= 30}
+                  <button className="cd-nav-btn" disabled={selectedCluster >= lastCluster}
                     onClick={() => navigateCluster(1)}>
-                    {selectedCluster < 30 ? cLabel(selectedCluster + 1) : ""} ›
+                    {selectedCluster < lastCluster ? cLabel(selectedCluster + 1) : ""} ›
                   </button>
                 </div>
               </div>
@@ -354,10 +359,12 @@ export default function ClusterList() {
                   </svg>
                   3D Structure ·&nbsp;
                   <span className="accent">{cLabel(selectedCluster)}</span>
+                  {useAlphaFold && <span className="hint">AlphaFold prediction</span>}
                 </div>
                 <PDBViewer
                   key={cLabel(selectedCluster)}
                   clusterId={cLabel(selectedCluster)}
+                  structureUrl={useAlphaFold ? `${API_BASE}/api/clusters/${selectedCluster}/alphafold.cif` : undefined}
                   height={350}
                 />
               </div>
@@ -544,7 +551,7 @@ export default function ClusterList() {
                         {pageRows.map((cluster, i) => {
                           const cid    = cluster.cluster_id;
                           const pdb4   = getPdb4(cluster.pdb_id);
-                          const hasNet = cid <= 30;
+                          const hasNet = cid <= LOCAL_PDB_MAX;
                           const hasPdb = pdb4 && !pdb4.startsWith("PDB");
 
                           return (
