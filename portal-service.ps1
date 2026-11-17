@@ -63,13 +63,26 @@ $Vite   = Join-Path $Amp "node_modules\vite\bin\vite.js"
 #   { "python": "C:\\...\\python.exe", "node": "C:\\...\\node.exe", "production": true }
 # production: the Node backend serves the built site (amp-portal\dist) on port
 # 5000, so the Vite dev server is not started.
+#
+# tunnel: true also keeps a Cloudflare quick tunnel running, which gives the
+# site a public https://<random>.trycloudflare.com link with no router or
+# firewall changes. The link changes every time the tunnel starts; the current
+# one is written to logs\portal\public_url.txt. Needs cloudflared installed
+# (winget install Cloudflare.cloudflared) or "cloudflared": "<path>".
 $Production = $false
+$Tunnel = $null
 $SettingsFile = Join-Path $Root "portal.settings.json"
 if (Test-Path $SettingsFile) {
     $cfg = Get-Content $SettingsFile -Raw | ConvertFrom-Json
     if ($cfg.python)     { $Python = $cfg.python }
     if ($cfg.node)       { $Node = $cfg.node }
     if ($cfg.production) { $Production = $true }
+    if ($cfg.tunnel) {
+        $cf = if ($cfg.cloudflared) { $cfg.cloudflared } else { Resolve-Exe "cloudflared.exe" "C:\Program Files (x86)\cloudflared\cloudflared.exe" }
+        $sitePort = if ($Production) { 5000 } else { 5173 }
+        $Tunnel = @{ Name = "tunnel"; File = $cf; Args = "tunnel --no-autoupdate --url http://localhost:$sitePort"; Dir = $Root
+                     Match = "cloudflared.*tunnel.*localhost:$sitePort" }
+    }
 }
 
 # Grace: seconds to wait after a start before treating "port not listening" as
@@ -150,6 +163,26 @@ function Start-PortalService($svc) {
         -RedirectStandardOutput $out -RedirectStandardError $err -WindowStyle Hidden -PassThru
 }
 
+$UrlFile = Join-Path $LogDir "public_url.txt"
+
+# cloudflared prints its link to stderr (tunnel.err); a copy started by hand
+# with --logfile writes tunnel.log. Only the newest of the two belongs to the
+# running tunnel.
+function Get-TunnelUrl {
+    $f = @("tunnel.err", "tunnel.log") | ForEach-Object { Join-Path $LogDir $_ } | Where-Object { Test-Path $_ } |
+         Sort-Object { (Get-Item $_).LastWriteTime } -Descending | Select-Object -First 1
+    if (-not $f) { return $null }
+    $m = Select-String -Path $f -Pattern 'https://[a-z0-9-]+\.trycloudflare\.com' -ErrorAction SilentlyContinue | Select-Object -Last 1
+    if ($m) { return $m.Matches[0].Value }
+    return $null
+}
+
+function Get-TunnelProcess {
+    if (-not $Tunnel) { return $null }
+    Get-CimInstance Win32_Process -Filter "Name='cloudflared.exe'" -ErrorAction SilentlyContinue |
+        Where-Object { $_.CommandLine -match $Tunnel.Match } | Select-Object -First 1
+}
+
 function Test-WatchdogRunning {
     $m = New-Object System.Threading.Mutex($false, $MutexName)
     try {
@@ -174,6 +207,7 @@ function Invoke-Watchdog {
     Write-Log "watchdog started (PID $PID)"
     $state = @{}
     foreach ($s in $Services) { $state[$s.Name] = @{ Proc = $null; Started = [datetime]::MinValue; Starts = @(); Paused = $false; Fails = 0; Quiet = $false } }
+    $tunnelState = @{ Proc = $null; Starts = @(); Paused = $false; Seen = $false; Url = $null }
 
     # A supervisor must outlive its own errors. The script-wide "Stop" is right
     # for install and uninstall, where a failure should be loud, but inside this
@@ -244,6 +278,41 @@ function Invoke-Watchdog {
             }
         }
 
+        # The tunnel has no port of its own to probe: watch its process instead,
+        # adopting a copy started by hand rather than starting a second link.
+        if ($Tunnel) {
+            $tp = $tunnelState
+            $alive = $tp.Proc -and -not $tp.Proc.HasExited
+            if (-not $alive) {
+                $ext = Get-TunnelProcess
+                if ($ext) { $tp.Proc = Get-Process -Id $ext.ProcessId -ErrorAction SilentlyContinue; $alive = [bool]$tp.Proc }
+            }
+            if (-not $alive) {
+                $now = Get-Date
+                $tp.Starts = @($tp.Starts | Where-Object { ($now - $_).TotalMinutes -lt 10 })
+                if ($tp.Starts.Count -ge 5) {
+                    if (-not $tp.Paused) { Write-Log "tunnel: 5 failed starts in 10 min - pausing restarts; see tunnel.err"; $tp.Paused = $true }
+                } else {
+                    if ($tp.Seen) { Write-Log "tunnel: exited - restarting (the public link will change)" }
+                    try {
+                        $tp.Proc = Start-PortalService $Tunnel
+                        $tp.Starts += $now; $tp.Paused = $false
+                        Write-Log "tunnel: started PID $($tp.Proc.Id)"
+                    } catch {
+                        Write-Log "tunnel: could not start - $($_.Exception.Message)"
+                        $tp.Starts += $now
+                    }
+                }
+            }
+            if ($tp.Proc) { $tp.Seen = $true }
+            $url = Get-TunnelUrl
+            if ($url -and $url -ne $tp.Url) {
+                $tp.Url = $url
+                try { Set-Content -Path $UrlFile -Value $url -Encoding ASCII } catch {}
+                Write-Log "tunnel: public link $url"
+            }
+        }
+
         # A heartbeat every hour, so a loop that has stopped turning is visible
         # in the log instead of looking like a quiet, healthy night.
         $beat++
@@ -272,6 +341,11 @@ function Stop-Portal {
             "$($s.Name): not running"
         }
     }
+    if ($Tunnel) {
+        $t = Get-TunnelProcess
+        if ($t) { Stop-Process -Id $t.ProcessId -Force -ErrorAction SilentlyContinue; "stopped tunnel (PID $($t.ProcessId)); the next start gets a new public link" }
+        else    { "tunnel: not running" }
+    }
 }
 
 # ── status ────────────────────────────────────────────────────────────────────
@@ -296,6 +370,12 @@ function Show-Status {
         }
     }
     "Website        : $SiteUrl"
+    if ($Tunnel) {
+        $t = Get-TunnelProcess
+        "{0,-15}: {1}" -f "tunnel", $(if ($t) { "up    PID $($t.ProcessId)" } else { "DOWN" })
+        $u = Get-TunnelUrl
+        "Public link    : " + $(if ($t -and $u) { $u } else { "(none yet)" })
+    }
     if (Test-Path $WatchLog) { ""; "Recent watchdog log:"; Get-Content $WatchLog -Tail 6 | ForEach-Object { "  $_" } }
 }
 
