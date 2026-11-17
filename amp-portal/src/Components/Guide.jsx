@@ -52,6 +52,7 @@ const teamMembers = [
 export default function Guide() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
+  const [errorText, setErrorText] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
   useRevealOnScroll(0.08);
@@ -61,20 +62,25 @@ export default function Guide() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
+    setStatus("");
     try {
+      // The server forwards this to the team's Google Form and replies
+      // { success: true } once Google has accepted it.
       const response = await fetch(`${API_BASE}/api/feedback`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
-      const data = await response.json();
+      const data = await response.json().catch(() => ({}));
       if (data.success) {
         setStatus("success");
         setForm({ name: "", email: "", message: "" });
       } else {
+        setErrorText(data.error || "");
         setStatus("error");
       }
     } catch {
+      setErrorText("");
       setStatus("error");
     } finally {
       setSubmitting(false);
@@ -557,7 +563,7 @@ export default function Guide() {
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                         <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
                       </svg>
-                      Something went wrong. Please try again.
+                      {errorText || "Something went wrong. Please try again."}
                     </div>
                   )}
                 </form>

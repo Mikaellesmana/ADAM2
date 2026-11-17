@@ -1002,16 +1002,60 @@ app.get("/api/research/file", (req, res) => {
 /* ===========================
    FEEDBACK
 =========================== */
-app.post("/api/feedback", (req, res) => {
-  const feedback = req.body;
-  const file     = path.join(SERVER_DIR, "feedback.json");
-  let data = [];
-  if (fs.existsSync(file)) {
-    data = JSON.parse(fs.readFileSync(file));
+// Each submission goes to the team's Google Form ("Feedback": Name, Email,
+// Message) and is also kept in feedback.json as a local backup. Another form
+// can be set in .env with FEEDBACK_FORM_ID and FEEDBACK_ENTRY_NAME / _EMAIL /
+// _MESSAGE (the entry.<number> IDs from the form's page).
+const FEEDBACK_FORM = {
+  id:      process.env.FEEDBACK_FORM_ID      || "1FAIpQLSfiLPhLT5USWEsKHZRGHnPDtB5oownnLr3ao25l8xdWUP4yWA",
+  name:    process.env.FEEDBACK_ENTRY_NAME    || "entry.363379346",
+  email:   process.env.FEEDBACK_ENTRY_EMAIL   || "entry.1943044839",
+  message: process.env.FEEDBACK_ENTRY_MESSAGE || "entry.901411385",
+};
+const FEEDBACK_LIMITS = { name: 200, email: 200, message: 5000 };
+const feedbackHits = new Map();   // ip -> recent submission times (5 per minute)
+
+app.post("/api/feedback", async (req, res) => {
+  const clean = (v, max) => String(v ?? "").trim().slice(0, max);
+  const entry = {
+    name:    clean(req.body?.name, FEEDBACK_LIMITS.name),
+    email:   clean(req.body?.email, FEEDBACK_LIMITS.email),
+    message: clean(req.body?.message, FEEDBACK_LIMITS.message),
+  };
+  if (!entry.message) return res.status(400).json({ success: false, error: "Please write a message." });
+
+  const ip = req.headers["cf-connecting-ip"] || req.ip;
+  const now = Date.now();
+  const recent = (feedbackHits.get(ip) || []).filter((t) => now - t < 60_000);
+  if (recent.length >= 5) return res.status(429).json({ success: false, error: "Too many submissions. Please wait a minute." });
+  feedbackHits.set(ip, [...recent, now]);
+
+  let sent = false;
+  try {
+    const body = new URLSearchParams({
+      [FEEDBACK_FORM.name]: entry.name, [FEEDBACK_FORM.email]: entry.email, [FEEDBACK_FORM.message]: entry.message,
+    });
+    const r = await fetch(`https://docs.google.com/forms/d/e/${FEEDBACK_FORM.id}/formResponse`, {
+      method: "POST", body, signal: AbortSignal.timeout(15000),
+    });
+    sent = r.ok;
+    if (!sent) console.warn(`Google Form rejected feedback: HTTP ${r.status}`);
+  } catch (e) {
+    console.warn(`Google Form unreachable: ${e.message}`);
   }
-  data.push({ ...feedback, date: new Date() });
-  fs.writeFileSync(file, JSON.stringify(data, null, 2));
-  res.json({ message: "Feedback saved" });
+
+  // Local backup, whatever Google said.
+  try {
+    const file = path.join(SERVER_DIR, "feedback.json");
+    const data = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : [];
+    data.push({ ...entry, date: new Date(), sentToGoogleForm: sent });
+    fs.writeFileSync(file, JSON.stringify(data, null, 2));
+  } catch (e) {
+    console.error("Could not save feedback backup:", e.message);
+  }
+
+  if (!sent) return res.status(502).json({ success: false, error: "Feedback could not be sent right now. Please try again later." });
+  res.json({ success: true });
 });
 
 /* ===========================
