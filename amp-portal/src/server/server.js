@@ -290,6 +290,25 @@ app.get("/api/clusters/:id", (req, res) => {
 });
 
 /* ===========================
+   CLUSTER ALPHAFOLD STRUCTURE — /api/clusters/:id/alphafold.cif
+   The cluster's AlphaFold prediction, read from the AlphaFold/ archives.
+   Gives clusters without a /pdb/AC_xxx.pdb file a 3D structure.
+=========================== */
+app.get("/api/clusters/:id/alphafold.cif", (req, res) => {
+  const id = parseInt(req.params.id);
+  if (isNaN(id)) return res.status(400).json({ error: "Invalid cluster ID" });
+  try {
+    const entry = researchResults.alphafoldForCluster(id);
+    if (!entry) return res.status(404).json({ error: `No AlphaFold structure for cluster ${id}` });
+    res.setHeader("Cache-Control", "public, max-age=86400");
+    res.type("chemical/x-cif").send(researchResults.readEntry(entry));
+  } catch (error) {
+    console.error("AlphaFold cluster structure error:", error);
+    res.status(500).json({ error: "Could not read the AlphaFold structure." });
+  }
+});
+
+/* ===========================
    CLUSTER SEQUENCES — /api/clusters/:id/sequences
    Fetches FASTA sequences from RCSB for each PDB entry
    Used by ClusterNetwork to calculate similarity edges

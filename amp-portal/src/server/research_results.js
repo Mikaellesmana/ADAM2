@@ -122,6 +122,14 @@ function listAlphafold() {
   return [...records.values()];
 }
 
+// The AlphaFold structure for a Clustering List cluster number (9 -> ac_009).
+// Matched by number, so a folder named with an extra zero (ac_0112) still
+// belongs to cluster 112.
+function alphafoldForCluster(clusterNumber) {
+  const record = listAlphafold().find((r) => Number(r.id.replace(/^ac_/i, "")) === clusterNumber && r.files.structure);
+  return record ? indexFor("alphafold").get(record.files.structure) || null : null;
+}
+
 function fileFor(dataset, name) {
   if (!ARCHIVES[dataset] || typeof name !== "string" || name.includes("..") || name.startsWith("/")) return null;
   return indexFor(dataset).get(name) || null;
@@ -132,4 +140,4 @@ function sequenceAnalysis() {
   return JSON.parse(fs.readFileSync(filename, "utf8"));
 }
 
-module.exports = { listEsmfold, listAlphafold, fileFor, readEntry, sequenceAnalysis };
+module.exports = { listEsmfold, listAlphafold, alphafoldForCluster, fileFor, readEntry, sequenceAnalysis };
