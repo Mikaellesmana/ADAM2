@@ -123,8 +123,12 @@ export default function SequenceSearch() {
         .ms-table tbody tr:last-child { border-bottom: none; }
         .ms-table tbody tr:hover { background: #faf9f7; }
         .ms-table td { padding: 12px 16px; font-size: 13px; color: var(--text); vertical-align: middle; }
-        .td-seq { font-family: var(--mono); font-size: 11.5px; color: var(--muted); max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        /* Long sequences wrap inside their cell instead of running past the table edge. */
+        .td-seq { font-family: var(--mono); font-size: 11.5px; color: var(--muted); min-width: 220px; max-width: 340px; white-space: normal; word-break: break-all; overflow-wrap: anywhere; line-height: 1.5; }
         .td-mono { font-family: var(--mono); font-size: 13px; }
+        .td-num { white-space: nowrap; }
+        /* Peptide names are joined with underscores, so they need permission to break too. */
+        .td-name { min-width: 140px; overflow-wrap: anywhere; }
 
         .ms-table-footer { padding: 14px 20px; background: var(--cream); border-top: 1px solid var(--border); display: flex; justify-content: flex-end; }
         .btn-download { background: var(--accent); color: #fff; border: none; border-radius: 3px; padding: 7px 16px; font-size: 12px; font-weight: 500; font-family: var(--sans); cursor: pointer; display: flex; align-items: center; gap: 6px; }
@@ -225,11 +229,11 @@ export default function SequenceSearch() {
                     {results.map((r, i) => (
                       <tr key={i}>
                         <td className="td-mono">{r.query}</td>
-                        <td className="td-mono">{r.target}</td>
-                        <td className="td-mono">{typeof r.fident === "number" ? r.fident.toFixed(3) : r.fident}</td>
-                        <td className="td-mono">{r.alnlen}</td>
-                        <td className="td-mono">{typeof r.evalue === "number" ? r.evalue.toExponential(2) : r.evalue}</td>
-                        <td className="td-mono">{r.bits}</td>
+                        <td className="td-mono td-name">{r.target}</td>
+                        <td className="td-mono td-num">{typeof r.fident === "number" ? r.fident.toFixed(3) : r.fident}</td>
+                        <td className="td-mono td-num">{r.alnlen}</td>
+                        <td className="td-mono td-num">{typeof r.evalue === "number" ? r.evalue.toExponential(2) : r.evalue}</td>
+                        <td className="td-mono td-num">{r.bits}</td>
                         <td className="td-seq" title={r.sequence}>{r.sequence}</td>
                       </tr>
                     ))}
