@@ -346,11 +346,12 @@ export default function Assistant() {
         .asst-form button:disabled { opacity: 0.5; cursor: default; }
         .asst-typing { align-self: flex-start; font-size: 12px; color: #888; }
         @media (max-width: 600px) {
-          .asst-octo { right: 6px; bottom: 4px; width: 90px; height: 87px; }
+          .asst-octo { right: 4px; bottom: 4px; width: 72px; height: 70px; }
           .asst-octo-label { display: none; }
-          .asst-panel { right: 16px; bottom: 98px; max-height: calc(100vh - 116px); }
-          .asst-tip { right: 100px; bottom: 30px; }
-          .asst-intro { right: 98px; bottom: 44px; width: min(240px, calc(100vw - 112px)); }
+          .asst-octo-close { top: 0; right: 2px; width: 20px; height: 20px; }
+          .asst-panel { right: 12px; left: 12px; width: auto; bottom: 80px; max-height: calc(100vh - 140px); }
+          .asst-tip { right: 82px; bottom: 22px; }
+          .asst-intro { right: 80px; bottom: 30px; width: min(240px, calc(100vw - 96px)); }
         }
       `}</style>
 

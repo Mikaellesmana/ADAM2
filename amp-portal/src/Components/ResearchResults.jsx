@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { API_BASE } from "../api";
 import PDBViewer from "./PDBViewer";
 
@@ -14,6 +14,15 @@ export default function ResearchResults() {
   const [selected, setSelected] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+  const detailRef = useRef(null);
+
+  // On a phone the details sit below the list, so jump to them after a tap.
+  function choose(item) {
+    setSelected(item);
+    if (window.matchMedia("(max-width: 760px)").matches) {
+      setTimeout(() => detailRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
+    }
+  }
 
   useEffect(() => {
     Promise.all([
@@ -60,7 +69,11 @@ export default function ResearchResults() {
       .research-bar{height:5px;background:#eee;border-radius:5px;margin-top:8px}.research-bar i{display:block;height:100%;background:#c93333;border-radius:5px}
       .research-pager{display:flex;justify-content:space-between;align-items:center;padding:12px;color:#777;font-size:12px}.research-pager button{background:white;border:1px solid #ddd;border-radius:5px;padding:6px 10px;cursor:pointer}
       .research-empty{padding:36px 18px;text-align:center;color:#888;font-size:13px;line-height:1.6}.research-error{padding:14px 16px;background:#fff1ee;border-radius:8px;color:#8c2020;font-size:13px}
-      @media(max-width:760px){.research-page{padding:36px 18px 60px}.research-layout{grid-template-columns:1fr}.research-list{max-height:300px}.research-tools{align-items:stretch;flex-direction:column}.research-detail{padding:15px}}
+      @media(max-width:760px){.research-page{padding:36px 18px 60px}.research-layout{grid-template-columns:1fr}.research-list{max-height:300px}.research-tools{align-items:stretch;flex-direction:column}.research-detail{padding:15px}
+        .research-tabs{flex-wrap:nowrap;overflow-x:auto;gap:2px;scrollbar-width:none}.research-tabs::-webkit-scrollbar{display:none}
+        .research-tab{padding:10px 12px;white-space:nowrap;flex-shrink:0}
+        .research-detail{scroll-margin-top:72px}.research-detail h2{font-size:15px;line-height:1.4}
+        .research-detail iframe{height:360px}.research-structure{height:300px}}
     `}</style>
     <div className="research-kicker">ADAM · Data Explorer</div>
     <h1>Research Results</h1>
@@ -72,11 +85,11 @@ export default function ResearchResults() {
     <div className="research-tools"><input className="research-search" value={query} onChange={(event)=>{setQuery(event.target.value);setPage(0);setSelected(null)}} placeholder={tab === "sequence" ? "Search by sequence" : "Search by peptide sequence or result ID"} aria-label="Search research results"/><span>{loading ? "Reading archives…" : `${rows.length.toLocaleString()} results`}</span></div>
     {!loading && !error && <div className="research-layout">
       <section className="research-list" aria-label="Available results">
-        {pageRows.map((item,index)=><button key={`${item.id}-${index}`} className={`research-row${selected===item?" selected":""}`} onClick={()=>setSelected(item)}><strong>{tab === "sequence" ? `Sequence ${item.sequence_index}` : item.id}</strong><span>{tab === "sequence" ? `${item.sequence_length} residues · ${item.top_features?.length || 0} feature descriptions` : `${item.sequence ? `${item.sequence.length} residues` : "Predicted structure"} · ${(item.available || Object.keys(item.files || {})).join(" · ")}`}</span></button>)}
+        {pageRows.map((item,index)=><button key={`${item.id}-${index}`} className={`research-row${selected===item?" selected":""}`} onClick={()=>choose(item)}><strong>{tab === "sequence" ? `Sequence ${item.sequence_index}` : item.id}</strong><span>{tab === "sequence" ? `${item.sequence_length} residues · ${item.top_features?.length || 0} feature descriptions` : `${item.sequence ? `${item.sequence.length} residues` : "Predicted structure"} · ${(item.available || Object.keys(item.files || {})).join(" · ")}`}</span></button>)}
         {!pageRows.length&&<div className="research-empty">No matching results. Try a shorter search term.</div>}
         <div className="research-pager"><span>{rows.length ? `${page*PAGE_SIZE+1}–${Math.min((page+1)*PAGE_SIZE,rows.length)} of ${rows.length}` : "0 results"}</span><div><button disabled={page===0} onClick={()=>setPage((p)=>Math.max(0,p-1))}>Previous</button> <button disabled={(page+1)*PAGE_SIZE>=rows.length} onClick={()=>setPage((p)=>p+1)}>Next</button></div></div>
       </section>
-      <section className="research-detail" aria-live="polite">
+      <section className="research-detail" aria-live="polite" ref={detailRef}>
         {!selected ? <div className="research-empty">Choose a result to view its structure, plots, confidence data, or feature descriptions.</div> : tab === "sequence" ? <SequenceDetail item={selected}/> : <StructureDetail item={selected} dataset={tab}/>}
       </section>
     </div>}

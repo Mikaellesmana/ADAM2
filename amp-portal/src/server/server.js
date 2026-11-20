@@ -666,7 +666,9 @@ function buildDownloads() {
       csvBytes: csv.length,
       fastaSequences: fastaCount,
       fastaBytes: fastaBuf.length,
-      sourceFile: DATA_SOURCE,
+      // Shown on the public Download page: name the release, not the
+      // server's internal database address ("PostgreSQL adam_v10 @ localhost").
+      sourceFile: /^PostgreSQL/.test(DATA_SOURCE) ? "the ADAM2 database (v10)" : DATA_SOURCE,
     },
   };
   return downloadCache;

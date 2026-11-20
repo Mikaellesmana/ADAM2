@@ -237,6 +237,12 @@ export default function Layout() {
           .nav-link { display: none; }
           .nav-separator { display: none; }
           .nav-burger { display: flex; }
+          /* The menu already lists every search page, so the Search dropdown
+             is dropped and the Search AMP button stays one compact line. */
+          .nav-dropdown-wrap { display: none; }
+          .header-inner { padding: 0 14px; height: 58px; }
+          .header-logo img { height: 26px; }
+          .nav-cta { padding: 8px 12px !important; font-size: 13px; white-space: nowrap; }
         }
 
         @media (prefers-reduced-motion: reduce) {
