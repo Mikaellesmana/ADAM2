@@ -362,17 +362,19 @@ export default function HomePage() {
         .quick-links a::after { content: '→'; font-size: 12px; opacity: 0.5; }
 
         /* ── Related DBs ── */
+        /* Wrapping row of bordered cards: a short last row is centred instead
+           of leaving an empty grey cell. 5 per row on desktop, 3 below 900px. */
         .related-grid {
-          display: grid;
-          grid-template-columns: repeat(5, 1fr);
-          gap: 1px;
-          background: var(--border);
-          border: 1px solid var(--border);
-          border-radius: 6px;
-          overflow: hidden;
+          --rel-gap: 12px; --rel-cols: 5;
+          display: flex; flex-wrap: wrap; justify-content: center;
+          gap: var(--rel-gap);
         }
         .related-card {
+          flex: 0 0 calc((100% - (var(--rel-cols) - 1) * var(--rel-gap)) / var(--rel-cols));
+          box-sizing: border-box;
           background: var(--card-bg);
+          border: 1px solid var(--border);
+          border-radius: 6px;
           padding: 24px 20px;
           text-decoration: none;
           color: inherit;
@@ -437,13 +439,18 @@ export default function HomePage() {
           .stat-item { flex: 1 1 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
           .feature-grid { grid-template-columns: 1fr 1fr; }
           .about-grid { grid-template-columns: 1fr; }
-          .related-grid { grid-template-columns: repeat(3, 1fr); }
+          .related-grid { --rel-cols: 3; }
         }
        @media (max-width: 900px) {
         .feature-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 560px) {
           .feature-grid { grid-template-columns: 1fr; }
+          .related-grid { --rel-gap: 8px; }
+          .related-card { padding: 18px 8px; }
+          /* Date above the update instead of a narrow date column. */
+          .update-item { grid-template-columns: 1fr; gap: 6px; padding: 18px 0; }
+          .update-date { padding-top: 0; }
         }
       `}</style>
 

@@ -267,6 +267,60 @@ export default function ClusterList() {
           .cl-toolbar { flex-direction: column; align-items: flex-start; }
           .cd-panel-card { max-width: 100%; }
         }
+
+        /* Phones: the 7-column tables are far wider than the screen and were
+           cut off, so each row becomes a card with labelled fields. */
+        @media (max-width: 700px) {
+          .cl-table, .cl-table tbody { display: block; width: 100%; }
+          .cl-table thead { display: none; }
+          .cl-table tbody tr:hover { background: none; }
+          .cl-table td { display: block; padding: 0 !important; text-align: left !important; min-width: 0 !important; }
+          .cl-table td::before {
+            display: block; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.12em;
+            text-transform: uppercase; color: var(--muted); margin-bottom: 2px;
+          }
+
+          /* Cluster list: fold picture on the left, the rest beside and below it. */
+          .cl-list-table tbody tr {
+            display: grid; grid-template-columns: 92px minmax(0, 1fr); column-gap: 14px; row-gap: 10px;
+            grid-template-areas: "fold id" "fold seq" "fold pfam" "cath cath" "scop scop";
+            padding: 16px;
+          }
+          .cl-list-table td:nth-child(1) { display: none; }
+          .cl-list-table td:nth-child(2) { grid-area: id; }
+          .cl-list-table td:nth-child(2) .cl-name { text-align: left; font-size: 15px; }
+          .cl-list-table .cl-net-img { display: none; }
+          .cl-list-table td:nth-child(3) { grid-area: fold; }
+          .cl-list-table .cl-pdb-img, .cl-list-table .cl-pdb-placeholder { width: 92px; height: 92px; }
+          .cl-list-table td:nth-child(4) { grid-area: seq; }
+          .cl-list-table td:nth-child(4)::before { content: "#SEQ"; }
+          .cl-list-table td:nth-child(5) { grid-area: pfam; }
+          .cl-list-table td:nth-child(5)::before { content: "Pfam"; }
+          .cl-list-table td:nth-child(5) .cl-pfam-link { display: inline-block; margin-right: 10px; line-height: 1.6; }
+          .cl-list-table td:nth-child(6) { grid-area: cath; }
+          .cl-list-table td:nth-child(6)::before { content: "CATH (representative)"; }
+          .cl-list-table td:nth-child(7) { grid-area: scop; }
+          .cl-list-table td:nth-child(7)::before { content: "SCOP (representative)"; }
+          .cl-tag-row { line-height: 1.6; overflow-wrap: anywhere; }
+
+          /* Entries on a cluster's page: label on the left, value on the right. */
+          .cd-entries-table tbody tr { display: block; padding: 12px 16px; }
+          .cd-entries-table td { position: relative; padding: 3px 0 3px 86px !important; overflow-wrap: anywhere; }
+          .cd-entries-table td::before { position: absolute; left: 0; top: 5px; width: 80px; margin: 0; }
+          .cd-panel-label .hint { display: none; }
+          .cd-entries-table td:nth-child(1) { display: none; }
+          .cd-entries-table td:nth-child(2)::before { content: "PDB ID"; }
+          .cd-entries-table td:nth-child(3)::before { content: "Chain"; }
+          .cd-entries-table td:nth-child(4)::before { content: "Sequences"; }
+          .cd-entries-table td:nth-child(5)::before { content: "Pfam"; }
+          .cd-entries-table td:nth-child(6)::before { content: "CATH"; }
+          .cd-entries-table td:nth-child(7)::before { content: "SCOP"; }
+
+          /* Detail top bar and pagination: fit one phone-width line each. */
+          .cd-topbar-inner { gap: 8px; }
+          .cd-nav-btn, .cd-back { padding: 6px 10px; }
+          .cl-pagination { justify-content: center; }
+        }
       `}</style>
 
       <div className="cl-page">
@@ -411,7 +465,7 @@ export default function ClusterList() {
                         PDB Entries · {cLabel(selectedCluster)}
                       </div>
                     </div>
-                    <table className="cl-table">
+                    <table className="cl-table cd-entries-table">
                       <thead>
                         <tr>
                           <th>Cluster ID</th>
@@ -553,7 +607,7 @@ export default function ClusterList() {
                   </div>
                 ) : (
                   <>
-                    <table className="cl-table">
+                    <table className="cl-table cl-list-table">
                       <thead>
                         <tr>
                           <th style={{ width: 48 }}>#</th>

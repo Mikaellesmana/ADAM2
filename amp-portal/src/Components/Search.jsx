@@ -679,8 +679,26 @@ export default function Search() {
           .result-meta-grid { grid-template-columns: repeat(3, 1fr); }
         }
         @media (max-width: 560px) {
-          .result-meta-grid { grid-template-columns: 1fr 1fr; }
+          .result-meta-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px 14px; }
           .srch-brand { padding-right: 20px; }
+          /* Long values (several activities) wrap to two lines instead of
+             being cut off after a few words. */
+          .result-meta-value {
+            white-space: normal; display: -webkit-box; -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; overflow: hidden; overflow-wrap: anywhere;
+          }
+          /* Results toolbar: sort on one row, select on the next, download
+             full width, instead of buttons wrapping in ragged rows. */
+          .results-topbar { flex-direction: column; align-items: stretch; gap: 12px; padding: 14px 16px; }
+          .results-topbar-right { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+          .results-topbar-right .ctrl-divider { display: none; }
+          .results-topbar-right .ctrl-select, .results-topbar-right .ctrl-btn { width: 100%; justify-content: center; text-align: center; }
+          .results-topbar-right .btn-download { grid-column: 1 / -1; justify-content: center; }
+          /* Pagination: arrows, the current page and its neighbours only. */
+          .page-btns .page-btn:not(.active):not(:nth-child(-n+2)):not(:nth-last-child(-n+2)):not(.active + .page-btn):not(:has(+ .page-btn.active)) { display: none; }
+          .page-btns { flex-wrap: nowrap; justify-content: center; width: 100%; }
+          .page-controls { width: 100%; justify-content: center; }
+          .pagination-bar { flex-direction: column; gap: 10px; }
         }
       `}</style>
 

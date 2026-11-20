@@ -40,6 +40,25 @@ body {
   overflow-x: hidden;
 }
 
+/* Phones: the FASTA input card used by the prediction pages (pred-, ens-)
+   and the search tools (ms-, ss-). The header's description was squeezed
+   beside a two-line "Load example" button, and the action buttons wrapped
+   their labels onto two or three lines. "body" outranks each page's own
+   (later-loaded) styles. */
+@media (max-width: 600px) {
+  body :is(.pred-input-header, .ens-input-header, .ms-input-header, .ss-input-header) {
+    padding: 14px 16px; flex-wrap: wrap; gap: 10px;
+  }
+  body :is(.pred-input-header-left, .ens-input-header-left, .ms-input-header-left) { flex: 1 1 180px; min-width: 0; }
+  body .btn-example { white-space: nowrap; padding: 5px 10px; }
+  body :is(.pred-input-footer, .ens-input-footer, .ms-input-footer, .ss-input-footer) {
+    padding: 14px 16px; flex-direction: column; align-items: stretch; gap: 10px;
+  }
+  /* Main action full width on top, Clear underneath. */
+  body :is(.pred-actions, .ens-actions, .ms-actions, .ss-actions) { width: 100%; display: flex; flex-direction: column-reverse; gap: 8px; }
+  body :is(.pred-actions, .ens-actions, .ms-actions, .ss-actions) > button { width: 100%; white-space: nowrap; justify-content: center; }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
