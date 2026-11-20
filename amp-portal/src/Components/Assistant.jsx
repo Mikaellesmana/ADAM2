@@ -1,6 +1,57 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { API_BASE } from "../api";
+
+// What the octopus says when a page opens: the page's name and a one- or
+// two-sentence explanation. First match wins, so specific paths come first.
+const PAGE_INTRO = [
+  [/^\/$/, {
+    en: ["Welcome to ADAM!", "This is the antimicrobial peptide (AMP) database. Search 57,000+ peptides, compare sequences and structures, or predict whether a new sequence is an AMP."],
+    zh: ["歡迎來到 ADAM！", "這是抗菌胜肽（AMP）資料庫。你可以搜尋超過 57,000 筆胜肽、比對序列與結構，或預測新序列是不是 AMP。"] }],
+  [/^\/search\/sequence/, {
+    en: ["Sequence Search", "Paste a peptide sequence in FASTA format and MMseqs2 finds similar sequences in ADAM, with identity and E-value."],
+    zh: ["序列搜尋", "貼上 FASTA 格式的胜肽序列，MMseqs2 會在 ADAM 中找出相似序列，並列出相似度與 E 值。"] }],
+  [/^\/search\/structure/, {
+    en: ["Structure Search", "Upload a .pdb file and Foldseek finds AMPs with a similar 3D structure."],
+    zh: ["結構搜尋", "上傳 .pdb 檔，Foldseek 會找出 3D 結構相似的抗菌胜肽。"] }],
+  [/^\/search/, {
+    en: ["Search AMP", "Filter the database by name, sequence, length, activity, organism, structure or reference. Combine fields to narrow it down."],
+    zh: ["搜尋 AMP", "可依名稱、序列、長度、活性、來源生物、結構或文獻篩選資料庫，多個條件可以一起使用。"] }],
+  [/^\/(result|cluster\/)/, {
+    en: ["Peptide entry", "Everything ADAM knows about this peptide: its sequence, activity, source organism, structure and references."],
+    zh: ["胜肽資料", "這裡是這筆胜肽的完整資料：序列、活性、來源生物、結構與參考文獻。"] }],
+  [/^\/cluster/, {
+    en: ["Clustering List", "AMPs grouped into 136 structural fold clusters. Click a cluster to see its 3D structure, similarity network and member entries."],
+    zh: ["分群列表", "抗菌胜肽依結構摺疊分成 136 群。點選任一群，可查看 3D 結構、相似度網路與成員資料。"] }],
+  [/^\/prediction\/svm/, {
+    en: ["SVM prediction", "A support vector machine trained on amino-acid composition. Fast AMP / non-AMP calls for one or many sequences."],
+    zh: ["SVM 預測", "以胺基酸組成訓練的支持向量機，可快速判斷一條或多條序列是否為 AMP。"] }],
+  [/^\/prediction\/hmm/, {
+    en: ["HMM prediction", "Scores your sequence against a profile built from known AMPs. A higher log-odds score means more AMP-like."],
+    zh: ["HMM 預測", "把序列與已知 AMP 建立的特徵輪廓比對，log-odds 分數越高越像 AMP。"] }],
+  [/^\/prediction\/(esmc|flm)/, {
+    en: ["ESMC FLM prediction", "A protein language model fine-tuned on ADAM. The most accurate model here, and a little slower."],
+    zh: ["ESMC FLM 預測", "以 ADAM 資料微調的蛋白質語言模型，是這裡最準確的模型，速度稍慢。"] }],
+  [/^\/prediction\/ensemble/, {
+    en: ["Ensemble prediction", "Runs SVM, HMM and ESMC FLM side by side and combines them into one consensus, so no single model has to be trusted alone."],
+    zh: ["整合預測", "同時執行 SVM、HMM 與 ESMC FLM，並整合成一個共識結果，不必只相信單一模型。"] }],
+  [/^\/prediction/, {
+    en: ["Prediction System", "Check whether a sequence is likely an AMP. Pick one model, or use the ensemble to compare all three."],
+    zh: ["預測系統", "判斷序列是否可能是 AMP。可選擇單一模型，或用整合預測比較三個模型。"] }],
+  [/^\/download/, {
+    en: ["Download", "Get the whole database as a CSV table or as FASTA sequences, ready for Excel, Python, R or BLAST."],
+    zh: ["下載", "下載整個資料庫：CSV 表格或 FASTA 序列，可直接用於 Excel、Python、R 或 BLAST。"] }],
+  [/^\/guide/, {
+    en: ["Help", "How to use each tool, database statistics, the team's contacts, and a feedback form. You can also just ask me!"],
+    zh: ["說明", "各工具的使用方式、資料庫統計、團隊聯絡方式與意見回饋表單。也可以直接問我！"] }],
+];
+const NOT_FOUND_INTRO = {
+  en: ["Hmm, no page here", "This address doesn't exist. Use the menu at the top, or ask me where to find something."],
+  zh: ["咦，這裡沒有頁面", "這個網址不存在。請使用上方選單，或問我要找的東西在哪裡。"],
+};
+const KNOWN_PATH = /^\/(|search(\/(sequence|structure))?|result\/[^/]+|cluster(\/[^/]+)?|guide|download|prediction(\/(svm|hmm|esmc-flm|esmc|flm|ensemble))?)\/?$/;
+const introFor = (path) => (KNOWN_PATH.test(path) ? (PAGE_INTRO.find(([re]) => re.test(path)) || [])[1] : NOT_FOUND_INTRO);
+const INTRO_MS = 12000;   // how long the octopus's page bubble stays up
 
 // Floating help assistant, mounted once in Layout so it is on every page.
 // The answering happens on the server (POST /api/assistant, see
@@ -56,15 +107,47 @@ function writeTipSeen() {
   try { localStorage.setItem(TIP_KEY, "1"); } catch { /* private mode: tip shows again next time */ }
 }
 
+// The chat and the octopus's page bubbles share one language: the visitor's
+// last choice, else Chinese for a Chinese-language browser, else English.
+const LANG_KEY = "adam-assistant-lang";
+function readLang() {
+  try { const saved = localStorage.getItem(LANG_KEY); if (saved === "en" || saved === "zh") return saved; } catch { /* no storage */ }
+  return /^zh/i.test(navigator.language || "") ? "zh" : "en";
+}
+function writeLang(value) {
+  try { localStorage.setItem(LANG_KEY, value); } catch { /* private mode: falls back next time */ }
+}
+
 export default function Assistant() {
   const [open, setOpen] = useState(false);
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState(readLang);
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [showTip, setShowTip] = useState(() => !readTipSeen());
   const [messages, setMessages] = useState([]);
   const [aiName, setAiName] = useState(null);
+  const [intro, setIntro] = useState(null);   // { path, title, text } shown in the octopus's bubble
   const listRef = useRef(null);
+  const { pathname } = useLocation();
+  const introducedPath = useRef(null);
+
+  // Each time a page opens, the octopus explains where you are, then hides
+  // the bubble after INTRO_MS. It waits while the chat or the first-visit
+  // tip is showing, and introduces each page visit only once.
+  useEffect(() => {
+    if (open || showTip) { setIntro(null); return; }
+    if (introducedPath.current === pathname) return;
+    setIntro(null);
+    const words = introFor(pathname);
+    if (!words) return;
+    const [title, text] = words[lang] || words.en;
+    const show = setTimeout(() => {
+      introducedPath.current = pathname;
+      setIntro({ path: pathname, title, text });
+    }, 700);
+    const hide = setTimeout(() => setIntro(null), 700 + INTRO_MS);
+    return () => { clearTimeout(show); clearTimeout(hide); };
+  }, [pathname, showTip, open]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (listRef.current) listRef.current.scrollTop = listRef.current.scrollHeight;
@@ -85,6 +168,7 @@ export default function Assistant() {
 
   const openPanel = () => {
     setOpen(true);
+    setIntro(null);
     setShowTip(false);
     writeTipSeen();
   };
@@ -149,7 +233,7 @@ export default function Assistant() {
         .asst-octo-bubble:nth-child(2) { animation-delay: 1s; width: 5px; height: 5px; }
         .asst-octo-bubble:nth-child(3) { animation-delay: 2s; width: 6px; height: 6px; }
         .asst-octo:hover .asst-octo-body { animation: octo-wiggle 0.9s ease-in-out infinite; }
-        .asst-octo.boing .asst-octo-body { animation: octo-boing 0.55s ease-out; }
+        .asst-octo .asst-octo-body.boing { animation: octo-boing 0.55s ease-out; }
         .asst-octo-label {
           position: absolute; right: 92%; top: 14px; white-space: nowrap; pointer-events: none;
           background: #fff; color: #A80000; font: 600 12px 'IBM Plex Sans', sans-serif;
@@ -186,6 +270,33 @@ export default function Assistant() {
           background: #fff; color: #222831; border-radius: 12px; padding: 12px 14px;
           box-shadow: 0 6px 24px rgba(0,0,0,0.15); font-size: 13px; line-height: 1.45;
         }
+        /* The octopus's page explanation: a speech bubble pointing at it. */
+        .asst-intro {
+          position: fixed; right: 128px; bottom: 58px; z-index: 300; width: 270px;
+          background: #fff; color: #222831; border-radius: 14px 14px 4px 14px;
+          box-shadow: 0 8px 28px rgba(0,0,0,0.18); padding: 12px 34px 14px 14px;
+          font-family: 'IBM Plex Sans', sans-serif; cursor: pointer; overflow: hidden;
+          animation: intro-in 0.35s cubic-bezier(.2,1.4,.4,1) both;
+        }
+        .asst-intro::after {
+          content: ""; position: absolute; right: -7px; bottom: 14px; width: 14px; height: 14px;
+          background: #fff; transform: rotate(45deg); box-shadow: 3px -3px 6px rgba(0,0,0,0.05);
+        }
+        .asst-intro-title { font-size: 13px; font-weight: 700; color: #A80000; margin-bottom: 4px; }
+        .asst-intro-text { font-size: 12.5px; line-height: 1.5; color: #3a3f47; }
+        .asst-intro-close {
+          position: absolute; top: 6px; right: 6px; width: 22px; height: 22px; border: none; border-radius: 50%;
+          background: transparent; color: #999; cursor: pointer; font-size: 14px; line-height: 22px; padding: 0;
+        }
+        .asst-intro-close:hover { background: #f1f1f1; color: #555; }
+        .asst-intro-timer {
+          position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; background: #A80000; opacity: 0.55;
+          transform-origin: left; animation: intro-timer linear forwards;
+        }
+        @keyframes intro-in { from { opacity: 0; transform: translateY(8px) scale(0.92); } to { opacity: 1; transform: none; } }
+        @keyframes intro-timer { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+        .asst-octo.talking .asst-octo-label { display: none; }
+        @media (prefers-reduced-motion: reduce) { .asst-intro { animation: none; } }
         .asst-tip button { margin-top: 8px; border: none; background: none; color: #A80000; font-weight: 600; cursor: pointer; padding: 0; font-size: 12px; }
         .asst-panel {
           position: fixed; right: 24px; bottom: 126px; z-index: 300;
@@ -236,6 +347,7 @@ export default function Assistant() {
           .asst-octo-label { display: none; }
           .asst-panel { right: 16px; bottom: 98px; max-height: calc(100vh - 116px); }
           .asst-tip { right: 100px; bottom: 30px; }
+          .asst-intro { right: 98px; bottom: 44px; width: min(240px, calc(100vw - 112px)); }
         }
       `}</style>
 
@@ -251,6 +363,17 @@ export default function Assistant() {
         </div>
       )}
 
+      {intro && !open && (
+        <div className="asst-intro" role="status" key={intro.path} onClick={openPanel}
+          title={lang === "zh" ? "點我開始提問" : "Click to ask me something"}>
+          <button className="asst-intro-close" aria-label={lang === "zh" ? "關閉" : "Close"}
+            onClick={(e) => { e.stopPropagation(); setIntro(null); }}>✕</button>
+          <div className="asst-intro-title">{intro.title}</div>
+          <div className="asst-intro-text">{intro.text}</div>
+          <span className="asst-intro-timer" style={{ animationDuration: `${INTRO_MS}ms` }} />
+        </div>
+      )}
+
       {open && (
         <div className="asst-panel" role="dialog" aria-label="ADAM assistant">
           <div className="asst-head">
@@ -261,7 +384,7 @@ export default function Assistant() {
                 {aiName && <span className="asst-ai-badge">AI · {aiName}</span>}
               </div>
             </div>
-            <select value={lang} onChange={(e) => setLang(e.target.value)} aria-label="Language">
+            <select value={lang} onChange={(e) => { setLang(e.target.value); writeLang(e.target.value); }} aria-label="Language">
               <option value="en">English</option>
               <option value="zh">繁體中文</option>
             </select>
@@ -340,14 +463,15 @@ export default function Assistant() {
       )}
 
       <button
-        className="asst-octo"
+        className={`asst-octo${intro && !open ? " talking" : ""}`}
         onClick={(e) => {
-          // Restart the bounce on every click, then open or close the chat.
-          const el = e.currentTarget;
+          // Restart the bounce on every click, then open or close the chat. The
+          // class goes on the inner body, whose className React never rewrites.
+          const el = e.currentTarget.querySelector(".asst-octo-body");
           el.classList.remove("boing"); void el.offsetWidth; el.classList.add("boing");
           open ? setOpen(false) : openPanel();
         }}
-        onAnimationEnd={(e) => { if (e.animationName === "octo-boing") e.currentTarget.classList.remove("boing"); }}
+        onAnimationEnd={(e) => { if (e.animationName === "octo-boing") e.target.classList.remove("boing"); }}
         aria-label={open ? (lang === "zh" ? "關閉 ADAM 助理" : "Close ADAM assistant") : (lang === "zh" ? "開啟 ADAM 助理" : "Open ADAM assistant")}
         aria-expanded={open}
       >
