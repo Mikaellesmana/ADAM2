@@ -78,6 +78,7 @@ const PAGES = [
   ["/prediction/esmc-flm", "ESMC FLM prediction"],
   ["/prediction/ensemble", "Ensemble prediction (all three models)"],
   ["/download", "Download (CSV and FASTA)"],
+  ["/research-results", "Research Results (AlphaFold and ESMFold predicted structures, sequence feature analysis)"],
   ["/guide", "Help page: getting started, database statistics, contact and feedback form"],
   ["/guide#dbs-unclassified", "Help page section explaining Unclassified entries"],
 ];

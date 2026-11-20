@@ -38,6 +38,9 @@ const PAGE_INTRO = [
   [/^\/prediction/, {
     en: ["Prediction System", "Check whether a sequence is likely an AMP. Pick one model, or use the ensemble to compare all three."],
     zh: ["預測系統", "判斷序列是否可能是 AMP。可選擇單一模型，或用整合預測比較三個模型。"] }],
+  [/^\/research-results/, {
+    en: ["Research Results", "Predicted 3D structures: AlphaFold models for the clusters and ESMFold models for thousands of peptides, plus sequence feature analysis. Pick a tab and search by ID or sequence."],
+    zh: ["研究成果", "預測的 3D 結構：各分群的 AlphaFold 模型、數千條胜肽的 ESMFold 模型，以及序列特徵分析。選擇分頁後可用 ID 或序列搜尋。"] }],
   [/^\/download/, {
     en: ["Download", "Get the whole database as a CSV table or as FASTA sequences, ready for Excel, Python, R or BLAST."],
     zh: ["下載", "下載整個資料庫：CSV 表格或 FASTA 序列，可直接用於 Excel、Python、R 或 BLAST。"] }],
@@ -49,7 +52,7 @@ const NOT_FOUND_INTRO = {
   en: ["Hmm, no page here", "This address doesn't exist. Use the menu at the top, or ask me where to find something."],
   zh: ["咦，這裡沒有頁面", "這個網址不存在。請使用上方選單，或問我要找的東西在哪裡。"],
 };
-const KNOWN_PATH = /^\/(|search(\/(sequence|structure))?|result\/[^/]+|cluster(\/[^/]+)?|guide|download|prediction(\/(svm|hmm|esmc-flm|esmc|flm|ensemble))?)\/?$/;
+const KNOWN_PATH = /^\/(|search(\/(sequence|structure))?|result\/[^/]+|cluster(\/[^/]+)?|guide|download|research-results|prediction(\/(svm|hmm|esmc-flm|esmc|flm|ensemble))?)\/?$/;
 const introFor = (path) => (KNOWN_PATH.test(path) ? (PAGE_INTRO.find(([re]) => re.test(path)) || [])[1] : NOT_FOUND_INTRO);
 const INTRO_MS = 12000;   // how long the octopus's page bubble stays up
 

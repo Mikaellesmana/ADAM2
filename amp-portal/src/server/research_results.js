@@ -1,17 +1,17 @@
-// AlphaFold structures for the Clustering List, read straight out of the ZIP
-// archives in AlphaFold/ at the project root (one folder per cluster: ac_009,
-// ac_024, ...). Nothing is unpacked into public/ or bundled into the build.
+// Read selected scientific results directly from the user's ZIP archives.
+// Nothing is unpacked into public/ or bundled into the frontend build.
 const fs = require("fs");
 const path = require("path");
 const zlib = require("zlib");
 
-const ROOT = path.resolve(__dirname, "..", "..", "..");
-const ALPHAFOLD_DIR = path.join(ROOT, "AlphaFold");
+const PROJECT_DIR = path.resolve(__dirname, "..", "..", "..");
+const ROOT = PROJECT_DIR;
 const ARCHIVES = {
-  alphafold: fs.existsSync(ALPHAFOLD_DIR)
-    ? fs.readdirSync(ALPHAFOLD_DIR, { withFileTypes: true })
+  esmfold: [path.join(ROOT, "esmfold", "ESMFold2_outputs-20261116T192516Z-1-001.zip")],
+  alphafold: fs.existsSync(path.join(ROOT, "AlphaFold"))
+    ? fs.readdirSync(path.join(ROOT, "AlphaFold"), { withFileTypes: true })
       .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".zip"))
-      .map((entry) => path.join(ALPHAFOLD_DIR, entry.name)).sort()
+      .map((entry) => path.join(ROOT, "AlphaFold", entry.name)).sort()
     : [],
 };
 const indexes = new Map();
@@ -83,6 +83,26 @@ function readEntry(entry) {
   } finally { fs.closeSync(fd); }
 }
 
+function listEsmfold() {
+  const files = indexFor("esmfold");
+  const records = new Map();
+  for (const [name, file] of files) {
+    const match = name.match(/^ESMFold2_outputs\/([^/]+)\/([^/]+)$/);
+    if (!match) continue;
+    const [, sequence, filename] = match;
+    const ext = path.extname(filename).toLowerCase();
+    if (![".pdb", ".png", ".html", ".json", ".csv"].includes(ext)) continue;
+    if (!records.has(sequence)) records.set(sequence, { id: sequence, sequence, files: {} });
+    const record = records.get(sequence);
+    const key = ({ ".pdb": "structure", ".png": "plot", ".html": "viewer", ".json": filename.replace(/\.json$/i, ""), ".csv": filename.replace(/\.csv$/i, "") })[ext];
+    // Prefer the stable named artifacts when archives contain similarly named files.
+    if (key === "structure" || key === "plot" || key === "viewer" || !record.files[key]) record.files[key] = name;
+    record.fileSizes ||= {};
+    record.fileSizes[key] = file.size;
+  }
+  return [...records.values()].map(({ fileSizes, ...record }) => ({ ...record, available: Object.keys(record.files), bytes: fileSizes }));
+}
+
 function listAlphafold() {
   const files = indexFor("alphafold");
   const records = new Map();
@@ -110,4 +130,14 @@ function alphafoldForCluster(clusterNumber) {
   return record ? indexFor("alphafold").get(record.files.structure) || null : null;
 }
 
-module.exports = { alphafoldForCluster, readEntry };
+function fileFor(dataset, name) {
+  if (!ARCHIVES[dataset] || typeof name !== "string" || name.includes("..") || name.startsWith("/")) return null;
+  return indexFor(dataset).get(name) || null;
+}
+
+function sequenceAnalysis() {
+  const filename = path.join(ROOT, "sequence_analysis_results.json");
+  return JSON.parse(fs.readFileSync(filename, "utf8"));
+}
+
+module.exports = { listEsmfold, listAlphafold, alphafoldForCluster, fileFor, readEntry, sequenceAnalysis };
