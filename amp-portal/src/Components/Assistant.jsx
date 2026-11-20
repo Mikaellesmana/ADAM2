@@ -126,22 +126,69 @@ export default function Assistant() {
   return (
     <>
       <style>{`
-        .asst-fab {
-          position: fixed; right: 24px; bottom: 24px; z-index: 300;
-          width: 56px; height: 56px; border-radius: 50%; border: none; cursor: pointer;
-          background: #A80000; color: #fff; box-shadow: 0 6px 20px rgba(168,0,0,0.35);
-          display: flex; align-items: center; justify-content: center;
-          transition: transform 0.15s ease;
+        /* The assistant's button is ADAM's octopus mascot: it floats, blinks and
+           blows bubbles; it wiggles on hover and bounces when clicked. */
+        .asst-octo {
+          position: fixed; right: 14px; bottom: 8px; z-index: 300;
+          width: 116px; height: 112px; border: none; background: none; padding: 0;
+          cursor: pointer; -webkit-tap-highlight-color: transparent;
         }
-        .asst-fab:hover { transform: scale(1.06); }
+        .asst-octo:focus-visible { outline: 3px solid rgba(168,0,0,0.45); outline-offset: 2px; border-radius: 18px; }
+        .asst-octo-body {
+          position: absolute; inset: 0; transform-origin: 50% 88%;
+          animation: octo-float 3.6s ease-in-out infinite;
+          filter: drop-shadow(0 6px 10px rgba(0,0,0,0.2));
+        }
+        .asst-octo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; user-select: none; }
+        .asst-octo img.blink { opacity: 0; animation: octo-blink 4.6s linear infinite; }
+        .asst-octo-bubble {
+          position: absolute; left: 88%; top: 36%; width: 7px; height: 7px; border-radius: 50%;
+          background: radial-gradient(circle at 35% 35%, #ff9a9a, #b3121a 70%);
+          opacity: 0; animation: octo-bubble 3s ease-in infinite;
+        }
+        .asst-octo-bubble:nth-child(2) { animation-delay: 1s; width: 5px; height: 5px; }
+        .asst-octo-bubble:nth-child(3) { animation-delay: 2s; width: 6px; height: 6px; }
+        .asst-octo:hover .asst-octo-body { animation: octo-wiggle 0.9s ease-in-out infinite; }
+        .asst-octo.boing .asst-octo-body { animation: octo-boing 0.55s ease-out; }
+        .asst-octo-label {
+          position: absolute; right: 92%; top: 14px; white-space: nowrap; pointer-events: none;
+          background: #fff; color: #A80000; font: 600 12px 'IBM Plex Sans', sans-serif;
+          padding: 6px 11px; border-radius: 12px 12px 3px 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+          opacity: 0; transform: translateX(6px); transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        .asst-octo:hover .asst-octo-label, .asst-octo:focus-visible .asst-octo-label { opacity: 1; transform: none; }
+        .asst-octo-close {
+          position: absolute; top: 4px; right: 8px; width: 24px; height: 24px; border-radius: 50%;
+          background: #A80000; color: #fff; display: flex; align-items: center; justify-content: center;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+        }
+        @keyframes octo-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-7px) rotate(2deg); } }
+        @keyframes octo-wiggle {
+          0%, 100% { transform: translateY(-5px) rotate(0deg) scale(1.08); }
+          25% { transform: translateY(-7px) rotate(-6deg) scale(1.08); }
+          75% { transform: translateY(-7px) rotate(6deg) scale(1.08); }
+        }
+        @keyframes octo-boing {
+          0% { transform: scale(1, 1); } 30% { transform: scale(1.14, 0.84); }
+          60% { transform: translateY(-10px) scale(0.93, 1.1); } 100% { transform: scale(1, 1); }
+        }
+        @keyframes octo-blink { 0%, 91%, 97%, 100% { opacity: 0; } 92%, 96% { opacity: 1; } }
+        @keyframes octo-bubble {
+          0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+          15% { opacity: 0.9; }
+          100% { transform: translate(7px, -48px) scale(1); opacity: 0; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .asst-octo-body, .asst-octo img.blink, .asst-octo-bubble { animation: none !important; }
+        }
         .asst-tip {
-          position: fixed; right: 92px; bottom: 30px; z-index: 300; max-width: 240px;
+          position: fixed; right: 132px; bottom: 44px; z-index: 300; max-width: 240px;
           background: #fff; color: #222831; border-radius: 12px; padding: 12px 14px;
           box-shadow: 0 6px 24px rgba(0,0,0,0.15); font-size: 13px; line-height: 1.45;
         }
         .asst-tip button { margin-top: 8px; border: none; background: none; color: #A80000; font-weight: 600; cursor: pointer; padding: 0; font-size: 12px; }
         .asst-panel {
-          position: fixed; right: 24px; bottom: 92px; z-index: 300;
+          position: fixed; right: 24px; bottom: 126px; z-index: 300;
           width: 370px; max-width: calc(100vw - 32px); height: 520px; max-height: calc(100vh - 120px);
           background: #fff; border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,0.22);
           display: flex; flex-direction: column; overflow: hidden;
@@ -185,17 +232,18 @@ export default function Assistant() {
         .asst-form button:disabled { opacity: 0.5; cursor: default; }
         .asst-typing { align-self: flex-start; font-size: 12px; color: #888; }
         @media (max-width: 600px) {
-          .asst-fab { right: 16px; bottom: 16px; }
-          .asst-panel { right: 16px; bottom: 84px; }
-          .asst-tip { right: 84px; bottom: 22px; }
+          .asst-octo { right: 6px; bottom: 4px; width: 90px; height: 87px; }
+          .asst-octo-label { display: none; }
+          .asst-panel { right: 16px; bottom: 98px; max-height: calc(100vh - 116px); }
+          .asst-tip { right: 100px; bottom: 30px; }
         }
       `}</style>
 
       {showTip && !open && (
         <div className="asst-tip" role="status">
           {lang === "zh"
-            ? "第一次來嗎？點右下角的按鈕，我可以幫你找資料或說明網站功能。"
-            : "First time here? Click the button to ask how the site works or to look up a peptide."}
+            ? "第一次來嗎？點右下角的章魚，我可以幫你找資料或說明網站功能。"
+            : "First time here? Click the octopus to ask how the site works or to look up a peptide."}
           <br />
           <button onClick={() => { setShowTip(false); writeTipSeen(); }}>
             {lang === "zh" ? "知道了" : "Got it"}
@@ -291,12 +339,29 @@ export default function Assistant() {
         </div>
       )}
 
-      <button className="asst-fab" onClick={() => (open ? setOpen(false) : openPanel())} aria-label="Open ADAM assistant">
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          {open
-            ? <path d="M6 6l12 12M18 6L6 18" />
-            : <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z" />}
-        </svg>
+      <button
+        className="asst-octo"
+        onClick={(e) => {
+          // Restart the bounce on every click, then open or close the chat.
+          const el = e.currentTarget;
+          el.classList.remove("boing"); void el.offsetWidth; el.classList.add("boing");
+          open ? setOpen(false) : openPanel();
+        }}
+        onAnimationEnd={(e) => { if (e.animationName === "octo-boing") e.currentTarget.classList.remove("boing"); }}
+        aria-label={open ? (lang === "zh" ? "關閉 ADAM 助理" : "Close ADAM assistant") : (lang === "zh" ? "開啟 ADAM 助理" : "Open ADAM assistant")}
+        aria-expanded={open}
+      >
+        <span className="asst-octo-body">
+          <span className="asst-octo-bubble" /><span className="asst-octo-bubble" /><span className="asst-octo-bubble" />
+          <img src="/mascot/octopus.webp" alt="" width="240" height="232" />
+          <img src="/mascot/octopus-blink.webp" alt="" width="240" height="232" className="blink" />
+        </span>
+        {!open && <span className="asst-octo-label">{lang === "zh" ? "問問 ADAM 🐙" : "Ask ADAM 🐙"}</span>}
+        {open && (
+          <span className="asst-octo-close" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><path d="M6 6l12 12M18 6L6 18" /></svg>
+          </span>
+        )}
       </button>
     </>
   );
