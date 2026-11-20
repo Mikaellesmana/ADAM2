@@ -9,7 +9,7 @@ try { process.loadEnvFile(path.join(__dirname, ".env")); } catch { /* no .env: E
 const { inferOrigin, fillFromSequence, fillFromFamily } = require("./origin_curation");
 const { createAssistant } = require("./assistant");
 const aiInfo = require("./assistant_ai");
-const alphafoldArchive = require("./alphafold_archive");
+const researchResults = require("./research_results");
 
 const SERVER_DIR  = __dirname;
 const PYTHON_DIR  = path.join(SERVER_DIR, "python");
@@ -298,10 +298,10 @@ app.get("/api/clusters/:id/alphafold.cif", (req, res) => {
   const id = parseInt(req.params.id);
   if (isNaN(id)) return res.status(400).json({ error: "Invalid cluster ID" });
   try {
-    const entry = alphafoldArchive.alphafoldForCluster(id);
+    const entry = researchResults.alphafoldForCluster(id);
     if (!entry) return res.status(404).json({ error: `No AlphaFold structure for cluster ${id}` });
     res.setHeader("Cache-Control", "public, max-age=86400");
-    res.type("chemical/x-cif").send(alphafoldArchive.readEntry(entry));
+    res.type("chemical/x-cif").send(researchResults.readEntry(entry));
   } catch (error) {
     console.error("AlphaFold cluster structure error:", error);
     res.status(500).json({ error: "Could not read the AlphaFold structure." });
@@ -954,6 +954,49 @@ app.post("/api/search/sequence", (req, res) => {
     res,
     label: "seq",
   });
+});
+
+/* ===========================
+   RESEARCH RESULTS — AlphaFold / ESMFold archives
+=========================== */
+// research_results.js reads files straight out of the ZIP archives in
+// AlphaFold/ and esmfold/ at the project root, plus
+// sequence_analysis_results.json; nothing is unpacked.
+app.get("/api/research/catalog", (req, res) => {
+  try {
+    res.json({ esmfold: researchResults.listEsmfold(), alphafold: researchResults.listAlphafold() });
+  } catch (error) {
+    console.error("Research archive catalog error:", error);
+    res.status(500).json({ error: "Could not read research result archives." });
+  }
+});
+
+app.get("/api/research/sequence-analysis", (req, res) => {
+  try { res.json(researchResults.sequenceAnalysis()); }
+  catch (error) {
+    console.error("Sequence analysis results error:", error);
+    res.status(500).json({ error: "Could not read sequence analysis results." });
+  }
+});
+
+app.get("/api/research/file", (req, res) => {
+  const { dataset, file } = req.query;
+  if (!["esmfold", "alphafold"].includes(dataset) || typeof file !== "string") {
+    return res.status(400).json({ error: "Unknown dataset or file." });
+  }
+  try {
+    const entry = researchResults.fileFor(dataset, file);
+    if (!entry) return res.status(404).json({ error: "Research result file not found." });
+    const body = researchResults.readEntry(entry);
+    const ext = path.extname(file).toLowerCase();
+    const types = { ".cif": "chemical/x-cif", ".pdb": "chemical/x-pdb", ".png": "image/png", ".json": "application/json", ".csv": "text/csv", ".html": "text/html; charset=utf-8" };
+    res.setHeader("X-Content-Type-Options", "nosniff");
+    res.setHeader("Cache-Control", "public, max-age=86400");
+    res.type(types[ext] || "application/octet-stream").send(body);
+  } catch (error) {
+    console.error("Research archive file error:", error);
+    res.status(500).json({ error: "Could not open research result file." });
+  }
 });
 
 /* ===========================
