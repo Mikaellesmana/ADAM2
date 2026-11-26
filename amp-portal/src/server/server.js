@@ -861,7 +861,7 @@ const upload  = multer({ dest: tmpDir });
 /* ===========================
    SHARED — run an easy-search binary inside WSL, parse the .m8 output
 =========================== */
-function runEasySearch({ bin, queryWinPath, db, extraArgs, cols, cleanupPaths, res, label }) {
+function runEasySearch({ bin, queryWinPath, db, extraArgs, cols, cleanupPaths, res, label, transform }) {
   const outWinPath = path.join(tmpDir, `${label}_${Date.now()}.m8`);
   const args = [
     "-e", bin, "easy-search",
@@ -904,7 +904,7 @@ function runEasySearch({ bin, queryWinPath, db, extraArgs, cols, cleanupPaths, r
       cleanupPaths.forEach((p) => fs.existsSync(p) && fs.unlinkSync(p));
       if (fs.existsSync(outWinPath)) fs.unlinkSync(outWinPath);
       console.log(`${label} results:`, results.length);
-      res.json(results);
+      res.json(transform ? transform(results) : results);
 
     } catch (e) {
       cleanupPaths.forEach((p) => fs.existsSync(p) && fs.unlinkSync(p));
@@ -955,8 +955,31 @@ app.post("/api/search/sequence", (req, res) => {
     cleanupPaths: [queryPath],
     res,
     label: "seq",
+    transform: (hits) => hits.map((h) => ({ ...h, entries: entriesForHit(h) })),
   });
 });
+
+// The MMseqs2 index was built from an older export, so the number at the end
+// of a hit's name ("Magainin_2-GGS_20709") is not today's ADAM number. Hits
+// are matched to current entries by their exact sequence instead; when one
+// sequence is stored under several entries, the one whose name appears in
+// the hit name is listed first.
+let entriesBySequence = null;
+function entriesForHit(hit) {
+  if (!entriesBySequence) {
+    entriesBySequence = new Map();
+    peptides.forEach((p, i) => {
+      const seq = String(p.Sequence ?? "").trim().toUpperCase();
+      if (!seq) return;
+      if (!entriesBySequence.has(seq)) entriesBySequence.set(seq, []);
+      entriesBySequence.get(seq).push({ id: adamNo(i), adamId: p.Adam_ID, name: p.Peptide_Name });
+    });
+  }
+  const found = entriesBySequence.get(String(hit.sequence ?? "").trim().toUpperCase()) || [];
+  const target = String(hit.target ?? "").toLowerCase();
+  const named = (e) => (e.name && target.includes(String(e.name).toLowerCase().replace(/\s+/g, "_")) ? 0 : 1);
+  return [...found].sort((a, b) => named(a) - named(b)).slice(0, 5);
+}
 
 /* ===========================
    RESEARCH RESULTS — AlphaFold / ESMFold archives
