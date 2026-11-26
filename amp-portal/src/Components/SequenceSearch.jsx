@@ -1,18 +1,32 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { API_BASE } from "../api";
 import useRevealOnScroll from "../useRevealOnScroll";
 
 const EXAMPLE_FASTA = `>Query_Peptide
 GIGKFLHSAKKFGKAFVGEIMNS`;
 
+// The last search is kept for the browser session, so going Back from a
+// peptide entry (opened from an ADAM ID) shows the same results again.
+const LAST_SEARCH_KEY = "adam-sequence-search";
+function readLastSearch() {
+  try { return JSON.parse(sessionStorage.getItem(LAST_SEARCH_KEY)) || null; } catch { return null; }
+}
+function writeLastSearch(value) {
+  try {
+    if (value) sessionStorage.setItem(LAST_SEARCH_KEY, JSON.stringify(value));
+    else sessionStorage.removeItem(LAST_SEARCH_KEY);
+  } catch { /* storage full or blocked: the search just isn't restored */ }
+}
+
 export default function SequenceSearch() {
   const navigate = useNavigate();
-  const [sequence, setSequence] = useState("");
-  const [results, setResults] = useState([]);
+  const [last] = useState(readLastSearch);
+  const [sequence, setSequence] = useState(last?.sequence || "");
+  const [results, setResults] = useState(last?.results || []);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(Boolean(last));
 
   useRevealOnScroll(0.08);
 
@@ -37,8 +51,10 @@ export default function SequenceSearch() {
       }
 
       const data = await response.json();
-      setResults(Array.isArray(data) ? data : []);
+      const list = Array.isArray(data) ? data : [];
+      setResults(list);
       setSubmitted(true);
+      writeLastSearch({ sequence, results: list });
     } catch (err) {
       setError(err.message || "Sequence search failed. Please try again.");
     } finally {
@@ -51,6 +67,7 @@ export default function SequenceSearch() {
     setResults([]);
     setError("");
     setSubmitted(false);
+    writeLastSearch(null);
   };
 
   return (
@@ -129,6 +146,17 @@ export default function SequenceSearch() {
         .td-num { white-space: nowrap; }
         /* Peptide names are joined with underscores, so they need permission to break too. */
         .td-name { min-width: 140px; overflow-wrap: anywhere; }
+        /* Matching ADAM entries: each links to its result page. */
+        .td-adam { white-space: nowrap; }
+        .adam-link {
+          display: block; width: fit-content; font-family: var(--mono); font-size: 12.5px; font-weight: 600;
+          color: var(--accent); text-decoration: none; padding: 2px 8px; border-radius: 10px;
+          background: rgba(168, 0, 0, 0.06); border: 1px solid rgba(168, 0, 0, 0.18);
+          transition: background 0.12s, border-color 0.12s;
+        }
+        .adam-link + .adam-link { margin-top: 4px; }
+        .adam-link:hover { background: rgba(168, 0, 0, 0.12); border-color: var(--accent); text-decoration: underline; }
+        .adam-none { color: var(--muted); }
 
         .ms-table-footer { padding: 14px 20px; background: var(--cream); border-top: 1px solid var(--border); display: flex; justify-content: flex-end; }
         .btn-download { background: var(--accent); color: #fff; border: none; border-radius: 3px; padding: 7px 16px; font-size: 12px; font-weight: 500; font-family: var(--sans); cursor: pointer; display: flex; align-items: center; gap: 6px; }
@@ -218,6 +246,7 @@ export default function SequenceSearch() {
                     <tr>
                       <th>Query</th>
                       <th>Target</th>
+                      <th>ADAM ID</th>
                       <th>Identity</th>
                       <th>Aln Len</th>
                       <th>E-value</th>
@@ -230,6 +259,16 @@ export default function SequenceSearch() {
                       <tr key={i}>
                         <td className="td-mono">{r.query}</td>
                         <td className="td-mono td-name">{r.target}</td>
+                        <td className="td-adam">
+                          {r.entries?.length
+                            ? r.entries.map((e) => (
+                                <Link key={e.id} to={`/result/${e.id}`} className="adam-link"
+                                  title={`${e.name || e.adamId} — open the peptide entry`}>
+                                  {e.adamId || `#${e.id}`}
+                                </Link>
+                              ))
+                            : <span className="adam-none">—</span>}
+                        </td>
                         <td className="td-mono td-num">{typeof r.fident === "number" ? r.fident.toFixed(3) : r.fident}</td>
                         <td className="td-mono td-num">{r.alnlen}</td>
                         <td className="td-mono td-num">{typeof r.evalue === "number" ? r.evalue.toExponential(2) : r.evalue}</td>
@@ -241,8 +280,8 @@ export default function SequenceSearch() {
                 </table>
                 <div className="ms-table-footer">
                   <button type="button" className="btn-download" onClick={() => {
-                    const csv = ["Query,Target,Identity,AlnLen,Evalue,Bits,Sequence",
-                      ...results.map(r => `${r.query},${r.target},${r.fident},${r.alnlen},${r.evalue},${r.bits},${r.sequence}`)].join("\n");
+                    const csv = ["Query,Target,ADAM_ID,Identity,AlnLen,Evalue,Bits,Sequence",
+                      ...results.map(r => `${r.query},${r.target},${(r.entries || []).map(e => e.adamId).join(";")},${r.fident},${r.alnlen},${r.evalue},${r.bits},${r.sequence}`)].join("\n");
                     const url = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
                     Object.assign(document.createElement("a"), { href: url, download: "sequence_results.csv" }).click();
                     URL.revokeObjectURL(url);
